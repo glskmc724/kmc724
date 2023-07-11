@@ -1,4 +1,5 @@
 # UART_printf
+프로젝트를 열 때, 폴더 명을 `UART_printf.cydsn` 으로 변경해주세요.
 
 ## Hardware settings
 * TX PIN=P1[5]
