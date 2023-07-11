@@ -25,4 +25,6 @@
 0.1초마다 IMU 데이터를 양 단으로 전송함
 
 ## Output
+* COM30=Central, print Peripheral's IMU data (from COM32)
+* COM32=Peripheral, print Central's IMU data (from COM30)
 ![output](https://github.com/glskmc724/kmc724/assets/90677740/40f6e4ab-2fb7-437e-8466-b273a2ea7663)
