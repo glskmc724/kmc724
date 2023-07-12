@@ -1,3 +1,4 @@
 # NUCLEO-F412ZG
 
-## Test
+## LED Toggle
+LED Blue, Green, Red toggle at 1 sec
