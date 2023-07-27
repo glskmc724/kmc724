@@ -56,7 +56,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern TIM_HandleTypeDef htim3;
+//extern TIM_HandleTypeDef htim3;
 /* USER CODE BEGIN EV */
 extern STM_HandlesTypeDef handles;
 /* USER CODE END EV */
@@ -207,9 +207,9 @@ void TIM3_IRQHandler(void)
   /* USER CODE BEGIN TIM3_IRQn 0 */
 
   /* USER CODE END TIM3_IRQn 0 */
-  HAL_TIM_IRQHandler(handles.htim);
+//  HAL_TIM_IRQHandler(&htim3);
   /* USER CODE BEGIN TIM3_IRQn 1 */
-
+  HAL_TIM_IRQHandler(handles.htim);
   /* USER CODE END TIM3_IRQn 1 */
 }
 

@@ -53,16 +53,23 @@ void GPIO_Config(void)
 
 	HAL_GPIO_WritePin(GPIOB, LD1_Pin | LD3_Pin | LD2_Pin, GPIO_PIN_RESET);
 
-	GPIO_InitStruct.Pin = USER_Btn_Pin;
-	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+	GPIO_InitStruct.Pin = L207_RST_Pin | L207_DIR_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
-	HAL_GPIO_Init(USER_Btn_GPIO_Port, &GPIO_InitStruct);
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 	GPIO_InitStruct.Pin = LD1_Pin | LD3_Pin | LD2_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+	GPIO_InitStruct.Pin = L207_ENA_Pin | L297_Test_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 }
 
 void PWM_Config(STM_HandlesTypeDef* handles)
@@ -70,22 +77,17 @@ void PWM_Config(STM_HandlesTypeDef* handles)
 	TIM_MasterConfigTypeDef sMasterConfig = {0};
 	TIM_OC_InitTypeDef sConfigOC = {0};
 
+	handles->htim = (TIM_HandleTypeDef*)calloc(1, sizeof(TIM_HandleTypeDef));
 	handles->htim->Instance = TIM3;
 	handles->htim->Init.Prescaler = 95;
 	handles->htim->Init.CounterMode = TIM_COUNTERMODE_UP;
 	handles->htim->Init.Period = 1000;
 	handles->htim->Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 	handles->htim->Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-//	htim3.Instance = TIM3;
-//	htim3.Init.Prescaler = 95;
-//	htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-//	htim3.Init.Period = 1000;
-//	htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-//	htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
 
 	if (HAL_TIM_PWM_Init(handles->htim) != HAL_OK)
 	{
-		return;
+
 	}
 
 	sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
@@ -93,7 +95,7 @@ void PWM_Config(STM_HandlesTypeDef* handles)
 
 	if (HAL_TIMEx_MasterConfigSynchronization(handles->htim, &sMasterConfig) != HAL_OK)
 	{
-		return;
+
 	}
 
 	sConfigOC.OCMode = TIM_OCMODE_PWM1;
@@ -103,7 +105,7 @@ void PWM_Config(STM_HandlesTypeDef* handles)
 
 	if (HAL_TIM_PWM_ConfigChannel(handles->htim, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
 	{
-		return;
+
 	}
 
 	HAL_TIM_MspPostInit(handles->htim);
@@ -111,6 +113,7 @@ void PWM_Config(STM_HandlesTypeDef* handles)
 
 void UART_Config(STM_HandlesTypeDef* handles)
 {
+	handles->huart = (UART_HandleTypeDef*)calloc(1, sizeof(UART_HandleTypeDef));
 	handles->huart->Instance = USART3;
 	handles->huart->Init.BaudRate = 115200;
 	handles->huart->Init.WordLength = UART_WORDLENGTH_8B;
