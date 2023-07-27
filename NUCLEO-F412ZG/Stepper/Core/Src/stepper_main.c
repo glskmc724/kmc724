@@ -1,8 +1,8 @@
 /*
- * D10 = PD_14: ENABLE
- * D11 = PA_7 : DIR
- * D12 = PA_6 : Pulse
- * D13 = PA_5 : RST
+ * D8  = PF_12: RST
+ * D9  = PD_15: ENABLE
+ * D10 = PD_14: DIR
+ * D11 = PA_7 : PULSE
  */
 
 #include <stdlib.h>
@@ -12,7 +12,9 @@
 #include "config.h"
 
 STM_HandlesTypeDef handles;
+
 static uint32_t PWM_Count = 0;
+static uint8_t loop = 0;
 
 int main(void)
 {
@@ -29,29 +31,12 @@ int main(void)
 	// DIR = LD2 (BLUE)
 	// RST = LD3
 
-	HAL_GPIO_WritePin(L207_ENA_GPIO_Port, L207_ENA_Pin, 1);
-	HAL_GPIO_WritePin(L207_DIR_GPIO_Port, L207_DIR_Pin, 0);
-	HAL_GPIO_WritePin(L207_RST_GPIO_Port, L207_RST_Pin, 1);
+	HAL_GPIO_WritePin(L297_ENA_GPIO_Port, L297_ENA_Pin, 1);
+	HAL_GPIO_WritePin(L297_DIR_GPIO_Port, L297_DIR_Pin, 0);
+	HAL_GPIO_WritePin(L297_RST_GPIO_Port, L297_RST_Pin, 1);
 
 	while (1)
 	{
-		if (HAL_GPIO_ReadPin(L207_ENA_GPIO_Port, L207_ENA_Pin) == 1)
-		{
-			HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, 1);
-		}
-		else
-		{
-			HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, 0);
-		}
-
-		if (HAL_GPIO_ReadPin(L207_RST_GPIO_Port, L207_RST_Pin) == 1)
-		{
-			HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, 1);
-		}
-		else
-		{
-			HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, 0);
-		}
 	}
 }
 
@@ -61,8 +46,20 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef* htim)
 	{
 		if (PWM_Count == 0)
 		{
-			HAL_GPIO_TogglePin(L297_Test_GPIO_Port, L297_Test_Pin);
+			if (loop != 0)
+			{
+				HAL_GPIO_TogglePin(L297_PULSE_GPIO_Port, L297_PULSE_Pin);
+				loop -= 1;
+			}
 		}
-		PWM_Count = (PWM_Count + 1) % 1;
+		PWM_Count = (PWM_Count + 1) % 10;
+	}
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t pin)
+{
+	if (pin == BLUE_BTN_Pin)
+	{
+		loop = 200;
 	}
 }
