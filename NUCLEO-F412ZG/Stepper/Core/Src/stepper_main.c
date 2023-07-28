@@ -4,7 +4,7 @@
  * D10 = PD_14: DIR
  * D11 = PA_7 : PULSE
  */
-
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -37,6 +37,8 @@ int main(void)
 
 	while (1)
 	{
+		printf("Hello\r\n");
+		HAL_Delay(1000);
 	}
 }
 
@@ -60,6 +62,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin)
 {
 	if (pin == BLUE_BTN_Pin)
 	{
-		loop = 200;
+		loop = 2;
 	}
 }
