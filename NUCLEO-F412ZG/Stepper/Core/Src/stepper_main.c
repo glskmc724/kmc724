@@ -4,6 +4,7 @@
  * D10 = PD_14: DIR
  * D11 = PA_7 : PULSE
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,11 +15,12 @@
 STM_HandlesTypeDef handles;
 
 static uint32_t PWM_Count = 0;
-static uint8_t loop = 0;
+static uint16_t loop = 0;
 
 int main(void)
 {
-	char ch;
+	uint8_t data[4];
+	uint16_t value;
 
 	HAL_Init();
 
@@ -29,19 +31,20 @@ int main(void)
 
 	HAL_TIM_PWM_Start_IT(handles.htim, TIM_CHANNEL_1);
 
-	// ENA = LD1
-	// DIR = LD2 (BLUE)
-	// RST = LD3
-
 	HAL_GPIO_WritePin(L297_ENA_GPIO_Port, L297_ENA_Pin, 1);
 	HAL_GPIO_WritePin(L297_DIR_GPIO_Port, L297_DIR_Pin, 0);
 	HAL_GPIO_WritePin(L297_RST_GPIO_Port, L297_RST_Pin, 1);
 
 	while (1)
 	{
-		if (HAL_UART_Receive(handles.huart, (uint8_t*)&ch, 1, 1000) == HAL_OK)
+		if (HAL_UART_Receive(handles.huart, data, 4, 1000) == HAL_OK)
 		{
-			HAL_UART_Transmit(handles.huart, (uint8_t*)&ch, 1, 1000);
+			if (data[0] == 0x07 && data[3] == 0x24)
+			{
+				value = (data[1] << 8) | data[2];
+				loop = value * 2;
+//				printf("Loop=%d\r\n", loop);
+			}
 		}
 	}
 }
