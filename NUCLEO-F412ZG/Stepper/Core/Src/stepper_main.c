@@ -18,6 +18,8 @@ static uint8_t loop = 0;
 
 int main(void)
 {
+	char ch;
+
 	HAL_Init();
 
 	Sysclk_Config();
@@ -37,8 +39,10 @@ int main(void)
 
 	while (1)
 	{
-		printf("Hello\r\n");
-		HAL_Delay(1000);
+		if (HAL_UART_Receive(handles.huart, (uint8_t*)&ch, 1, 1000) == HAL_OK)
+		{
+			HAL_UART_Transmit(handles.huart, (uint8_t*)&ch, 1, 1000);
+		}
 	}
 }
 
