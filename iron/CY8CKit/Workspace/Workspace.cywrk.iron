@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace\BLE_IMU\TopDesign">
+<ExpandedNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\TopDesign</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\Pins</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\Analog</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\DMA</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\Clocks</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\Interrupts</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\System</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\Directives</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr\Flash Security</v>
+<v>Workspace\BLE_IMU\Header Files\cyapicallbacks.h</v>
+<v>Workspace\BLE_IMU\Header Files\debug.h</v>
+<v>Workspace\BLE_IMU\Header Files\imu.h</v>
+<v>Workspace\BLE_IMU\Header Files\myble.h</v>
+<v>Workspace\BLE_IMU\Source Files</v>
+<v>Workspace\BLE_IMU\Source Files\debug.c</v>
+<v>Workspace\BLE_IMU\Source Files\imu.c</v>
+<v>Workspace\BLE_IMU\Source Files\main.c</v>
+<v>Workspace\BLE_IMU\Source Files\myble.c</v>
+<v>Workspace\BLE_IMU\Generated_Source\PSoC4</v>
+<v>Workspace\UART_printf\TopDesign</v>
+<v>Workspace\UART_printf\UART_printf.cydwr</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\Pins</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\Analog</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\DMA</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\Clocks</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\Interrupts</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\System</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\Directives</v>
+<v>Workspace\UART_printf\UART_printf.cydwr\Flash Security</v>
+<v>Workspace\UART_printf\Header Files</v>
+<v>Workspace\UART_printf\Header Files\cyapicallbacks.h</v>
+<v>Workspace\UART_printf\Source Files</v>
+<v>Workspace\UART_printf\Source Files\main.c</v>
+<v>Workspace\UART_printf\Generated_Source\PSoC4</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\TopDesign</v>
+<v>Workspace\BLE_IMU\BLE_IMU.cydwr</v>
+<v>Workspace\BLE_IMU\Header Files</v>
+<v>Workspace\BLE_IMU\Source Files</v>
+<v>Workspace\BLE_IMU\Source Files\debug.c</v>
+<v>Workspace\BLE_IMU\Source Files\imu.c</v>
+<v>Workspace\BLE_IMU\Source Files\main.c</v>
+<v>Workspace\BLE_IMU\Source Files\myble.c</v>
+<v>Workspace\BLE_IMU\Generated_Source</v>
+<v>Workspace\UART_printf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\TopDesign</v>
+<v>Workspace\BLE_IMU\TopDesign\TopDesign.cysch</v>
+<v>Workspace\UART_printf</v>
+<v>Workspace\UART_printf\TopDesign</v>
+<v>Workspace\UART_printf\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\TopDesign</v>
+<v>Workspace\BLE_IMU\TopDesign\TopDesign.cysch</v>
+<v>Workspace\UART_printf</v>
+<v>Workspace\UART_printf\TopDesign</v>
+<v>Workspace\UART_printf\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\CortexM0</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_custom.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_gatt.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\debug.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\imu.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\myble.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_BOOT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_RX.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_RX_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SCBCLK.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SPI_UART.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SPI_UART_INT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_TX.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_TX_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_UART.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_UART_BOOT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_BOOT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_RX.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_RX_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_SCB_IRQ.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_SCBCLK.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_SPI_UART.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_SPI_UART_INT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_TX.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_TX_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_UART.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_UART_BOOT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\BLE_IMU.elf</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\BLE_IMU.hex</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\BLE_IMU.map</v>
+<v>Workspace\BLE_IMU\BLE_IMU.gpdsc</v>
+<v>Workspace\BLE_IMU\BLE_IMU.rpt</v>
+<v>Workspace\BLE_IMU\BLE_IMU_timing.html</v>
+<v>Workspace\UART_printf</v>
+<v>Workspace\UART_printf\CortexM0</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_BOOT.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_PM.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SCBCLK.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SPI_UART.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SPI_UART_INT.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_UART.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_UART_BOOT.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RX.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RX_PM.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_TX.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_TX_PM.lst</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\UART_printf.elf</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\UART_printf.hex</v>
+<v>Workspace\UART_printf\CortexM0\ARM_GCC_541\Debug\UART_printf.map</v>
+<v>Workspace\UART_printf\UART_printf.gpdsc</v>
+<v>Workspace\UART_printf\UART_printf.rpt</v>
+<v>Workspace\UART_printf\UART_printf_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\CortexM0</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_custom.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_gatt.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\debug.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\imu.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\myble.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_BOOT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_RX.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_RX_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SCBCLK.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SPI_UART.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_SPI_UART_INT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_TX.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_TX_PM.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_UART.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_DBG_UART_BOOT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_BOOT.lst</v>
+<v>Workspace\BLE_IMU\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_IMU_PM.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\PSoC 4 Architecture TRM</v>
+<v>Workspace\BLE_IMU\PSoC 4200 BLE Family Datasheet</v>
+<v>Workspace\BLE_IMU\System Reference Guides</v>
+<v>Workspace\BLE_IMU\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace\BLE_IMU\System Reference Guides\cy_dmac_v1_10</v>
+<v>Workspace\BLE_IMU\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace\BLE_IMU\BLE_v3_50.pdf</v>
+<v>Workspace\BLE_IMU\cy_pins_v2_20</v>
+<v>Workspace\BLE_IMU\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace\BLE_IMU\SCB_P4_v4_0</v>
+<v>Workspace\BLE_IMU\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>Workspace\UART_printf</v>
+<v>Workspace\UART_printf\PSoC 4 Architecture TRM</v>
+<v>Workspace\UART_printf\PSoC 4200 BLE Family Datasheet</v>
+<v>Workspace\UART_printf\System Reference Guides</v>
+<v>Workspace\UART_printf\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace\UART_printf\System Reference Guides\cy_dmac_v1_10</v>
+<v>Workspace\UART_printf\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace\UART_printf\cy_pins_v2_20</v>
+<v>Workspace\UART_printf\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace\UART_printf\SCB_P4_v4_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace</v>
+<v>Workspace\BLE_IMU</v>
+<v>Workspace\BLE_IMU\PSoC 4 Architecture TRM</v>
+<v>Workspace\BLE_IMU\PSoC 4200 BLE Family Datasheet</v>
+<v>Workspace\BLE_IMU\System Reference Guides</v>
+<v>Workspace\BLE_IMU\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace\BLE_IMU\System Reference Guides\cy_dmac_v1_10</v>
+<v>Workspace\BLE_IMU\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace\BLE_IMU\BLE_v3_50.pdf</v>
+<v>Workspace\BLE_IMU\cy_pins_v2_20</v>
+<v>Workspace\BLE_IMU\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace\BLE_IMU\SCB_P4_v4_0</v>
+<v>Workspace\BLE_IMU\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>Workspace\UART_printf</v>
+<v>Workspace\UART_printf\PSoC 4 Architecture TRM</v>
+<v>Workspace\UART_printf\PSoC 4200 BLE Family Datasheet</v>
+<v>Workspace\UART_printf\System Reference Guides</v>
+<v>Workspace\UART_printf\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace\UART_printf\System Reference Guides\cy_dmac_v1_10</v>
+<v>Workspace\UART_printf\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Workspace\UART_printf\cy_pins_v2_20</v>
+<v>Workspace\UART_printf\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace\UART_printf\SCB_P4_v4_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\BLE_IMU.cydsn\main.c" />
+<name v=".\BLE_IMU.cydsn\imu.h" />
+<name v=".\BLE_IMU.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\BLE_IMU.cydsn\myble.c" />
+<name v=".\BLE_IMU.cydsn\BLE_IMU.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1309, 635" SelectedTabbedMdiWindow="27a8e725-cfa0-40e7-85f7-84ffe3420e54"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="dfe0ce83-94ab-48a9-8730-3f562fbe34db" /><DocumentWindow Key="D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\main.c" Guid="09148e83-91a9-45d8-8cac-1d3456f52f21" /><DocumentWindow Key="D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\imu.h" Guid="27a8e725-cfa0-40e7-85f7-84ffe3420e54" /><DocumentWindow Key="D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\TopDesign\TopDesign.cysch" Guid="12009826-d790-43dd-8563-0e1940bbcf7d" /><DocumentWindow Key="D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\myble.c" Guid="c7931ef8-094f-4062-89cd-96d23550cade" /><DocumentWindow Key="D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cydwr" Guid="9836e879-82c7-4bce-9aab-11813380f393" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

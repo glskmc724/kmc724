@@ -1,0 +1,3 @@
+﻿  main.c
+D:\git\kmc724\etc\Circular_Queue\main.c(17,50): warning C4267: '함수': 'size_t'에서 'uint8_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Circular_Queue.vcxproj -> D:\git\kmc724\etc\Circular_Queue\x64\Debug\Circular_Queue.exe

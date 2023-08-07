@@ -1,0 +1,921 @@
+Loading plugins phase: Elapsed time ==> 0s.188ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -d CY8C4248LQI-BL583 -s D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 1s.425ms
+<CYPRESSTAG name="HDL generation results...">
+</CYPRESSTAG>
+HDL generation phase: Elapsed time ==> 0s.125ms
+<CYPRESSTAG name="Synthesis results...">
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp Verilog Synthesis Compiler: Version 6.3 IR 41
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  BLE_IMU.v
+Program  :   D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -dcpsoc3 BLE_IMU.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  BLE_IMU.v
+Program  :   D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -dcpsoc3 BLE_IMU.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  BLE_IMU.v
+Program  :   vlogfe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -dcpsoc3 -verilog BLE_IMU.v
+======================================================================
+
+vlogfe V6.3 IR 41:  Verilog parser
+Wed Jul 12 18:07:17 2023
+
+
+======================================================================
+Compiling:  BLE_IMU.v
+Program  :   vpp
+Options  :    -yv2 -q10 BLE_IMU.v
+======================================================================
+
+vpp V6.3 IR 41:  Verilog Pre-Processor
+Wed Jul 12 18:07:17 2023
+
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
+
+vpp:  No errors.
+
+Library 'work' => directory 'lcpsoc3'
+General_symbol_table
+General_symbol_table
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Using control file 'BLE_IMU.ctl'.
+
+vlogfe:  No errors.
+
+
+======================================================================
+Compiling:  BLE_IMU.v
+Program  :   tovif
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -dcpsoc3 -verilog BLE_IMU.v
+======================================================================
+
+tovif V6.3 IR 41:  High-level synthesis
+Wed Jul 12 18:07:17 2023
+
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\codegentemp\BLE_IMU.ctl'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\codegentemp\BLE_IMU.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+
+tovif:  No errors.
+
+
+======================================================================
+Compiling:  BLE_IMU.v
+Program  :   topld
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -dcpsoc3 -verilog BLE_IMU.v
+======================================================================
+
+topld V6.3 IR 41:  Synthesis and optimization
+Wed Jul 12 18:07:17 2023
+
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\codegentemp\BLE_IMU.ctl'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\codegentemp\BLE_IMU.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	\UART_DBG:Net_1257\
+	\UART_DBG:uncfg_rx_irq\
+	\UART_DBG:Net_1099\
+	\UART_DBG:Net_1258\
+	Net_24
+	Net_33
+	Net_34
+	Net_35
+	Net_36
+	Net_37
+	Net_38
+	Net_39
+	Net_42
+	\UART_IMU:Net_1257\
+	\UART_IMU:uncfg_rx_irq\
+	\UART_IMU:Net_1099\
+	\UART_IMU:Net_1258\
+	Net_44
+	Net_53
+	Net_54
+	Net_55
+	Net_56
+	Net_57
+	Net_58
+	Net_59
+	Net_64
+	Net_67
+	\BLE:Net_55\
+
+
+Deleted 28 User equations/components.
+Deleted 0 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing \UART_DBG:sclk_s_wire\ to \UART_DBG:select_s_wire\
+Aliasing \UART_DBG:mosi_s_wire\ to \UART_DBG:select_s_wire\
+Aliasing \UART_DBG:miso_m_wire\ to \UART_DBG:select_s_wire\
+Aliasing \UART_DBG:cts_wire\ to \UART_DBG:select_s_wire\
+Aliasing zero to \UART_DBG:select_s_wire\
+Aliasing one to tmpOE__UART_DBG_RX_net_0
+Aliasing tmpOE__UART_DBG_TX_net_0 to tmpOE__UART_DBG_RX_net_0
+Aliasing \UART_IMU:select_s_wire\ to \UART_DBG:select_s_wire\
+Aliasing \UART_IMU:sclk_s_wire\ to \UART_DBG:select_s_wire\
+Aliasing \UART_IMU:mosi_s_wire\ to \UART_DBG:select_s_wire\
+Aliasing \UART_IMU:miso_m_wire\ to \UART_DBG:select_s_wire\
+Aliasing \UART_IMU:cts_wire\ to \UART_DBG:select_s_wire\
+Aliasing tmpOE__UART_IMU_RX_net_0 to tmpOE__UART_DBG_RX_net_0
+Aliasing tmpOE__UART_IMU_TX_net_0 to tmpOE__UART_DBG_RX_net_0
+Removing Lhs of wire \UART_DBG:rx_wire\[3] = Net_225[4]
+Removing Lhs of wire \UART_DBG:Net_1170\[7] = \UART_DBG:Net_847\[1]
+Removing Lhs of wire \UART_DBG:sclk_s_wire\[8] = \UART_DBG:select_s_wire\[2]
+Removing Lhs of wire \UART_DBG:mosi_s_wire\[9] = \UART_DBG:select_s_wire\[2]
+Removing Lhs of wire \UART_DBG:miso_m_wire\[10] = \UART_DBG:select_s_wire\[2]
+Removing Lhs of wire \UART_DBG:cts_wire\[13] = \UART_DBG:select_s_wire\[2]
+Removing Rhs of wire Net_226[38] = \UART_DBG:tx_wire\[16]
+Removing Rhs of wire zero[42] = \UART_DBG:select_s_wire\[2]
+Removing Lhs of wire one[45] = tmpOE__UART_DBG_RX_net_0[41]
+Removing Lhs of wire tmpOE__UART_DBG_TX_net_0[48] = tmpOE__UART_DBG_RX_net_0[41]
+Removing Lhs of wire \UART_IMU:select_s_wire\[55] = zero[42]
+Removing Lhs of wire \UART_IMU:rx_wire\[56] = Net_60[57]
+Removing Lhs of wire \UART_IMU:Net_1170\[60] = \UART_IMU:Net_847\[54]
+Removing Lhs of wire \UART_IMU:sclk_s_wire\[61] = zero[42]
+Removing Lhs of wire \UART_IMU:mosi_s_wire\[62] = zero[42]
+Removing Lhs of wire \UART_IMU:miso_m_wire\[63] = zero[42]
+Removing Lhs of wire \UART_IMU:cts_wire\[68] = zero[42]
+Removing Rhs of wire Net_61[92] = \UART_IMU:tx_wire\[70]
+Removing Lhs of wire tmpOE__UART_IMU_RX_net_0[95] = tmpOE__UART_DBG_RX_net_0[41]
+Removing Lhs of wire tmpOE__UART_IMU_TX_net_0[100] = tmpOE__UART_DBG_RX_net_0[41]
+
+------------------------------------------------------
+Aliased 0 equations, 20 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Substituting virtuals - pass 1:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 0 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+topld:  No errors.
+
+CYPRESS_DIR    : D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp
+Warp Program   : D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -dcpsoc3 BLE_IMU.v -verilog
+</CYPRESSTAG>
+Warp synthesis phase: Elapsed time ==> 0s.390ms
+<CYPRESSTAG name="Fitter results...">
+<CYPRESSTAG name="Fitter startup details...">
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Wednesday, 12 July 2023 18:07:17
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj -d CY8C4248LQI-BL583 BLE_IMU.v -verilog
+</CYPRESSTAG>
+<CYPRESSTAG name="Design parsing">
+Design parsing phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Tech Mapping">
+<CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
+Assigning clock BLE_LFCLK to clock LFClk because it is a pass-through
+<CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
+    Fixed Function Clock 1: Automatic-assigning  clock 'UART_IMU_SCBCLK'. Signal=\UART_IMU:Net_847_ff1\
+    Fixed Function Clock 2: Automatic-assigning  clock 'UART_DBG_SCBCLK'. Signal=\UART_DBG:Net_847_ff2\
+<CYPRESSTAG name="UDB Clock/Enable Remapping Results">
+</CYPRESSTAG>
+</CYPRESSTAG>
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+<CYPRESSTAG name="Duplicate Macrocell detection">
+</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Duplicate Macrocell detection">
+</CYPRESSTAG>
+<CYPRESSTAG name="Design Equations" icon="FILE_RPT_EQUATION">
+
+------------------------------------------------------------
+Design Equations
+------------------------------------------------------------
+    <CYPRESSTAG name="Pin listing">
+
+    ------------------------------------------------------------
+    Pin listing
+    ------------------------------------------------------------
+
+    Pin : Name = UART_DBG_RX(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: HI_Z_DIGITAL
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => UART_DBG_RX(0)__PA ,
+            fb => Net_225 ,
+            pad => UART_DBG_RX(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = UART_DBG_TX(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => UART_DBG_TX(0)__PA ,
+            pin_input => Net_226 ,
+            pad => UART_DBG_TX(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = UART_IMU_RX(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: HI_Z_DIGITAL
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => UART_IMU_RX(0)__PA ,
+            fb => Net_60 ,
+            pad => UART_IMU_RX(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = UART_IMU_TX(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => UART_IMU_TX(0)__PA ,
+            pin_input => Net_61 ,
+            pad => UART_IMU_TX(0)_PAD );
+        Properties:
+        {
+        }
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Datapath listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Status register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="StatusI register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Sync listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Control register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Count7 listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="DRQ listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Interrupt listing">
+
+    ------------------------------------------------------------
+    Interrupt listing
+    ------------------------------------------------------------
+
+    interrupt: Name =\UART_IMU:SCB_IRQ\
+        PORT MAP (
+            interrupt => Net_45 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+
+    interrupt: Name =\BLE:bless_isr\
+        PORT MAP (
+            interrupt => \BLE:Net_15\ );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+    </CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Technology mapping summary" expanded>
+
+------------------------------------------------------------
+Technology mapping summary
+------------------------------------------------------------
+
+Resource Type                 : Used : Free :  Max :  % Used
+============================================================
+Digital Clocks                :    0 :    4 :    4 :  0.00 %
+Interrupts                    :    2 :   30 :   32 :  6.25 %
+IO                            :    8 :   30 :   38 : 21.05 %
+Segment LCD                   :    0 :    1 :    1 :  0.00 %
+CapSense                      :    0 :    1 :    1 :  0.00 %
+Die Temp                      :    0 :    1 :    1 :  0.00 %
+Serial Communication (SCB)    :    2 :    0 :    2 : 100.00 %
+BLE                           :    1 :    0 :    1 : 100.00 %
+DMA Channels                  :    0 :    8 :    8 :  0.00 %
+Timer/Counter/PWM             :    0 :    4 :    4 :  0.00 %
+UDB                           :      :      :      :        
+  Macrocells                  :    0 :   32 :   32 :  0.00 %
+  Unique P-terms              :    0 :   64 :   64 :  0.00 %
+  Total P-terms               :    0 :      :      :        
+  Datapath Cells              :    0 :    4 :    4 :  0.00 %
+  Status Cells                :    0 :    4 :    4 :  0.00 %
+  Control Cells               :    0 :    4 :    4 :  0.00 %
+Comparator/Opamp              :    0 :    4 :    4 :  0.00 %
+LP Comparator                 :    0 :    2 :    2 :  0.00 %
+SAR ADC                       :    0 :    1 :    1 :  0.00 %
+DAC                           :      :      :      :        
+  7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
+  8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
+</CYPRESSTAG>
+Technology Mapping: Elapsed time ==> 0s.031ms
+Tech Mapping phase: Elapsed time ==> 0s.062ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Placement">
+<CYPRESSTAG name="FFB & IO Pre Placement">
+<CYPRESSTAG name="Placement" icon="FILE_RPT_PLACEMENT">
+
+Cell                                : Block                              
+=========================================================================
+UART_DBG_RX(0)                      : [IOP=(1)][IoId=(4)]                
+UART_DBG_TX(0)                      : [IOP=(1)][IoId=(5)]                
+UART_IMU_RX(0)                      : [IOP=(0)][IoId=(0)]                
+UART_IMU_TX(0)                      : [IOP=(0)][IoId=(1)]                
+ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]           
+\UART_DBG:SCB\                      : SCB_[FFB(SCB,0)]                   
+\UART_IMU:SCB\                      : SCB_[FFB(SCB,1)]                   
+\BLE:cy_m0s8_ble\                   : BLE_[FFB(BLE,0)]                   
+
+</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Real Analog Placement">
+Elapsed time ==> 0.1066647s
+</CYPRESSTAG>
+Analog Placement phase: Elapsed time ==> 0s.235ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Routing">
+<CYPRESSTAG name="Analog Routing">
+Route success=True, Iterations=1 Elapsed=0.0007807 secs
+</CYPRESSTAG>
+Analog Routing phase: Elapsed time ==> 0s.015ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Code Generation">
+============ Analog Final Answer Routes ============
+Dump of CyAnalogRoutingResultsDB
+Map of net to items {
+}
+Map of item to net {
+}
+Mux Info {
+}
+Analog Code Generation phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Placement">
+<CYPRESSTAG name="Detailed placement messages">
+I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
+I2076: Total run-time: 0.3 sec.
+
+</CYPRESSTAG>
+<CYPRESSTAG name="PLD Packing">
+<CYPRESSTAG name="PLD Packing Summary">
+No PLDs were packed.
+</CYPRESSTAG>
+PLD Packing: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Partitioning">
+<CYPRESSTAG name="Initial Partitioning Summary">
+Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+<CYPRESSTAG name="Final Partitioning Summary">
+Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+Partitioning: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Final Placement Summary">
+
+------------------------------------------------------------
+Final Placement Summary
+------------------------------------------------------------
+
+       Resource Type :      Count : Avg Inputs : Avg Outputs
+    ========================================================
+                 UDB :          0 :       0.00 :       0.00
+<CYPRESSTAG name="Final Placement Details">
+<CYPRESSTAG name="Component Details">
+
+------------------------------------------------------------
+Component Placement Details
+------------------------------------------------------------
+UDB [UDB=(0,0)] is empty.
+UDB [UDB=(0,1)] is empty.
+UDB [UDB=(1,0)] is empty.
+UDB [UDB=(1,1)] is empty.
+Intr container @ [IntrContainer=(0)]: 
+  Intr@ [IntrContainer=(0)][IntrId=(10)] 
+    interrupt: Name =\UART_IMU:SCB_IRQ\
+        PORT MAP (
+            interrupt => Net_45 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(12)] 
+    interrupt: Name =\BLE:bless_isr\
+        PORT MAP (
+            interrupt => \BLE:Net_15\ );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+Drq container @ [DrqContainer=(0)]: empty
+Port 0 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = UART_IMU_RX(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => UART_IMU_RX(0)__PA ,
+        fb => Net_60 ,
+        pad => UART_IMU_RX(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = UART_IMU_TX(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => UART_IMU_TX(0)__PA ,
+        pin_input => Net_61 ,
+        pad => UART_IMU_TX(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 1 contains the following IO cells:
+[IoId=4]: 
+Pin : Name = UART_DBG_RX(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => UART_DBG_RX(0)__PA ,
+        fb => Net_225 ,
+        pad => UART_DBG_RX(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
+Pin : Name = UART_DBG_TX(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => UART_DBG_TX(0)__PA ,
+        pin_input => Net_226 ,
+        pad => UART_DBG_TX(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 2 contains the following IO cells:
+Port 3 contains the following IO cells:
+Port 4 contains the following IO cells:
+Port 5 contains the following IO cells:
+Port 6 contains the following IO cells:
+ARM group 0: empty
+Clock group 0: 
+    Clock Block @ F(Clock,0): 
+    m0s8clockblockcell: Name =ClockBlock
+        PORT MAP (
+            hfclk => ClockBlock_HFClk ,
+            imo => ClockBlock_IMO ,
+            ext => ClockBlock_ExtClk ,
+            sysclk => ClockBlock_SysClk ,
+            eco => ClockBlock_ECO ,
+            ilo => ClockBlock_ILO ,
+            lfclk => ClockBlock_LFClk ,
+            wco => ClockBlock_WCO ,
+            dsi_in_0 => ClockBlock_Routed1 ,
+            ff_div_1 => \UART_IMU:Net_847_ff1\ ,
+            ff_div_2 => \UART_DBG:Net_847_ff2\ );
+        Properties:
+        {
+        }
+LCD group 0: empty
+PICU group 0: empty
+LPCOMP group 0: empty
+SCB group 0: 
+    SCB Block @ F(SCB,0): 
+    m0s8scbcell: Name =\UART_DBG:SCB\
+        PORT MAP (
+            clock => \UART_DBG:Net_847_ff2\ ,
+            interrupt => Net_25 ,
+            uart_rx => Net_225 ,
+            uart_tx => Net_226 ,
+            uart_rts => \UART_DBG:rts_wire\ ,
+            mosi_m => \UART_DBG:mosi_m_wire\ ,
+            select_m_3 => \UART_DBG:select_m_wire_3\ ,
+            select_m_2 => \UART_DBG:select_m_wire_2\ ,
+            select_m_1 => \UART_DBG:select_m_wire_1\ ,
+            select_m_0 => \UART_DBG:select_m_wire_0\ ,
+            sclk_m => \UART_DBG:sclk_m_wire\ ,
+            miso_s => \UART_DBG:miso_s_wire\ ,
+            tr_tx_req => Net_28 ,
+            tr_rx_req => Net_27 );
+        Properties:
+        {
+            cy_registers = ""
+            scb_mode = 2
+        }
+    SCB Block @ F(SCB,1): 
+    m0s8scbcell: Name =\UART_IMU:SCB\
+        PORT MAP (
+            clock => \UART_IMU:Net_847_ff1\ ,
+            interrupt => Net_45 ,
+            uart_rx => Net_60 ,
+            uart_tx => Net_61 ,
+            uart_rts => \UART_IMU:rts_wire\ ,
+            mosi_m => \UART_IMU:mosi_m_wire\ ,
+            select_m_3 => \UART_IMU:select_m_wire_3\ ,
+            select_m_2 => \UART_IMU:select_m_wire_2\ ,
+            select_m_1 => \UART_IMU:select_m_wire_1\ ,
+            select_m_0 => \UART_IMU:select_m_wire_0\ ,
+            sclk_m => \UART_IMU:sclk_m_wire\ ,
+            miso_s => \UART_IMU:miso_s_wire\ ,
+            tr_tx_req => Net_48 ,
+            tr_rx_req => Net_47 );
+        Properties:
+        {
+            cy_registers = ""
+            scb_mode = 2
+        }
+CSD group 0: empty
+CSIDAC8 group 0: empty
+CSIDAC7 group 0: empty
+TCPWM group 0: empty
+OA group 0: empty
+TEMP group 0: empty
+SARADC group 0: empty
+CLK_GEN group 0: 
+    M0S8 Clock Gen Block @ F(CLK_GEN,0): 
+    m0s8clockgenblockcell: Name =ClockGenBlock
+        PORT MAP (
+             );
+        Properties:
+        {
+        }
+LPCOMPBLOCK group 0: empty
+PASSBLOCK group 0: empty
+BLE group 0: 
+    BLE Block @ F(BLE,0): 
+    p4blecell: Name =\BLE:cy_m0s8_ble\
+        PORT MAP (
+            interrupt => \BLE:Net_15\ ,
+            rfctrl_extpa_en => Net_68 );
+        Properties:
+        {
+            cy_registers = ""
+        }
+WCO group 0: empty
+SRSS group 0: empty
+CPUSS group 0: empty
+IOSS group 0: empty
+EXCO group 0: empty
+</CYPRESSTAG>
+<CYPRESSTAG name="Port Configuration Details">
+
+------------------------------------------------------------
+Port Configuration report
+------------------------------------------------------------
+     |     |       | Interrupt |                  |                | 
+Port | Pin | Fixed |      Type |       Drive Mode |           Name | Connections
+-----+-----+-------+-----------+------------------+----------------+------------
+   0 |   0 |     * |      NONE |     HI_Z_DIGITAL | UART_IMU_RX(0) | FB(Net_60)
+     |   1 |     * |      NONE |         CMOS_OUT | UART_IMU_TX(0) | In(Net_61)
+-----+-----+-------+-----------+------------------+----------------+------------
+   1 |   4 |     * |      NONE |     HI_Z_DIGITAL | UART_DBG_RX(0) | FB(Net_225)
+     |   5 |     * |      NONE |         CMOS_OUT | UART_DBG_TX(0) | In(Net_226)
+--------------------------------------------------------------------------------
+</CYPRESSTAG>
+</CYPRESSTAG>
+</CYPRESSTAG>
+Digital component placer commit/Report: Elapsed time ==> 0s.031ms
+Digital Placement phase: Elapsed time ==> 0s.437ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Routing">
+"D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc4/3/256dma/route_arch-rrg.cydata" --vh2-path "BLE_IMU_r.vh2" --pcf-path "BLE_IMU.pco" --des-name "BLE_IMU" --dsf-path "BLE_IMU.dsf" --sdc-path "BLE_IMU.sdc" --lib-path "BLE_IMU_r.lib"
+Routing successful.
+Digital Routing phase: Elapsed time ==> 0s.468ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Generation">
+Bitstream Generation phase: Elapsed time ==> 0s.156ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Verification">
+Bitstream Verification phase: Elapsed time ==> 0s.025ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Static timing analysis">
+Timing report is in BLE_IMU_timing.html.
+Static timing analysis phase: Elapsed time ==> 0s.130ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Data reporting">
+Data reporting phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Database update...">
+Design database save phase: Elapsed time ==> 0s.124ms
+</CYPRESSTAG>
+cydsfit: Elapsed time ==> 1s.671ms
+</CYPRESSTAG>
+Fitter phase: Elapsed time ==> 1s.671ms
+API generation phase: Elapsed time ==> 1s.358ms
+Dependency generation phase: Elapsed time ==> 0s.009ms
+Cleanup phase: Elapsed time ==> 0s.000ms

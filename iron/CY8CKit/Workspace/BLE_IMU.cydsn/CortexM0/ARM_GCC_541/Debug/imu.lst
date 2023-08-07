@@ -1,0 +1,4840 @@
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"imu.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_d2uiz
+  20              		.section	.text.EBIMU_send_command,"ax",%progbits
+  21              		.align	2
+  22              		.global	EBIMU_send_command
+  23              		.code	16
+  24              		.thumb_func
+  25              		.type	EBIMU_send_command, %function
+  26              	EBIMU_send_command:
+  27              	.LFB36:
+  28              		.file 1 "imu.c"
+   1:imu.c         **** #include <stdio.h>
+   2:imu.c         **** 
+   3:imu.c         **** #include "imu.h"
+   4:imu.c         **** 
+   5:imu.c         **** void EBIMU_send_command(uint8 cmd, double data)
+   6:imu.c         **** {
+  29              		.loc 1 6 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 64
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34 0000 30B5     		push	{r4, r5, lr}
+  35              		.cfi_def_cfa_offset 12
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  39 0002 91B0     		sub	sp, sp, #68
+  40              		.cfi_def_cfa_offset 80
+  41 0004 1D00     		movs	r5, r3
+   7:imu.c         ****     char str[64];
+   8:imu.c         ****     
+   9:imu.c         ****     switch (cmd)
+  42              		.loc 1 9 0
+  43 0006 3428     		cmp	r0, #52
+  44 0008 00D9     		bls	.LCB15
+  45 000a 2AE2     		b	.L2	@long jump
+  46              	.LCB15:
+  47 000c 8000     		lsls	r0, r0, #2
+  48              	.LVL1:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 2
+
+
+  49 000e DB4B     		ldr	r3, .L61
+  50 0010 1B58     		ldr	r3, [r3, r0]
+  51 0012 9F46     		mov	pc, r3
+  52              		.section	.rodata
+  53              		.align	2
+  54              	.L4:
+  55 0000 14000000 		.word	.L3
+  56 0004 28000000 		.word	.L5
+  57 0008 3C000000 		.word	.L6
+  58 000c 50000000 		.word	.L7
+  59 0010 64000000 		.word	.L8
+  60 0014 78000000 		.word	.L9
+  61 0018 8C000000 		.word	.L10
+  62 001c A0000000 		.word	.L11
+  63 0020 B4000000 		.word	.L12
+  64 0024 C8000000 		.word	.L13
+  65 0028 DC000000 		.word	.L14
+  66 002c F0000000 		.word	.L15
+  67 0030 04010000 		.word	.L16
+  68 0034 18010000 		.word	.L17
+  69 0038 2C010000 		.word	.L18
+  70 003c 40010000 		.word	.L19
+  71 0040 54010000 		.word	.L20
+  72 0044 68010000 		.word	.L21
+  73 0048 7C010000 		.word	.L22
+  74 004c 88010000 		.word	.L23
+  75 0050 9C010000 		.word	.L24
+  76 0054 A8010000 		.word	.L25
+  77 0058 BC010000 		.word	.L26
+  78 005c D0010000 		.word	.L27
+  79 0060 DC010000 		.word	.L28
+  80 0064 E8010000 		.word	.L29
+  81 0068 FC010000 		.word	.L30
+  82 006c 10020000 		.word	.L31
+  83 0070 1C020000 		.word	.L32
+  84 0074 30020000 		.word	.L33
+  85 0078 3C020000 		.word	.L34
+  86 007c 48020000 		.word	.L35
+  87 0080 5A020000 		.word	.L36
+  88 0084 68020000 		.word	.L37
+  89 0088 76020000 		.word	.L38
+  90 008c 84020000 		.word	.L39
+  91 0090 92020000 		.word	.L40
+  92 0094 A4020000 		.word	.L41
+  93 0098 AE020000 		.word	.L42
+  94 009c BC020000 		.word	.L43
+  95 00a0 CE020000 		.word	.L44
+  96 00a4 DC020000 		.word	.L45
+  97 00a8 EE020000 		.word	.L46
+  98 00ac 00030000 		.word	.L47
+  99 00b0 12030000 		.word	.L48
+ 100 00b4 1C030000 		.word	.L49
+ 101 00b8 2E030000 		.word	.L50
+ 102 00bc 3C030000 		.word	.L51
+ 103 00c0 50030000 		.word	.L52
+ 104 00c4 5A030000 		.word	.L53
+ 105 00c8 6C030000 		.word	.L54
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 3
+
+
+ 106 00cc 4C040000 		.word	.L55
+ 107 00d0 56040000 		.word	.L56
+ 108              		.section	.text.EBIMU_send_command
+ 109              	.L3:
+  10:imu.c         ****     {
+  11:imu.c         ****         case SET_BAUDRATE:
+  12:imu.c         ****             sprintf(str, "<sb%d>", (uint8)data);
+ 110              		.loc 1 12 0
+ 111 0014 1000     		movs	r0, r2
+ 112 0016 2900     		movs	r1, r5
+ 113 0018 FFF7FEFF 		bl	__aeabi_d2uiz
+ 114              	.LVL2:
+ 115 001c C2B2     		uxtb	r2, r0
+ 116 001e D849     		ldr	r1, .L61+4
+ 117 0020 6846     		mov	r0, sp
+ 118 0022 FFF7FEFF 		bl	sprintf
+ 119              	.LVL3:
+  13:imu.c         ****             break;
+ 120              		.loc 1 13 0
+ 121 0026 1CE2     		b	.L2
+ 122              	.LVL4:
+ 123              	.L5:
+  14:imu.c         ****         case SET_OUTPUT_RATE:
+  15:imu.c         ****             sprintf(str, "<sor%d>", (uint16)data);
+ 124              		.loc 1 15 0
+ 125 0028 1000     		movs	r0, r2
+ 126 002a 2900     		movs	r1, r5
+ 127 002c FFF7FEFF 		bl	__aeabi_d2uiz
+ 128              	.LVL5:
+ 129 0030 82B2     		uxth	r2, r0
+ 130 0032 D449     		ldr	r1, .L61+8
+ 131 0034 6846     		mov	r0, sp
+ 132 0036 FFF7FEFF 		bl	sprintf
+ 133              	.LVL6:
+  16:imu.c         ****             break;
+ 134              		.loc 1 16 0
+ 135 003a 12E2     		b	.L2
+ 136              	.LVL7:
+ 137              	.L6:
+  17:imu.c         ****         case SET_OUTPUT_CODE:
+  18:imu.c         ****             sprintf(str, "<soc%d>", (uint8)data);
+ 138              		.loc 1 18 0
+ 139 003c 1000     		movs	r0, r2
+ 140 003e 2900     		movs	r1, r5
+ 141 0040 FFF7FEFF 		bl	__aeabi_d2uiz
+ 142              	.LVL8:
+ 143 0044 C2B2     		uxtb	r2, r0
+ 144 0046 D049     		ldr	r1, .L61+12
+ 145 0048 6846     		mov	r0, sp
+ 146 004a FFF7FEFF 		bl	sprintf
+ 147              	.LVL9:
+  19:imu.c         ****             break;
+ 148              		.loc 1 19 0
+ 149 004e 08E2     		b	.L2
+ 150              	.LVL10:
+ 151              	.L7:
+  20:imu.c         ****         case SET_OUTPUT_FORMAT:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 4
+
+
+  21:imu.c         ****             sprintf(str, "<sof%d>", (uint8)data);
+ 152              		.loc 1 21 0
+ 153 0050 1000     		movs	r0, r2
+ 154 0052 2900     		movs	r1, r5
+ 155 0054 FFF7FEFF 		bl	__aeabi_d2uiz
+ 156              	.LVL11:
+ 157 0058 C2B2     		uxtb	r2, r0
+ 158 005a CC49     		ldr	r1, .L61+16
+ 159 005c 6846     		mov	r0, sp
+ 160 005e FFF7FEFF 		bl	sprintf
+ 161              	.LVL12:
+  22:imu.c         ****             break;
+ 162              		.loc 1 22 0
+ 163 0062 FEE1     		b	.L2
+ 164              	.LVL13:
+ 165              	.L8:
+  23:imu.c         ****         case SET_OUTPUT_GYRO:
+  24:imu.c         ****             sprintf(str, "<sog%d>", (uint8)data);
+ 166              		.loc 1 24 0
+ 167 0064 1000     		movs	r0, r2
+ 168 0066 2900     		movs	r1, r5
+ 169 0068 FFF7FEFF 		bl	__aeabi_d2uiz
+ 170              	.LVL14:
+ 171 006c C2B2     		uxtb	r2, r0
+ 172 006e C849     		ldr	r1, .L61+20
+ 173 0070 6846     		mov	r0, sp
+ 174 0072 FFF7FEFF 		bl	sprintf
+ 175              	.LVL15:
+  25:imu.c         ****             break;
+ 176              		.loc 1 25 0
+ 177 0076 F4E1     		b	.L2
+ 178              	.LVL16:
+ 179              	.L9:
+  26:imu.c         ****         case SET_OUTPUT_ACCELERO:
+  27:imu.c         ****             sprintf(str, "<soa%d>", (uint8)data);
+ 180              		.loc 1 27 0
+ 181 0078 1000     		movs	r0, r2
+ 182 007a 2900     		movs	r1, r5
+ 183 007c FFF7FEFF 		bl	__aeabi_d2uiz
+ 184              	.LVL17:
+ 185 0080 C2B2     		uxtb	r2, r0
+ 186 0082 C449     		ldr	r1, .L61+24
+ 187 0084 6846     		mov	r0, sp
+ 188 0086 FFF7FEFF 		bl	sprintf
+ 189              	.LVL18:
+  28:imu.c         ****             break;
+ 190              		.loc 1 28 0
+ 191 008a EAE1     		b	.L2
+ 192              	.LVL19:
+ 193              	.L10:
+  29:imu.c         ****         case SET_OUTPUT_MAGNETO:
+  30:imu.c         ****             sprintf(str, "<som%d>", (uint8)data);
+ 194              		.loc 1 30 0
+ 195 008c 1000     		movs	r0, r2
+ 196 008e 2900     		movs	r1, r5
+ 197 0090 FFF7FEFF 		bl	__aeabi_d2uiz
+ 198              	.LVL20:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 5
+
+
+ 199 0094 C2B2     		uxtb	r2, r0
+ 200 0096 C049     		ldr	r1, .L61+28
+ 201 0098 6846     		mov	r0, sp
+ 202 009a FFF7FEFF 		bl	sprintf
+ 203              	.LVL21:
+  31:imu.c         ****             break;
+ 204              		.loc 1 31 0
+ 205 009e E0E1     		b	.L2
+ 206              	.LVL22:
+ 207              	.L11:
+  32:imu.c         ****         case SET_OUTPUT_DISTANCE:
+  33:imu.c         ****             sprintf(str, "<sod%d>", (uint8)data);
+ 208              		.loc 1 33 0
+ 209 00a0 1000     		movs	r0, r2
+ 210 00a2 2900     		movs	r1, r5
+ 211 00a4 FFF7FEFF 		bl	__aeabi_d2uiz
+ 212              	.LVL23:
+ 213 00a8 C2B2     		uxtb	r2, r0
+ 214 00aa BC49     		ldr	r1, .L61+32
+ 215 00ac 6846     		mov	r0, sp
+ 216 00ae FFF7FEFF 		bl	sprintf
+ 217              	.LVL24:
+  34:imu.c         ****             break;
+ 218              		.loc 1 34 0
+ 219 00b2 D6E1     		b	.L2
+ 220              	.LVL25:
+ 221              	.L12:
+  35:imu.c         ****         case SET_OUTPUT_TEMPERATURE:
+  36:imu.c         ****             sprintf(str, "<sot%d>", (uint8)data);
+ 222              		.loc 1 36 0
+ 223 00b4 1000     		movs	r0, r2
+ 224 00b6 2900     		movs	r1, r5
+ 225 00b8 FFF7FEFF 		bl	__aeabi_d2uiz
+ 226              	.LVL26:
+ 227 00bc C2B2     		uxtb	r2, r0
+ 228 00be B849     		ldr	r1, .L61+36
+ 229 00c0 6846     		mov	r0, sp
+ 230 00c2 FFF7FEFF 		bl	sprintf
+ 231              	.LVL27:
+  37:imu.c         ****             break;
+ 232              		.loc 1 37 0
+ 233 00c6 CCE1     		b	.L2
+ 234              	.LVL28:
+ 235              	.L13:
+  38:imu.c         ****         case SET_OUTPUT_TIMESTAMP:
+  39:imu.c         ****             sprintf(str, "<sots%d>", (uint8)data);
+ 236              		.loc 1 39 0
+ 237 00c8 1000     		movs	r0, r2
+ 238 00ca 2900     		movs	r1, r5
+ 239 00cc FFF7FEFF 		bl	__aeabi_d2uiz
+ 240              	.LVL29:
+ 241 00d0 C2B2     		uxtb	r2, r0
+ 242 00d2 B449     		ldr	r1, .L61+40
+ 243 00d4 6846     		mov	r0, sp
+ 244 00d6 FFF7FEFF 		bl	sprintf
+ 245              	.LVL30:
+  40:imu.c         ****             break;
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 6
+
+
+ 246              		.loc 1 40 0
+ 247 00da C2E1     		b	.L2
+ 248              	.LVL31:
+ 249              	.L14:
+  41:imu.c         ****         case SET_ENABLE_MAGNETO:
+  42:imu.c         ****             sprintf(str, "<sem%d>", (uint8)data);
+ 250              		.loc 1 42 0
+ 251 00dc 1000     		movs	r0, r2
+ 252 00de 2900     		movs	r1, r5
+ 253 00e0 FFF7FEFF 		bl	__aeabi_d2uiz
+ 254              	.LVL32:
+ 255 00e4 C2B2     		uxtb	r2, r0
+ 256 00e6 B049     		ldr	r1, .L61+44
+ 257 00e8 6846     		mov	r0, sp
+ 258 00ea FFF7FEFF 		bl	sprintf
+ 259              	.LVL33:
+  43:imu.c         ****             break;
+ 260              		.loc 1 43 0
+ 261 00ee B8E1     		b	.L2
+ 262              	.LVL34:
+ 263              	.L15:
+  44:imu.c         ****         case SET_SENS_GYRO:
+  45:imu.c         ****             sprintf(str, "<ssg%d>", (uint8)data);
+ 264              		.loc 1 45 0
+ 265 00f0 1000     		movs	r0, r2
+ 266 00f2 2900     		movs	r1, r5
+ 267 00f4 FFF7FEFF 		bl	__aeabi_d2uiz
+ 268              	.LVL35:
+ 269 00f8 C2B2     		uxtb	r2, r0
+ 270 00fa AC49     		ldr	r1, .L61+48
+ 271 00fc 6846     		mov	r0, sp
+ 272 00fe FFF7FEFF 		bl	sprintf
+ 273              	.LVL36:
+  46:imu.c         ****             break;
+ 274              		.loc 1 46 0
+ 275 0102 AEE1     		b	.L2
+ 276              	.LVL37:
+ 277              	.L16:
+  47:imu.c         ****         case SET_SENS_ACCELERO:
+  48:imu.c         ****             sprintf(str, "<ssa%d>", (uint8)data);
+ 278              		.loc 1 48 0
+ 279 0104 1000     		movs	r0, r2
+ 280 0106 2900     		movs	r1, r5
+ 281 0108 FFF7FEFF 		bl	__aeabi_d2uiz
+ 282              	.LVL38:
+ 283 010c C2B2     		uxtb	r2, r0
+ 284 010e A849     		ldr	r1, .L61+52
+ 285 0110 6846     		mov	r0, sp
+ 286 0112 FFF7FEFF 		bl	sprintf
+ 287              	.LVL39:
+  49:imu.c         ****             break;
+ 288              		.loc 1 49 0
+ 289 0116 A4E1     		b	.L2
+ 290              	.LVL40:
+ 291              	.L17:
+  50:imu.c         ****         case SET_LPF_GYRO:
+  51:imu.c         ****             sprintf(str, "<lpfg%d>", (uint8)data);
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 7
+
+
+ 292              		.loc 1 51 0
+ 293 0118 1000     		movs	r0, r2
+ 294 011a 2900     		movs	r1, r5
+ 295 011c FFF7FEFF 		bl	__aeabi_d2uiz
+ 296              	.LVL41:
+ 297 0120 C2B2     		uxtb	r2, r0
+ 298 0122 A449     		ldr	r1, .L61+56
+ 299 0124 6846     		mov	r0, sp
+ 300 0126 FFF7FEFF 		bl	sprintf
+ 301              	.LVL42:
+  52:imu.c         ****             break;
+ 302              		.loc 1 52 0
+ 303 012a 9AE1     		b	.L2
+ 304              	.LVL43:
+ 305              	.L18:
+  53:imu.c         ****         case SET_LPF_ACCELERO:
+  54:imu.c         ****             sprintf(str, "<lpfa%d>", (uint8)data);
+ 306              		.loc 1 54 0
+ 307 012c 1000     		movs	r0, r2
+ 308 012e 2900     		movs	r1, r5
+ 309 0130 FFF7FEFF 		bl	__aeabi_d2uiz
+ 310              	.LVL44:
+ 311 0134 C2B2     		uxtb	r2, r0
+ 312 0136 A049     		ldr	r1, .L61+60
+ 313 0138 6846     		mov	r0, sp
+ 314 013a FFF7FEFF 		bl	sprintf
+ 315              	.LVL45:
+  55:imu.c         ****             break;
+ 316              		.loc 1 55 0
+ 317 013e 90E1     		b	.L2
+ 318              	.LVL46:
+ 319              	.L19:
+  56:imu.c         ****         case SET_FILTER_FACTOR:
+  57:imu.c         ****             sprintf(str, "<sff%d>", (uint8)data);
+ 320              		.loc 1 57 0
+ 321 0140 1000     		movs	r0, r2
+ 322 0142 2900     		movs	r1, r5
+ 323 0144 FFF7FEFF 		bl	__aeabi_d2uiz
+ 324              	.LVL47:
+ 325 0148 C2B2     		uxtb	r2, r0
+ 326 014a 9C49     		ldr	r1, .L61+64
+ 327 014c 6846     		mov	r0, sp
+ 328 014e FFF7FEFF 		bl	sprintf
+ 329              	.LVL48:
+  58:imu.c         ****             break;
+ 330              		.loc 1 58 0
+ 331 0152 86E1     		b	.L2
+ 332              	.LVL49:
+ 333              	.L20:
+  59:imu.c         ****         case SET_FILTER_FACTOR_ACCELERO:
+  60:imu.c         ****             sprintf(str, "<sffa%d>", (uint8)data);
+ 334              		.loc 1 60 0
+ 335 0154 1000     		movs	r0, r2
+ 336 0156 2900     		movs	r1, r5
+ 337 0158 FFF7FEFF 		bl	__aeabi_d2uiz
+ 338              	.LVL50:
+ 339 015c C2B2     		uxtb	r2, r0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 8
+
+
+ 340 015e 9849     		ldr	r1, .L61+68
+ 341 0160 6846     		mov	r0, sp
+ 342 0162 FFF7FEFF 		bl	sprintf
+ 343              	.LVL51:
+  61:imu.c         ****             break;
+ 344              		.loc 1 61 0
+ 345 0166 7CE1     		b	.L2
+ 346              	.LVL52:
+ 347              	.L21:
+  62:imu.c         ****         case SET_FILTER_FACTOR_MAGNETO:
+  63:imu.c         ****             sprintf(str, "<sffm%d>", (uint8)data);
+ 348              		.loc 1 63 0
+ 349 0168 1000     		movs	r0, r2
+ 350 016a 2900     		movs	r1, r5
+ 351 016c FFF7FEFF 		bl	__aeabi_d2uiz
+ 352              	.LVL53:
+ 353 0170 C2B2     		uxtb	r2, r0
+ 354 0172 9449     		ldr	r1, .L61+72
+ 355 0174 6846     		mov	r0, sp
+ 356 0176 FFF7FEFF 		bl	sprintf
+ 357              	.LVL54:
+  64:imu.c         ****             break;
+ 358              		.loc 1 64 0
+ 359 017a 72E1     		b	.L2
+ 360              	.LVL55:
+ 361              	.L22:
+  65:imu.c         ****         case RAA_ALGORITHM_PARAM_LEVEL:
+  66:imu.c         ****             sprintf(str, "<raa_l%.2lf>", data);
+ 362              		.loc 1 66 0
+ 363 017c 2B00     		movs	r3, r5
+ 364 017e 9249     		ldr	r1, .L61+76
+ 365 0180 6846     		mov	r0, sp
+ 366 0182 FFF7FEFF 		bl	sprintf
+ 367              	.LVL56:
+  67:imu.c         ****             break;
+ 368              		.loc 1 67 0
+ 369 0186 6CE1     		b	.L2
+ 370              	.LVL57:
+ 371              	.L23:
+  68:imu.c         ****         case RAA_ALGORITHM_PARAM_TIMEOUT:
+  69:imu.c         ****             sprintf(str, "<raa_t%ld>", (uint32)data);
+ 372              		.loc 1 69 0
+ 373 0188 1000     		movs	r0, r2
+ 374 018a 2900     		movs	r1, r5
+ 375 018c FFF7FEFF 		bl	__aeabi_d2uiz
+ 376              	.LVL58:
+ 377 0190 0200     		movs	r2, r0
+ 378 0192 8E49     		ldr	r1, .L61+80
+ 379 0194 6846     		mov	r0, sp
+ 380 0196 FFF7FEFF 		bl	sprintf
+ 381              	.LVL59:
+  70:imu.c         ****             break;
+ 382              		.loc 1 70 0
+ 383 019a 62E1     		b	.L2
+ 384              	.LVL60:
+ 385              	.L24:
+  71:imu.c         ****         case RHA_ALGORITHM_PARAM_LEVEL:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 9
+
+
+  72:imu.c         ****             sprintf(str, "<rha_l%.2f>", data);
+ 386              		.loc 1 72 0
+ 387 019c 2B00     		movs	r3, r5
+ 388 019e 8C49     		ldr	r1, .L61+84
+ 389 01a0 6846     		mov	r0, sp
+ 390 01a2 FFF7FEFF 		bl	sprintf
+ 391              	.LVL61:
+  73:imu.c         ****             break;
+ 392              		.loc 1 73 0
+ 393 01a6 5CE1     		b	.L2
+ 394              	.LVL62:
+ 395              	.L25:
+  74:imu.c         ****         case RHA_ALGORITHM_PARAM_TIMEOUT:
+  75:imu.c         ****             sprintf(str, "<rha_t%ld>", (uint32)data);
+ 396              		.loc 1 75 0
+ 397 01a8 1000     		movs	r0, r2
+ 398 01aa 2900     		movs	r1, r5
+ 399 01ac FFF7FEFF 		bl	__aeabi_d2uiz
+ 400              	.LVL63:
+ 401 01b0 0200     		movs	r2, r0
+ 402 01b2 8849     		ldr	r1, .L61+88
+ 403 01b4 6846     		mov	r0, sp
+ 404 01b6 FFF7FEFF 		bl	sprintf
+ 405              	.LVL64:
+  76:imu.c         ****             break;
+ 406              		.loc 1 76 0
+ 407 01ba 52E1     		b	.L2
+ 408              	.LVL65:
+ 409              	.L26:
+  77:imu.c         ****         case AG_CALIBER_PARAM_ENABLE:
+  78:imu.c         ****             sprintf(str, "<agc_e%d>", (uint8)data);
+ 410              		.loc 1 78 0
+ 411 01bc 1000     		movs	r0, r2
+ 412 01be 2900     		movs	r1, r5
+ 413 01c0 FFF7FEFF 		bl	__aeabi_d2uiz
+ 414              	.LVL66:
+ 415 01c4 C2B2     		uxtb	r2, r0
+ 416 01c6 8449     		ldr	r1, .L61+92
+ 417 01c8 6846     		mov	r0, sp
+ 418 01ca FFF7FEFF 		bl	sprintf
+ 419              	.LVL67:
+  79:imu.c         ****             break;
+ 420              		.loc 1 79 0
+ 421 01ce 48E1     		b	.L2
+ 422              	.LVL68:
+ 423              	.L27:
+  80:imu.c         ****         case AG_CALIBER_PARAM_THRESHOLD:
+  81:imu.c         ****             sprintf(str, "<agc_t%.2f>", (double)data);
+ 424              		.loc 1 81 0
+ 425 01d0 2B00     		movs	r3, r5
+ 426 01d2 8249     		ldr	r1, .L61+96
+ 427 01d4 6846     		mov	r0, sp
+ 428 01d6 FFF7FEFF 		bl	sprintf
+ 429              	.LVL69:
+  82:imu.c         ****             break;
+ 430              		.loc 1 82 0
+ 431 01da 42E1     		b	.L2
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 10
+
+
+ 432              	.LVL70:
+ 433              	.L28:
+  83:imu.c         ****         case AG_CALIBER_PARAM_DRIFT:
+  84:imu.c         ****             sprintf(str, "<agc_d%.2f>", (double)data);
+ 434              		.loc 1 84 0
+ 435 01dc 2B00     		movs	r3, r5
+ 436 01de 8049     		ldr	r1, .L61+100
+ 437 01e0 6846     		mov	r0, sp
+ 438 01e2 FFF7FEFF 		bl	sprintf
+ 439              	.LVL71:
+  85:imu.c         ****             break;
+ 440              		.loc 1 85 0
+ 441 01e6 3CE1     		b	.L2
+ 442              	.LVL72:
+ 443              	.L29:
+  86:imu.c         ****         case AV_CANCEL_PARAM_GYRO_ENABLE:
+  87:imu.c         ****             sprintf(str, "<avcg_e%d>", (uint8)data);
+ 444              		.loc 1 87 0
+ 445 01e8 1000     		movs	r0, r2
+ 446 01ea 2900     		movs	r1, r5
+ 447 01ec FFF7FEFF 		bl	__aeabi_d2uiz
+ 448              	.LVL73:
+ 449 01f0 C2B2     		uxtb	r2, r0
+ 450 01f2 7C49     		ldr	r1, .L61+104
+ 451 01f4 6846     		mov	r0, sp
+ 452 01f6 FFF7FEFF 		bl	sprintf
+ 453              	.LVL74:
+  88:imu.c         ****             break;
+ 454              		.loc 1 88 0
+ 455 01fa 32E1     		b	.L2
+ 456              	.LVL75:
+ 457              	.L30:
+  89:imu.c         ****         case AV_CANCEL_PARAM_ACCELERO_ENABLE:
+  90:imu.c         ****             sprintf(str, "<avca_e%d>", (uint8)data);
+ 458              		.loc 1 90 0
+ 459 01fc 1000     		movs	r0, r2
+ 460 01fe 2900     		movs	r1, r5
+ 461 0200 FFF7FEFF 		bl	__aeabi_d2uiz
+ 462              	.LVL76:
+ 463 0204 C2B2     		uxtb	r2, r0
+ 464 0206 7849     		ldr	r1, .L61+108
+ 465 0208 6846     		mov	r0, sp
+ 466 020a FFF7FEFF 		bl	sprintf
+ 467              	.LVL77:
+  91:imu.c         ****             break;
+ 468              		.loc 1 91 0
+ 469 020e 28E1     		b	.L2
+ 470              	.LVL78:
+ 471              	.L31:
+  92:imu.c         ****         case POS_FILTER_PARAM_SL:
+  93:imu.c         ****             sprintf(str, "<posf_sl%.4f>", (double)data);
+ 472              		.loc 1 93 0
+ 473 0210 2B00     		movs	r3, r5
+ 474 0212 7649     		ldr	r1, .L61+112
+ 475 0214 6846     		mov	r0, sp
+ 476 0216 FFF7FEFF 		bl	sprintf
+ 477              	.LVL79:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 11
+
+
+  94:imu.c         ****             break;
+ 478              		.loc 1 94 0
+ 479 021a 22E1     		b	.L2
+ 480              	.LVL80:
+ 481              	.L32:
+  95:imu.c         ****         case POS_FILTER_PARAM_ST:
+  96:imu.c         ****             sprintf(str, "<posf_st%d>", (uint16)data);
+ 482              		.loc 1 96 0
+ 483 021c 1000     		movs	r0, r2
+ 484 021e 2900     		movs	r1, r5
+ 485 0220 FFF7FEFF 		bl	__aeabi_d2uiz
+ 486              	.LVL81:
+ 487 0224 82B2     		uxth	r2, r0
+ 488 0226 7249     		ldr	r1, .L61+116
+ 489 0228 6846     		mov	r0, sp
+ 490 022a FFF7FEFF 		bl	sprintf
+ 491              	.LVL82:
+  97:imu.c         ****             break;
+ 492              		.loc 1 97 0
+ 493 022e 18E1     		b	.L2
+ 494              	.LVL83:
+ 495              	.L33:
+  98:imu.c         ****         case POS_FILTER_PARAM_SR:
+  99:imu.c         ****             sprintf(str, "<posf_sr%.4f>", (double)data);
+ 496              		.loc 1 99 0
+ 497 0230 2B00     		movs	r3, r5
+ 498 0232 7049     		ldr	r1, .L61+120
+ 499 0234 6846     		mov	r0, sp
+ 500 0236 FFF7FEFF 		bl	sprintf
+ 501              	.LVL84:
+ 100:imu.c         ****             break;
+ 502              		.loc 1 100 0
+ 503 023a 12E1     		b	.L2
+ 504              	.LVL85:
+ 505              	.L34:
+ 101:imu.c         ****         case POS_FILTER_PARAM_AR:
+ 102:imu.c         ****             sprintf(str, "<posf_ar%.4f>", (double)data);
+ 506              		.loc 1 102 0
+ 507 023c 2B00     		movs	r3, r5
+ 508 023e 6E49     		ldr	r1, .L61+124
+ 509 0240 6846     		mov	r0, sp
+ 510 0242 FFF7FEFF 		bl	sprintf
+ 511              	.LVL86:
+ 103:imu.c         ****             break;
+ 512              		.loc 1 103 0
+ 513 0246 0CE1     		b	.L2
+ 514              	.LVL87:
+ 515              	.L35:
+ 104:imu.c         ****         case POS_ZERO:
+ 105:imu.c         ****             sprintf(str, "<posz>");
+ 516              		.loc 1 105 0
+ 517 0248 6C4B     		ldr	r3, .L61+128
+ 518 024a 1A68     		ldr	r2, [r3]
+ 519              	.LVL88:
+ 520 024c 0092     		str	r2, [sp]
+ 521 024e 9A88     		ldrh	r2, [r3, #4]
+ 522 0250 6946     		mov	r1, sp
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 12
+
+
+ 523 0252 8A80     		strh	r2, [r1, #4]
+ 524 0254 9B79     		ldrb	r3, [r3, #6]
+ 525 0256 8B71     		strb	r3, [r1, #6]
+ 106:imu.c         ****             break;
+ 526              		.loc 1 106 0
+ 527 0258 03E1     		b	.L2
+ 528              	.LVL89:
+ 529              	.L36:
+ 107:imu.c         ****         // CALIBRATION은 물리적으로 조절하고, 조절이 끝나면 '>'를 입력해주어�
+ 108:imu.c         ****         // 이건 추후에 구현 예정
+ 109:imu.c         ****         case CALIBRATION_GYRO:
+ 110:imu.c         ****             sprintf(str, "<cg>");
+ 530              		.loc 1 110 0
+ 531 025a 694B     		ldr	r3, .L61+132
+ 532 025c 1A68     		ldr	r2, [r3]
+ 533              	.LVL90:
+ 534 025e 0092     		str	r2, [sp]
+ 535 0260 1B79     		ldrb	r3, [r3, #4]
+ 536 0262 6A46     		mov	r2, sp
+ 537 0264 1371     		strb	r3, [r2, #4]
+ 111:imu.c         ****             break;
+ 538              		.loc 1 111 0
+ 539 0266 FCE0     		b	.L2
+ 540              	.LVL91:
+ 541              	.L37:
+ 112:imu.c         ****         case CALIBRATION_ACCELERO_FREE:
+ 113:imu.c         ****             sprintf(str, "<caf>");
+ 542              		.loc 1 113 0
+ 543 0268 664B     		ldr	r3, .L61+136
+ 544 026a 1A68     		ldr	r2, [r3]
+ 545              	.LVL92:
+ 546 026c 0092     		str	r2, [sp]
+ 547 026e 9B88     		ldrh	r3, [r3, #4]
+ 548 0270 6A46     		mov	r2, sp
+ 549 0272 9380     		strh	r3, [r2, #4]
+ 114:imu.c         ****             break;
+ 550              		.loc 1 114 0
+ 551 0274 F5E0     		b	.L2
+ 552              	.LVL93:
+ 553              	.L38:
+ 115:imu.c         ****         case CALIBRATION_ACCELERO_SIMPLE:
+ 116:imu.c         ****             sprintf(str, "<cas>");
+ 554              		.loc 1 116 0
+ 555 0276 644B     		ldr	r3, .L61+140
+ 556 0278 1A68     		ldr	r2, [r3]
+ 557              	.LVL94:
+ 558 027a 0092     		str	r2, [sp]
+ 559 027c 9B88     		ldrh	r3, [r3, #4]
+ 560 027e 6A46     		mov	r2, sp
+ 561 0280 9380     		strh	r3, [r2, #4]
+ 117:imu.c         ****             break;
+ 562              		.loc 1 117 0
+ 563 0282 EEE0     		b	.L2
+ 564              	.LVL95:
+ 565              	.L39:
+ 118:imu.c         ****         case CALIBRATION_MAGNETO_FREE:
+ 119:imu.c         ****             sprintf(str, "<cmf>");
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 13
+
+
+ 566              		.loc 1 119 0
+ 567 0284 614B     		ldr	r3, .L61+144
+ 568 0286 1A68     		ldr	r2, [r3]
+ 569              	.LVL96:
+ 570 0288 0092     		str	r2, [sp]
+ 571 028a 9B88     		ldrh	r3, [r3, #4]
+ 572 028c 6A46     		mov	r2, sp
+ 573 028e 9380     		strh	r3, [r2, #4]
+ 120:imu.c         ****             break;
+ 574              		.loc 1 120 0
+ 575 0290 E7E0     		b	.L2
+ 576              	.LVL97:
+ 577              	.L40:
+ 121:imu.c         ****         case CALIBRATION_MAGNETO_XY:
+ 122:imu.c         ****             sprintf(str, "<cnxy>");
+ 578              		.loc 1 122 0
+ 579 0292 5F4B     		ldr	r3, .L61+148
+ 580 0294 1A68     		ldr	r2, [r3]
+ 581              	.LVL98:
+ 582 0296 0092     		str	r2, [sp]
+ 583 0298 9A88     		ldrh	r2, [r3, #4]
+ 584 029a 6946     		mov	r1, sp
+ 585 029c 8A80     		strh	r2, [r1, #4]
+ 586 029e 9B79     		ldrb	r3, [r3, #6]
+ 587 02a0 8B71     		strb	r3, [r1, #6]
+ 123:imu.c         ****             break;
+ 588              		.loc 1 123 0
+ 589 02a2 DEE0     		b	.L2
+ 590              	.LVL99:
+ 591              	.L41:
+ 124:imu.c         ****         case CALIBRATION_MAGNETO_PXY:
+ 125:imu.c         ****             sprintf(str, "<+cnxy>");
+ 592              		.loc 1 125 0
+ 593 02a4 6A46     		mov	r2, sp
+ 594              	.LVL100:
+ 595 02a6 5B4B     		ldr	r3, .L61+152
+ 596 02a8 03CB     		ldmia	r3!, {r0, r1}
+ 597 02aa 03C2     		stmia	r2!, {r0, r1}
+ 126:imu.c         ****             break;
+ 598              		.loc 1 126 0
+ 599 02ac D9E0     		b	.L2
+ 600              	.LVL101:
+ 601              	.L42:
+ 127:imu.c         ****         case CALIBRATION_MAGNETO_Z:
+ 128:imu.c         ****             sprintf(str, "<cnz>");
+ 602              		.loc 1 128 0
+ 603 02ae 5A4B     		ldr	r3, .L61+156
+ 604 02b0 1A68     		ldr	r2, [r3]
+ 605              	.LVL102:
+ 606 02b2 0092     		str	r2, [sp]
+ 607 02b4 9B88     		ldrh	r3, [r3, #4]
+ 608 02b6 6A46     		mov	r2, sp
+ 609 02b8 9380     		strh	r3, [r2, #4]
+ 129:imu.c         ****             break;
+ 610              		.loc 1 129 0
+ 611 02ba D2E0     		b	.L2
+ 612              	.LVL103:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 14
+
+
+ 613              	.L43:
+ 130:imu.c         ****         case CALIBRATION_MAGNETO_PZ:
+ 131:imu.c         ****             sprintf(str, "<+cnz>");
+ 614              		.loc 1 131 0
+ 615 02bc 574B     		ldr	r3, .L61+160
+ 616 02be 1A68     		ldr	r2, [r3]
+ 617              	.LVL104:
+ 618 02c0 0092     		str	r2, [sp]
+ 619 02c2 9A88     		ldrh	r2, [r3, #4]
+ 620 02c4 6946     		mov	r1, sp
+ 621 02c6 8A80     		strh	r2, [r1, #4]
+ 622 02c8 9B79     		ldrb	r3, [r3, #6]
+ 623 02ca 8B71     		strb	r3, [r1, #6]
+ 132:imu.c         ****             break;
+ 624              		.loc 1 132 0
+ 625 02cc C9E0     		b	.L2
+ 626              	.LVL105:
+ 627              	.L44:
+ 133:imu.c         ****         case SET_MOTION_OFFSET:
+ 134:imu.c         ****             sprintf(str, "<cmo>");
+ 628              		.loc 1 134 0
+ 629 02ce 544B     		ldr	r3, .L61+164
+ 630 02d0 1A68     		ldr	r2, [r3]
+ 631              	.LVL106:
+ 632 02d2 0092     		str	r2, [sp]
+ 633 02d4 9B88     		ldrh	r3, [r3, #4]
+ 634 02d6 6A46     		mov	r2, sp
+ 635 02d8 9380     		strh	r3, [r2, #4]
+ 135:imu.c         ****             break;
+ 636              		.loc 1 135 0
+ 637 02da C2E0     		b	.L2
+ 638              	.LVL107:
+ 639              	.L45:
+ 136:imu.c         ****         case SET_MOTION_OFFSET_X:
+ 137:imu.c         ****             sprintf(str, "<cmox>");
+ 640              		.loc 1 137 0
+ 641 02dc 514B     		ldr	r3, .L61+168
+ 642 02de 1A68     		ldr	r2, [r3]
+ 643              	.LVL108:
+ 644 02e0 0092     		str	r2, [sp]
+ 645 02e2 9A88     		ldrh	r2, [r3, #4]
+ 646 02e4 6946     		mov	r1, sp
+ 647 02e6 8A80     		strh	r2, [r1, #4]
+ 648 02e8 9B79     		ldrb	r3, [r3, #6]
+ 649 02ea 8B71     		strb	r3, [r1, #6]
+ 138:imu.c         ****             break;
+ 650              		.loc 1 138 0
+ 651 02ec B9E0     		b	.L2
+ 652              	.LVL109:
+ 653              	.L46:
+ 139:imu.c         ****         case SET_MOTION_OFFSET_Y:
+ 140:imu.c         ****             sprintf(str, "<cmoy>");
+ 654              		.loc 1 140 0
+ 655 02ee 4E4B     		ldr	r3, .L61+172
+ 656 02f0 1A68     		ldr	r2, [r3]
+ 657              	.LVL110:
+ 658 02f2 0092     		str	r2, [sp]
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 15
+
+
+ 659 02f4 9A88     		ldrh	r2, [r3, #4]
+ 660 02f6 6946     		mov	r1, sp
+ 661 02f8 8A80     		strh	r2, [r1, #4]
+ 662 02fa 9B79     		ldrb	r3, [r3, #6]
+ 663 02fc 8B71     		strb	r3, [r1, #6]
+ 141:imu.c         ****             break;
+ 664              		.loc 1 141 0
+ 665 02fe B0E0     		b	.L2
+ 666              	.LVL111:
+ 667              	.L47:
+ 142:imu.c         ****         case SET_MOTION_OFFSET_Z:
+ 143:imu.c         ****             sprintf(str, "<cmoz>");
+ 668              		.loc 1 143 0
+ 669 0300 4A4B     		ldr	r3, .L61+176
+ 670 0302 1A68     		ldr	r2, [r3]
+ 671              	.LVL112:
+ 672 0304 0092     		str	r2, [sp]
+ 673 0306 9A88     		ldrh	r2, [r3, #4]
+ 674 0308 6946     		mov	r1, sp
+ 675 030a 8A80     		strh	r2, [r1, #4]
+ 676 030c 9B79     		ldrb	r3, [r3, #6]
+ 677 030e 8B71     		strb	r3, [r1, #6]
+ 144:imu.c         ****             break;
+ 678              		.loc 1 144 0
+ 679 0310 A7E0     		b	.L2
+ 680              	.LVL113:
+ 681              	.L48:
+ 145:imu.c         ****         case SET_MOTION_OFFSET_XY:
+ 146:imu.c         ****             sprintf(str, "<cmoxy>");
+ 682              		.loc 1 146 0
+ 683 0312 6A46     		mov	r2, sp
+ 684              	.LVL114:
+ 685 0314 464B     		ldr	r3, .L61+180
+ 686 0316 03CB     		ldmia	r3!, {r0, r1}
+ 687 0318 03C2     		stmia	r2!, {r0, r1}
+ 147:imu.c         ****             break;
+ 688              		.loc 1 147 0
+ 689 031a A2E0     		b	.L2
+ 690              	.LVL115:
+ 691              	.L49:
+ 148:imu.c         ****         case CLEAR_MOTION_OFFSET:
+ 149:imu.c         ****             sprintf(str, "<cmoc>");
+ 692              		.loc 1 149 0
+ 693 031c 454B     		ldr	r3, .L61+184
+ 694 031e 1A68     		ldr	r2, [r3]
+ 695              	.LVL116:
+ 696 0320 0092     		str	r2, [sp]
+ 697 0322 9A88     		ldrh	r2, [r3, #4]
+ 698 0324 6946     		mov	r1, sp
+ 699 0326 8A80     		strh	r2, [r1, #4]
+ 700 0328 9B79     		ldrb	r3, [r3, #6]
+ 701 032a 8B71     		strb	r3, [r1, #6]
+ 150:imu.c         ****             break;
+ 702              		.loc 1 150 0
+ 703 032c 99E0     		b	.L2
+ 704              	.LVL117:
+ 705              	.L50:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 16
+
+
+ 151:imu.c         ****         // CONFIGURATION is also wait until input character '>'.
+ 152:imu.c         ****         case CONFIGURATION:
+ 153:imu.c         ****             sprintf(str, "<cfg>");
+ 706              		.loc 1 153 0
+ 707 032e 424B     		ldr	r3, .L61+188
+ 708 0330 1A68     		ldr	r2, [r3]
+ 709              	.LVL118:
+ 710 0332 0092     		str	r2, [sp]
+ 711 0334 9B88     		ldrh	r3, [r3, #4]
+ 712 0336 6A46     		mov	r2, sp
+ 713 0338 9380     		strh	r3, [r2, #4]
+ 154:imu.c         ****             break;
+ 714              		.loc 1 154 0
+ 715 033a 92E0     		b	.L2
+ 716              	.LVL119:
+ 717              	.L51:
+ 155:imu.c         ****         case POWER_ON_START:
+ 156:imu.c         ****             sprintf(str, "<pons%d>", (uint8)data);
+ 718              		.loc 1 156 0
+ 719 033c 1000     		movs	r0, r2
+ 720 033e 2900     		movs	r1, r5
+ 721 0340 FFF7FEFF 		bl	__aeabi_d2uiz
+ 722              	.LVL120:
+ 723 0344 C2B2     		uxtb	r2, r0
+ 724 0346 3D49     		ldr	r1, .L61+192
+ 725 0348 6846     		mov	r0, sp
+ 726 034a FFF7FEFF 		bl	sprintf
+ 727              	.LVL121:
+ 157:imu.c         ****             break;
+ 728              		.loc 1 157 0
+ 729 034e 88E0     		b	.L2
+ 730              	.LVL122:
+ 731              	.L52:
+ 158:imu.c         ****         case START:
+ 159:imu.c         ****             sprintf(str, "<start>");
+ 732              		.loc 1 159 0
+ 733 0350 6A46     		mov	r2, sp
+ 734              	.LVL123:
+ 735 0352 3B4B     		ldr	r3, .L61+196
+ 736 0354 03CB     		ldmia	r3!, {r0, r1}
+ 737 0356 03C2     		stmia	r2!, {r0, r1}
+ 160:imu.c         ****             break;
+ 738              		.loc 1 160 0
+ 739 0358 83E0     		b	.L2
+ 740              	.LVL124:
+ 741              	.L53:
+ 161:imu.c         ****         case STOP:
+ 162:imu.c         ****             sprintf(str, "<stop>");
+ 742              		.loc 1 162 0
+ 743 035a 3A4B     		ldr	r3, .L61+200
+ 744 035c 1A68     		ldr	r2, [r3]
+ 745              	.LVL125:
+ 746 035e 0092     		str	r2, [sp]
+ 747 0360 9A88     		ldrh	r2, [r3, #4]
+ 748 0362 6946     		mov	r1, sp
+ 749 0364 8A80     		strh	r2, [r1, #4]
+ 750 0366 9B79     		ldrb	r3, [r3, #6]
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 17
+
+
+ 751 0368 8B71     		strb	r3, [r1, #6]
+ 163:imu.c         ****             break;
+ 752              		.loc 1 163 0
+ 753 036a 7AE0     		b	.L2
+ 754              	.LVL126:
+ 755              	.L54:
+ 164:imu.c         ****         case LOAD_FACTORORY_SETTINGS:
+ 165:imu.c         ****             sprintf(str, "<lf>");
+ 756              		.loc 1 165 0
+ 757 036c 364B     		ldr	r3, .L61+204
+ 758 036e 1A68     		ldr	r2, [r3]
+ 759              	.LVL127:
+ 760 0370 0092     		str	r2, [sp]
+ 761 0372 1B79     		ldrb	r3, [r3, #4]
+ 762 0374 6A46     		mov	r2, sp
+ 763 0376 1371     		strb	r3, [r2, #4]
+ 166:imu.c         ****             break;
+ 764              		.loc 1 166 0
+ 765 0378 73E0     		b	.L2
+ 766              	.L62:
+ 767 037a C046     		.align	2
+ 768              	.L61:
+ 769 037c 00000000 		.word	.L4
+ 770 0380 00000000 		.word	.LC1
+ 771 0384 08000000 		.word	.LC3
+ 772 0388 10000000 		.word	.LC5
+ 773 038c 18000000 		.word	.LC7
+ 774 0390 20000000 		.word	.LC9
+ 775 0394 28000000 		.word	.LC11
+ 776 0398 30000000 		.word	.LC13
+ 777 039c 38000000 		.word	.LC15
+ 778 03a0 40000000 		.word	.LC17
+ 779 03a4 48000000 		.word	.LC19
+ 780 03a8 54000000 		.word	.LC21
+ 781 03ac 5C000000 		.word	.LC23
+ 782 03b0 64000000 		.word	.LC25
+ 783 03b4 6C000000 		.word	.LC27
+ 784 03b8 78000000 		.word	.LC29
+ 785 03bc 84000000 		.word	.LC31
+ 786 03c0 8C000000 		.word	.LC33
+ 787 03c4 98000000 		.word	.LC35
+ 788 03c8 A4000000 		.word	.LC37
+ 789 03cc B4000000 		.word	.LC39
+ 790 03d0 C0000000 		.word	.LC41
+ 791 03d4 CC000000 		.word	.LC43
+ 792 03d8 D8000000 		.word	.LC45
+ 793 03dc E4000000 		.word	.LC47
+ 794 03e0 F0000000 		.word	.LC49
+ 795 03e4 FC000000 		.word	.LC51
+ 796 03e8 08010000 		.word	.LC53
+ 797 03ec 14010000 		.word	.LC55
+ 798 03f0 24010000 		.word	.LC57
+ 799 03f4 30010000 		.word	.LC59
+ 800 03f8 40010000 		.word	.LC61
+ 801 03fc 50010000 		.word	.LC63
+ 802 0400 58010000 		.word	.LC65
+ 803 0404 60010000 		.word	.LC67
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 18
+
+
+ 804 0408 68010000 		.word	.LC69
+ 805 040c 70010000 		.word	.LC71
+ 806 0410 78010000 		.word	.LC73
+ 807 0414 80010000 		.word	.LC75
+ 808 0418 88010000 		.word	.LC77
+ 809 041c 90010000 		.word	.LC79
+ 810 0420 98010000 		.word	.LC81
+ 811 0424 A0010000 		.word	.LC83
+ 812 0428 A8010000 		.word	.LC85
+ 813 042c B0010000 		.word	.LC87
+ 814 0430 B8010000 		.word	.LC89
+ 815 0434 C0010000 		.word	.LC91
+ 816 0438 C8010000 		.word	.LC93
+ 817 043c D0010000 		.word	.LC95
+ 818 0440 DC010000 		.word	.LC97
+ 819 0444 E4010000 		.word	.LC99
+ 820 0448 EC010000 		.word	.LC101
+ 821              	.LVL128:
+ 822              	.L55:
+ 167:imu.c         ****         case RESET:
+ 168:imu.c         ****             sprintf(str, "<reset>");
+ 823              		.loc 1 168 0
+ 824 044c 6A46     		mov	r2, sp
+ 825              	.LVL129:
+ 826 044e 134B     		ldr	r3, .L63
+ 827 0450 03CB     		ldmia	r3!, {r0, r1}
+ 828 0452 03C2     		stmia	r2!, {r0, r1}
+ 169:imu.c         ****             break;
+ 829              		.loc 1 169 0
+ 830 0454 05E0     		b	.L2
+ 831              	.LVL130:
+ 832              	.L56:
+ 170:imu.c         ****         case VERSION_CHECK:
+ 171:imu.c         ****             sprintf(str, "<ver>");
+ 833              		.loc 1 171 0
+ 834 0456 124B     		ldr	r3, .L63+4
+ 835 0458 1A68     		ldr	r2, [r3]
+ 836              	.LVL131:
+ 837 045a 0092     		str	r2, [sp]
+ 838 045c 9B88     		ldrh	r3, [r3, #4]
+ 839 045e 6A46     		mov	r2, sp
+ 840 0460 9380     		strh	r3, [r2, #4]
+ 841              	.L2:
+ 172:imu.c         ****             break;
+ 173:imu.c         ****     }
+ 174:imu.c         ****     
+ 175:imu.c         ****     //printf("%s\r\n", str);
+ 176:imu.c         ****     UART_IMU_UartPutString(str);
+ 842              		.loc 1 176 0
+ 843 0462 6846     		mov	r0, sp
+ 844 0464 FFF7FEFF 		bl	UART_IMU_UartPutString
+ 845              	.LVL132:
+ 846              	.L57:
+ 177:imu.c         ****     
+ 178:imu.c         ****     uint8 ch;
+ 179:imu.c         ****     
+ 180:imu.c         ****     while ((ch = UART_IMU_UartGetChar()) != '<');
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 19
+
+
+ 847              		.loc 1 180 0 discriminator 1
+ 848 0468 FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 849              	.LVL133:
+ 850 046c C0B2     		uxtb	r0, r0
+ 851              	.LVL134:
+ 852 046e 3C28     		cmp	r0, #60
+ 853 0470 FAD1     		bne	.L57
+ 854              	.L58:
+ 181:imu.c         ****     while ((ch = UART_IMU_UartGetChar()) != 'o');
+ 855              		.loc 1 181 0 discriminator 1
+ 856 0472 FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 857              	.LVL135:
+ 858 0476 C0B2     		uxtb	r0, r0
+ 859              	.LVL136:
+ 860 0478 6F28     		cmp	r0, #111
+ 861 047a FAD1     		bne	.L58
+ 862              	.L59:
+ 182:imu.c         ****     while ((ch = UART_IMU_UartGetChar()) != 'k');
+ 863              		.loc 1 182 0 discriminator 1
+ 864 047c FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 865              	.LVL137:
+ 866 0480 C0B2     		uxtb	r0, r0
+ 867              	.LVL138:
+ 868 0482 6B28     		cmp	r0, #107
+ 869 0484 FAD1     		bne	.L59
+ 870              	.L60:
+ 183:imu.c         ****     while ((ch = UART_IMU_UartGetChar()) != '>');
+ 871              		.loc 1 183 0 discriminator 1
+ 872 0486 FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 873              	.LVL139:
+ 874 048a C0B2     		uxtb	r0, r0
+ 875              	.LVL140:
+ 876 048c 3E28     		cmp	r0, #62
+ 877 048e FAD1     		bne	.L60
+ 184:imu.c         ****     
+ 185:imu.c         ****     printf("OK\r\n");
+ 878              		.loc 1 185 0
+ 879 0490 0448     		ldr	r0, .L63+8
+ 880              	.LVL141:
+ 881 0492 FFF7FEFF 		bl	puts
+ 882              	.LVL142:
+ 186:imu.c         **** }
+ 883              		.loc 1 186 0
+ 884 0496 11B0     		add	sp, sp, #68
+ 885              		@ sp needed
+ 886 0498 30BD     		pop	{r4, r5, pc}
+ 887              	.L64:
+ 888 049a C046     		.align	2
+ 889              	.L63:
+ 890 049c F4010000 		.word	.LC103
+ 891 04a0 FC010000 		.word	.LC105
+ 892 04a4 04020000 		.word	.LC107
+ 893              		.cfi_endproc
+ 894              	.LFE36:
+ 895              		.size	EBIMU_send_command, .-EBIMU_send_command
+ 896              		.section	.text.EBIMU_poll,"ax",%progbits
+ 897              		.align	2
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 20
+
+
+ 898              		.global	EBIMU_poll
+ 899              		.code	16
+ 900              		.thumb_func
+ 901              		.type	EBIMU_poll, %function
+ 902              	EBIMU_poll:
+ 903              	.LFB37:
+ 187:imu.c         **** 
+ 188:imu.c         **** void EBIMU_poll(void)
+ 189:imu.c         **** {
+ 904              		.loc 1 189 0
+ 905              		.cfi_startproc
+ 906              		@ args = 0, pretend = 0, frame = 0
+ 907              		@ frame_needed = 0, uses_anonymous_args = 0
+ 908 0000 10B5     		push	{r4, lr}
+ 909              		.cfi_def_cfa_offset 8
+ 910              		.cfi_offset 4, -8
+ 911              		.cfi_offset 14, -4
+ 190:imu.c         ****     UART_IMU_UartPutChar('*');
+ 912              		.loc 1 190 0
+ 913 0002 2A20     		movs	r0, #42
+ 914 0004 FFF7FEFF 		bl	UART_IMU_SpiUartWriteTxData
+ 915              	.LVL143:
+ 191:imu.c         ****     CyDelay(10);
+ 916              		.loc 1 191 0
+ 917 0008 0A20     		movs	r0, #10
+ 918 000a FFF7FEFF 		bl	CyDelay
+ 919              	.LVL144:
+ 192:imu.c         **** }
+ 920              		.loc 1 192 0
+ 921              		@ sp needed
+ 922 000e 10BD     		pop	{r4, pc}
+ 923              		.cfi_endproc
+ 924              	.LFE37:
+ 925              		.size	EBIMU_poll, .-EBIMU_poll
+ 926              		.section	.text.EBIMU_recv_data,"ax",%progbits
+ 927              		.align	2
+ 928              		.global	EBIMU_recv_data
+ 929              		.code	16
+ 930              		.thumb_func
+ 931              		.type	EBIMU_recv_data, %function
+ 932              	EBIMU_recv_data:
+ 933              	.LFB38:
+ 193:imu.c         **** 
+ 194:imu.c         **** IMU EBIMU_recv_data(void)
+ 195:imu.c         **** {
+ 934              		.loc 1 195 0
+ 935              		.cfi_startproc
+ 936              		@ args = 0, pretend = 0, frame = 0
+ 937              		@ frame_needed = 0, uses_anonymous_args = 0
+ 938              	.LVL145:
+ 939 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 940              		.cfi_def_cfa_offset 20
+ 941              		.cfi_offset 4, -20
+ 942              		.cfi_offset 5, -16
+ 943              		.cfi_offset 6, -12
+ 944              		.cfi_offset 7, -8
+ 945              		.cfi_offset 14, -4
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 21
+
+
+ 946 0002 4746     		mov	r7, r8
+ 947 0004 80B4     		push	{r7}
+ 948              		.cfi_def_cfa_offset 24
+ 949              		.cfi_offset 8, -24
+ 950 0006 8046     		mov	r8, r0
+ 951              	.LVL146:
+ 196:imu.c         ****     uint16 hex;
+ 197:imu.c         ****     uint16 chksum = 0;
+ 198:imu.c         ****     int cnt = 0;   
+ 199:imu.c         ****     IMU data;
+ 200:imu.c         ****     
+ 201:imu.c         ****     EBIMU_poll();
+ 952              		.loc 1 201 0
+ 953 0008 FFF7FEFF 		bl	EBIMU_poll
+ 954              	.LVL147:
+ 202:imu.c         ****     
+ 203:imu.c         ****     hex = (UART_IMU_UartGetChar() << 8) | UART_IMU_UartGetChar();
+ 955              		.loc 1 203 0
+ 956 000c FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 957              	.LVL148:
+ 958 0010 0400     		movs	r4, r0
+ 959 0012 FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 960              	.LVL149:
+ 961 0016 2402     		lsls	r4, r4, #8
+ 962 0018 2043     		orrs	r0, r4
+ 963 001a 80B2     		uxth	r0, r0
+ 964              	.LVL150:
+ 204:imu.c         **** 
+ 205:imu.c         ****     if (hex == 0x5555)
+ 965              		.loc 1 205 0
+ 966 001c 274B     		ldr	r3, .L80
+ 967 001e 9842     		cmp	r0, r3
+ 968 0020 47D1     		bne	.L66
+ 969 0022 42E0     		b	.L78
+ 970              	.LVL151:
+ 971              	.L75:
+ 972              	.LBB2:
+ 206:imu.c         ****     {
+ 207:imu.c         ****         chksum = 0;
+ 208:imu.c         ****         cnt = 0;
+ 209:imu.c         **** 
+ 210:imu.c         ****         while (chksum != hex)
+ 211:imu.c         ****         {
+ 212:imu.c         ****             for (uint8 i = 0; i < 3; i++)
+ 213:imu.c         ****             {
+ 214:imu.c         ****                 chksum += ((hex & 0xFF00) >> 8) + (hex & 0x00FF);
+ 973              		.loc 1 214 0
+ 974 0024 020A     		lsrs	r2, r0, #8
+ 975 0026 FF23     		movs	r3, #255
+ 976 0028 1840     		ands	r0, r3
+ 977              	.LVL152:
+ 978 002a 1018     		adds	r0, r2, r0
+ 979 002c 3818     		adds	r0, r7, r0
+ 980 002e 87B2     		uxth	r7, r0
+ 981              	.LVL153:
+ 215:imu.c         ****                 hex = (UART_IMU_UartGetChar() << 8) | UART_IMU_UartGetChar();
+ 982              		.loc 1 215 0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 22
+
+
+ 983 0030 FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 984              	.LVL154:
+ 985 0034 0600     		movs	r6, r0
+ 986 0036 FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 987              	.LVL155:
+ 988 003a 3302     		lsls	r3, r6, #8
+ 989 003c 1843     		orrs	r0, r3
+ 990 003e 80B2     		uxth	r0, r0
+ 991              	.LVL156:
+ 216:imu.c         ****                 
+ 217:imu.c         ****                 switch (cnt)
+ 992              		.loc 1 217 0
+ 993 0040 012D     		cmp	r5, #1
+ 994 0042 0CD0     		beq	.L70
+ 995 0044 02DC     		bgt	.L71
+ 996 0046 002D     		cmp	r5, #0
+ 997 0048 05D0     		beq	.L72
+ 998 004a 16E0     		b	.L69
+ 999              	.L71:
+ 1000 004c 022D     		cmp	r5, #2
+ 1001 004e 0AD0     		beq	.L73
+ 1002 0050 032D     		cmp	r5, #3
+ 1003 0052 0DD0     		beq	.L74
+ 1004 0054 11E0     		b	.L69
+ 1005              	.L72:
+ 218:imu.c         ****                 {
+ 219:imu.c         ****                     case 0:
+ 220:imu.c         ****                         data.sof[i] = hex;
+ 1006              		.loc 1 220 0
+ 1007 0056 6300     		lsls	r3, r4, #1
+ 1008 0058 4246     		mov	r2, r8
+ 1009 005a 9852     		strh	r0, [r3, r2]
+ 221:imu.c         ****                         break;
+ 1010              		.loc 1 221 0
+ 1011 005c 0DE0     		b	.L69
+ 1012              	.L70:
+ 222:imu.c         ****                     case 1:
+ 223:imu.c         ****                         data.gyr[i] = hex;
+ 1013              		.loc 1 223 0
+ 1014 005e 6300     		lsls	r3, r4, #1
+ 1015 0060 4344     		add	r3, r3, r8
+ 1016 0062 D880     		strh	r0, [r3, #6]
+ 224:imu.c         ****                         break;
+ 1017              		.loc 1 224 0
+ 1018 0064 09E0     		b	.L69
+ 1019              	.L73:
+ 225:imu.c         ****                     case 2:
+ 226:imu.c         ****                         data.acc[i] = hex;
+ 1020              		.loc 1 226 0
+ 1021 0066 231D     		adds	r3, r4, #4
+ 1022 0068 5B00     		lsls	r3, r3, #1
+ 1023 006a 4344     		add	r3, r3, r8
+ 1024 006c 9880     		strh	r0, [r3, #4]
+ 227:imu.c         ****                         break;
+ 1025              		.loc 1 227 0
+ 1026 006e 04E0     		b	.L69
+ 1027              	.L74:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 23
+
+
+ 228:imu.c         ****                     case 3:
+ 229:imu.c         ****                         data.mag[i] = hex;
+ 1028              		.loc 1 229 0
+ 1029 0070 2300     		movs	r3, r4
+ 1030 0072 0833     		adds	r3, r3, #8
+ 1031 0074 5B00     		lsls	r3, r3, #1
+ 1032 0076 4344     		add	r3, r3, r8
+ 1033 0078 5880     		strh	r0, [r3, #2]
+ 1034              	.L69:
+ 212:imu.c         ****             {
+ 1035              		.loc 1 212 0 discriminator 2
+ 1036 007a 0134     		adds	r4, r4, #1
+ 1037              	.LVL157:
+ 1038 007c E4B2     		uxtb	r4, r4
+ 1039              	.LVL158:
+ 1040 007e 00E0     		b	.L77
+ 1041              	.LVL159:
+ 1042              	.L79:
+ 1043              	.LBE2:
+ 1044 0080 0024     		movs	r4, #0
+ 1045              	.L77:
+ 1046              	.LVL160:
+ 1047              	.LBB3:
+ 212:imu.c         ****             {
+ 1048              		.loc 1 212 0 is_stmt 0 discriminator 1
+ 1049 0082 022C     		cmp	r4, #2
+ 1050 0084 CED9     		bls	.L75
+ 1051              	.LBE3:
+ 230:imu.c         ****                         break;
+ 231:imu.c         ****                 }
+ 232:imu.c         ****             }
+ 233:imu.c         ****             
+ 234:imu.c         ****             cnt += 1;
+ 1052              		.loc 1 234 0 is_stmt 1
+ 1053 0086 0135     		adds	r5, r5, #1
+ 1054              	.LVL161:
+ 235:imu.c         ****             
+ 236:imu.c         ****             if (cnt == 3)
+ 1055              		.loc 1 236 0
+ 1056 0088 032D     		cmp	r5, #3
+ 1057 008a 10D1     		bne	.L67
+ 237:imu.c         ****             {
+ 238:imu.c         ****                 chksum += ((hex & 0xFF00) >> 8) + (hex & 0x00FF);
+ 1058              		.loc 1 238 0
+ 1059 008c 020A     		lsrs	r2, r0, #8
+ 1060 008e FF23     		movs	r3, #255
+ 1061 0090 1840     		ands	r0, r3
+ 1062              	.LVL162:
+ 1063 0092 1018     		adds	r0, r2, r0
+ 1064 0094 3818     		adds	r0, r7, r0
+ 1065 0096 87B2     		uxth	r7, r0
+ 1066              	.LVL163:
+ 239:imu.c         ****                 hex = (UART_IMU_UartGetChar() << 8) | UART_IMU_UartGetChar();
+ 1067              		.loc 1 239 0
+ 1068 0098 FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 1069              	.LVL164:
+ 1070 009c 0400     		movs	r4, r0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 24
+
+
+ 1071              	.LVL165:
+ 1072 009e FFF7FEFF 		bl	UART_IMU_UartGetChar
+ 1073              	.LVL166:
+ 1074 00a2 2402     		lsls	r4, r4, #8
+ 1075 00a4 2043     		orrs	r0, r4
+ 1076 00a6 80B2     		uxth	r0, r0
+ 1077              	.LVL167:
+ 1078 00a8 01E0     		b	.L67
+ 1079              	.LVL168:
+ 1080              	.L78:
+ 1081 00aa 0025     		movs	r5, #0
+ 1082 00ac 0027     		movs	r7, #0
+ 1083              	.LVL169:
+ 1084              	.L67:
+ 210:imu.c         ****         {
+ 1085              		.loc 1 210 0
+ 1086 00ae B842     		cmp	r0, r7
+ 1087 00b0 E6D1     		bne	.L79
+ 1088              	.LVL170:
+ 1089              	.L66:
+ 240:imu.c         ****             }
+ 241:imu.c         ****         }
+ 242:imu.c         ****     }
+ 243:imu.c         ****     return data;
+ 244:imu.c         **** }...
+ 1090              		.loc 1 244 0
+ 1091 00b2 4046     		mov	r0, r8
+ 1092              	.LVL171:
+ 1093              		@ sp needed
+ 1094              	.LVL172:
+ 1095 00b4 04BC     		pop	{r2}
+ 1096 00b6 9046     		mov	r8, r2
+ 1097 00b8 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 1098              	.L81:
+ 1099 00ba C046     		.align	2
+ 1100              	.L80:
+ 1101 00bc 55550000 		.word	21845
+ 1102              		.cfi_endproc
+ 1103              	.LFE38:
+ 1104              		.size	EBIMU_recv_data, .-EBIMU_recv_data
+ 1105              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1106              		.align	2
+ 1107              	.LC1:
+ 1108 0000 3C736225 		.ascii	"<sb%d>\000"
+ 1108      643E00
+ 1109 0007 00       		.space	1
+ 1110              	.LC3:
+ 1111 0008 3C736F72 		.ascii	"<sor%d>\000"
+ 1111      25643E00 
+ 1112              	.LC5:
+ 1113 0010 3C736F63 		.ascii	"<soc%d>\000"
+ 1113      25643E00 
+ 1114              	.LC7:
+ 1115 0018 3C736F66 		.ascii	"<sof%d>\000"
+ 1115      25643E00 
+ 1116              	.LC9:
+ 1117 0020 3C736F67 		.ascii	"<sog%d>\000"
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 25
+
+
+ 1117      25643E00 
+ 1118              	.LC11:
+ 1119 0028 3C736F61 		.ascii	"<soa%d>\000"
+ 1119      25643E00 
+ 1120              	.LC13:
+ 1121 0030 3C736F6D 		.ascii	"<som%d>\000"
+ 1121      25643E00 
+ 1122              	.LC15:
+ 1123 0038 3C736F64 		.ascii	"<sod%d>\000"
+ 1123      25643E00 
+ 1124              	.LC17:
+ 1125 0040 3C736F74 		.ascii	"<sot%d>\000"
+ 1125      25643E00 
+ 1126              	.LC19:
+ 1127 0048 3C736F74 		.ascii	"<sots%d>\000"
+ 1127      7325643E 
+ 1127      00
+ 1128 0051 000000   		.space	3
+ 1129              	.LC21:
+ 1130 0054 3C73656D 		.ascii	"<sem%d>\000"
+ 1130      25643E00 
+ 1131              	.LC23:
+ 1132 005c 3C737367 		.ascii	"<ssg%d>\000"
+ 1132      25643E00 
+ 1133              	.LC25:
+ 1134 0064 3C737361 		.ascii	"<ssa%d>\000"
+ 1134      25643E00 
+ 1135              	.LC27:
+ 1136 006c 3C6C7066 		.ascii	"<lpfg%d>\000"
+ 1136      6725643E 
+ 1136      00
+ 1137 0075 000000   		.space	3
+ 1138              	.LC29:
+ 1139 0078 3C6C7066 		.ascii	"<lpfa%d>\000"
+ 1139      6125643E 
+ 1139      00
+ 1140 0081 000000   		.space	3
+ 1141              	.LC31:
+ 1142 0084 3C736666 		.ascii	"<sff%d>\000"
+ 1142      25643E00 
+ 1143              	.LC33:
+ 1144 008c 3C736666 		.ascii	"<sffa%d>\000"
+ 1144      6125643E 
+ 1144      00
+ 1145 0095 000000   		.space	3
+ 1146              	.LC35:
+ 1147 0098 3C736666 		.ascii	"<sffm%d>\000"
+ 1147      6D25643E 
+ 1147      00
+ 1148 00a1 000000   		.space	3
+ 1149              	.LC37:
+ 1150 00a4 3C726161 		.ascii	"<raa_l%.2lf>\000"
+ 1150      5F6C252E 
+ 1150      326C663E 
+ 1150      00
+ 1151 00b1 000000   		.space	3
+ 1152              	.LC39:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 26
+
+
+ 1153 00b4 3C726161 		.ascii	"<raa_t%ld>\000"
+ 1153      5F74256C 
+ 1153      643E00
+ 1154 00bf 00       		.space	1
+ 1155              	.LC41:
+ 1156 00c0 3C726861 		.ascii	"<rha_l%.2f>\000"
+ 1156      5F6C252E 
+ 1156      32663E00 
+ 1157              	.LC43:
+ 1158 00cc 3C726861 		.ascii	"<rha_t%ld>\000"
+ 1158      5F74256C 
+ 1158      643E00
+ 1159 00d7 00       		.space	1
+ 1160              	.LC45:
+ 1161 00d8 3C616763 		.ascii	"<agc_e%d>\000"
+ 1161      5F652564 
+ 1161      3E00
+ 1162 00e2 0000     		.space	2
+ 1163              	.LC47:
+ 1164 00e4 3C616763 		.ascii	"<agc_t%.2f>\000"
+ 1164      5F74252E 
+ 1164      32663E00 
+ 1165              	.LC49:
+ 1166 00f0 3C616763 		.ascii	"<agc_d%.2f>\000"
+ 1166      5F64252E 
+ 1166      32663E00 
+ 1167              	.LC51:
+ 1168 00fc 3C617663 		.ascii	"<avcg_e%d>\000"
+ 1168      675F6525 
+ 1168      643E00
+ 1169 0107 00       		.space	1
+ 1170              	.LC53:
+ 1171 0108 3C617663 		.ascii	"<avca_e%d>\000"
+ 1171      615F6525 
+ 1171      643E00
+ 1172 0113 00       		.space	1
+ 1173              	.LC55:
+ 1174 0114 3C706F73 		.ascii	"<posf_sl%.4f>\000"
+ 1174      665F736C 
+ 1174      252E3466 
+ 1174      3E00
+ 1175 0122 0000     		.space	2
+ 1176              	.LC57:
+ 1177 0124 3C706F73 		.ascii	"<posf_st%d>\000"
+ 1177      665F7374 
+ 1177      25643E00 
+ 1178              	.LC59:
+ 1179 0130 3C706F73 		.ascii	"<posf_sr%.4f>\000"
+ 1179      665F7372 
+ 1179      252E3466 
+ 1179      3E00
+ 1180 013e 0000     		.space	2
+ 1181              	.LC61:
+ 1182 0140 3C706F73 		.ascii	"<posf_ar%.4f>\000"
+ 1182      665F6172 
+ 1182      252E3466 
+ 1182      3E00
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 27
+
+
+ 1183 014e 0000     		.space	2
+ 1184              	.LC63:
+ 1185 0150 3C706F73 		.ascii	"<posz>\000"
+ 1185      7A3E00
+ 1186 0157 00       		.space	1
+ 1187              	.LC65:
+ 1188 0158 3C63673E 		.ascii	"<cg>\000"
+ 1188      00
+ 1189 015d 000000   		.space	3
+ 1190              	.LC67:
+ 1191 0160 3C636166 		.ascii	"<caf>\000"
+ 1191      3E00
+ 1192 0166 0000     		.space	2
+ 1193              	.LC69:
+ 1194 0168 3C636173 		.ascii	"<cas>\000"
+ 1194      3E00
+ 1195 016e 0000     		.space	2
+ 1196              	.LC71:
+ 1197 0170 3C636D66 		.ascii	"<cmf>\000"
+ 1197      3E00
+ 1198 0176 0000     		.space	2
+ 1199              	.LC73:
+ 1200 0178 3C636E78 		.ascii	"<cnxy>\000"
+ 1200      793E00
+ 1201 017f 00       		.space	1
+ 1202              	.LC75:
+ 1203 0180 3C2B636E 		.ascii	"<+cnxy>\000"
+ 1203      78793E00 
+ 1204              	.LC77:
+ 1205 0188 3C636E7A 		.ascii	"<cnz>\000"
+ 1205      3E00
+ 1206 018e 0000     		.space	2
+ 1207              	.LC79:
+ 1208 0190 3C2B636E 		.ascii	"<+cnz>\000"
+ 1208      7A3E00
+ 1209 0197 00       		.space	1
+ 1210              	.LC81:
+ 1211 0198 3C636D6F 		.ascii	"<cmo>\000"
+ 1211      3E00
+ 1212 019e 0000     		.space	2
+ 1213              	.LC83:
+ 1214 01a0 3C636D6F 		.ascii	"<cmox>\000"
+ 1214      783E00
+ 1215 01a7 00       		.space	1
+ 1216              	.LC85:
+ 1217 01a8 3C636D6F 		.ascii	"<cmoy>\000"
+ 1217      793E00
+ 1218 01af 00       		.space	1
+ 1219              	.LC87:
+ 1220 01b0 3C636D6F 		.ascii	"<cmoz>\000"
+ 1220      7A3E00
+ 1221 01b7 00       		.space	1
+ 1222              	.LC89:
+ 1223 01b8 3C636D6F 		.ascii	"<cmoxy>\000"
+ 1223      78793E00 
+ 1224              	.LC91:
+ 1225 01c0 3C636D6F 		.ascii	"<cmoc>\000"
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 28
+
+
+ 1225      633E00
+ 1226 01c7 00       		.space	1
+ 1227              	.LC93:
+ 1228 01c8 3C636667 		.ascii	"<cfg>\000"
+ 1228      3E00
+ 1229 01ce 0000     		.space	2
+ 1230              	.LC95:
+ 1231 01d0 3C706F6E 		.ascii	"<pons%d>\000"
+ 1231      7325643E 
+ 1231      00
+ 1232 01d9 000000   		.space	3
+ 1233              	.LC97:
+ 1234 01dc 3C737461 		.ascii	"<start>\000"
+ 1234      72743E00 
+ 1235              	.LC99:
+ 1236 01e4 3C73746F 		.ascii	"<stop>\000"
+ 1236      703E00
+ 1237 01eb 00       		.space	1
+ 1238              	.LC101:
+ 1239 01ec 3C6C663E 		.ascii	"<lf>\000"
+ 1239      00
+ 1240 01f1 000000   		.space	3
+ 1241              	.LC103:
+ 1242 01f4 3C726573 		.ascii	"<reset>\000"
+ 1242      65743E00 
+ 1243              	.LC105:
+ 1244 01fc 3C766572 		.ascii	"<ver>\000"
+ 1244      3E00
+ 1245 0202 0000     		.space	2
+ 1246              	.LC107:
+ 1247 0204 4F4B0D00 		.ascii	"OK\015\000"
+ 1248              		.text
+ 1249              	.Letext0:
+ 1250              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 1251              		.file 3 "imu.h"
+ 1252              		.file 4 "d:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1253              		.file 5 "Generated_Source\\PSoC4/UART_IMU_SPI_UART.h"
+ 1254              		.file 6 "Generated_Source\\PSoC4/CyLib.h"
+ 1255              		.file 7 "<built-in>"
+ 1256              		.section	.debug_info,"",%progbits
+ 1257              	.Ldebug_info0:
+ 1258 0000 E4070000 		.4byte	0x7e4
+ 1259 0004 0400     		.2byte	0x4
+ 1260 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1261 000a 04       		.byte	0x4
+ 1262 000b 01       		.uleb128 0x1
+ 1263 000c 2C010000 		.4byte	.LASF79
+ 1264 0010 0C       		.byte	0xc
+ 1265 0011 CC010000 		.4byte	.LASF80
+ 1266 0015 78050000 		.4byte	.LASF81
+ 1267 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 1268 001d 00000000 		.4byte	0
+ 1269 0021 00000000 		.4byte	.Ldebug_line0
+ 1270 0025 02       		.uleb128 0x2
+ 1271 0026 08       		.byte	0x8
+ 1272 0027 04       		.byte	0x4
+ 1273 0028 AD040000 		.4byte	.LASF0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 29
+
+
+ 1274 002c 02       		.uleb128 0x2
+ 1275 002d 01       		.byte	0x1
+ 1276 002e 06       		.byte	0x6
+ 1277 002f 2D030000 		.4byte	.LASF1
+ 1278 0033 02       		.uleb128 0x2
+ 1279 0034 01       		.byte	0x1
+ 1280 0035 08       		.byte	0x8
+ 1281 0036 03030000 		.4byte	.LASF2
+ 1282 003a 02       		.uleb128 0x2
+ 1283 003b 02       		.byte	0x2
+ 1284 003c 05       		.byte	0x5
+ 1285 003d F2000000 		.4byte	.LASF3
+ 1286 0041 02       		.uleb128 0x2
+ 1287 0042 02       		.byte	0x2
+ 1288 0043 07       		.byte	0x7
+ 1289 0044 02040000 		.4byte	.LASF4
+ 1290 0048 02       		.uleb128 0x2
+ 1291 0049 04       		.byte	0x4
+ 1292 004a 05       		.byte	0x5
+ 1293 004b A8020000 		.4byte	.LASF5
+ 1294 004f 02       		.uleb128 0x2
+ 1295 0050 04       		.byte	0x4
+ 1296 0051 07       		.byte	0x7
+ 1297 0052 9B040000 		.4byte	.LASF6
+ 1298 0056 02       		.uleb128 0x2
+ 1299 0057 08       		.byte	0x8
+ 1300 0058 05       		.byte	0x5
+ 1301 0059 59020000 		.4byte	.LASF7
+ 1302 005d 02       		.uleb128 0x2
+ 1303 005e 08       		.byte	0x8
+ 1304 005f 07       		.byte	0x7
+ 1305 0060 7C000000 		.4byte	.LASF8
+ 1306 0064 03       		.uleb128 0x3
+ 1307 0065 04       		.byte	0x4
+ 1308 0066 05       		.byte	0x5
+ 1309 0067 696E7400 		.ascii	"int\000"
+ 1310 006b 02       		.uleb128 0x2
+ 1311 006c 04       		.byte	0x4
+ 1312 006d 07       		.byte	0x7
+ 1313 006e DE050000 		.4byte	.LASF9
+ 1314 0072 02       		.uleb128 0x2
+ 1315 0073 08       		.byte	0x8
+ 1316 0074 04       		.byte	0x4
+ 1317 0075 BC000000 		.4byte	.LASF10
+ 1318 0079 02       		.uleb128 0x2
+ 1319 007a 04       		.byte	0x4
+ 1320 007b 07       		.byte	0x7
+ 1321 007c 1B040000 		.4byte	.LASF11
+ 1322 0080 02       		.uleb128 0x2
+ 1323 0081 01       		.byte	0x1
+ 1324 0082 08       		.byte	0x8
+ 1325 0083 24040000 		.4byte	.LASF12
+ 1326 0087 04       		.uleb128 0x4
+ 1327 0088 D2010000 		.4byte	.LASF13
+ 1328 008c 02       		.byte	0x2
+ 1329 008d E401     		.2byte	0x1e4
+ 1330 008f 33000000 		.4byte	0x33
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 30
+
+
+ 1331 0093 04       		.uleb128 0x4
+ 1332 0094 7D040000 		.4byte	.LASF14
+ 1333 0098 02       		.byte	0x2
+ 1334 0099 E501     		.2byte	0x1e5
+ 1335 009b 41000000 		.4byte	0x41
+ 1336 009f 04       		.uleb128 0x4
+ 1337 00a0 94040000 		.4byte	.LASF15
+ 1338 00a4 02       		.byte	0x2
+ 1339 00a5 E601     		.2byte	0x1e6
+ 1340 00a7 4F000000 		.4byte	0x4f
+ 1341 00ab 02       		.uleb128 0x2
+ 1342 00ac 04       		.byte	0x4
+ 1343 00ad 04       		.byte	0x4
+ 1344 00ae 38020000 		.4byte	.LASF16
+ 1345 00b2 05       		.uleb128 0x5
+ 1346 00b3 F8       		.byte	0xf8
+ 1347 00b4 03       		.byte	0x3
+ 1348 00b5 06       		.byte	0x6
+ 1349 00b6 F7000000 		.4byte	0xf7
+ 1350 00ba 06       		.uleb128 0x6
+ 1351 00bb 736F6600 		.ascii	"sof\000"
+ 1352 00bf 03       		.byte	0x3
+ 1353 00c0 08       		.byte	0x8
+ 1354 00c1 F7000000 		.4byte	0xf7
+ 1355 00c5 00       		.byte	0
+ 1356 00c6 06       		.uleb128 0x6
+ 1357 00c7 67797200 		.ascii	"gyr\000"
+ 1358 00cb 03       		.byte	0x3
+ 1359 00cc 09       		.byte	0x9
+ 1360 00cd F7000000 		.4byte	0xf7
+ 1361 00d1 06       		.byte	0x6
+ 1362 00d2 06       		.uleb128 0x6
+ 1363 00d3 61636300 		.ascii	"acc\000"
+ 1364 00d7 03       		.byte	0x3
+ 1365 00d8 0A       		.byte	0xa
+ 1366 00d9 F7000000 		.4byte	0xf7
+ 1367 00dd 0C       		.byte	0xc
+ 1368 00de 06       		.uleb128 0x6
+ 1369 00df 6D616700 		.ascii	"mag\000"
+ 1370 00e3 03       		.byte	0x3
+ 1371 00e4 0B       		.byte	0xb
+ 1372 00e5 F7000000 		.4byte	0xf7
+ 1373 00e9 12       		.byte	0x12
+ 1374 00ea 06       		.uleb128 0x6
+ 1375 00eb 61616100 		.ascii	"aaa\000"
+ 1376 00ef 03       		.byte	0x3
+ 1377 00f0 0C       		.byte	0xc
+ 1378 00f1 07010000 		.4byte	0x107
+ 1379 00f5 18       		.byte	0x18
+ 1380 00f6 00       		.byte	0
+ 1381 00f7 07       		.uleb128 0x7
+ 1382 00f8 3A000000 		.4byte	0x3a
+ 1383 00fc 07010000 		.4byte	0x107
+ 1384 0100 08       		.uleb128 0x8
+ 1385 0101 79000000 		.4byte	0x79
+ 1386 0105 02       		.byte	0x2
+ 1387 0106 00       		.byte	0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 31
+
+
+ 1388 0107 07       		.uleb128 0x7
+ 1389 0108 87000000 		.4byte	0x87
+ 1390 010c 17010000 		.4byte	0x117
+ 1391 0110 08       		.uleb128 0x8
+ 1392 0111 79000000 		.4byte	0x79
+ 1393 0115 DF       		.byte	0xdf
+ 1394 0116 00       		.byte	0
+ 1395 0117 09       		.uleb128 0x9
+ 1396 0118 494D5500 		.ascii	"IMU\000"
+ 1397 011c 03       		.byte	0x3
+ 1398 011d 0D       		.byte	0xd
+ 1399 011e B2000000 		.4byte	0xb2
+ 1400 0122 0A       		.uleb128 0xa
+ 1401 0123 01       		.byte	0x1
+ 1402 0124 33000000 		.4byte	0x33
+ 1403 0128 03       		.byte	0x3
+ 1404 0129 0F       		.byte	0xf
+ 1405 012a 6D020000 		.4byte	0x26d
+ 1406 012e 0B       		.uleb128 0xb
+ 1407 012f D8010000 		.4byte	.LASF17
+ 1408 0133 00       		.byte	0
+ 1409 0134 0B       		.uleb128 0xb
+ 1410 0135 34050000 		.4byte	.LASF18
+ 1411 0139 01       		.byte	0x1
+ 1412 013a 0B       		.uleb128 0xb
+ 1413 013b 2E000000 		.4byte	.LASF19
+ 1414 013f 02       		.byte	0x2
+ 1415 0140 0B       		.uleb128 0xb
+ 1416 0141 05050000 		.4byte	.LASF20
+ 1417 0145 03       		.byte	0x3
+ 1418 0146 0B       		.uleb128 0xb
+ 1419 0147 84040000 		.4byte	.LASF21
+ 1420 014b 04       		.byte	0x4
+ 1421 014c 0B       		.uleb128 0xb
+ 1422 014d EF020000 		.4byte	.LASF22
+ 1423 0151 05       		.byte	0x5
+ 1424 0152 0B       		.uleb128 0xb
+ 1425 0153 F2040000 		.4byte	.LASF23
+ 1426 0157 06       		.byte	0x6
+ 1427 0158 0B       		.uleb128 0xb
+ 1428 0159 33060000 		.4byte	.LASF24
+ 1429 015d 07       		.byte	0x7
+ 1430 015e 0B       		.uleb128 0xb
+ 1431 015f 61050000 		.4byte	.LASF25
+ 1432 0163 08       		.byte	0x8
+ 1433 0164 0B       		.uleb128 0xb
+ 1434 0165 29040000 		.4byte	.LASF26
+ 1435 0169 09       		.byte	0x9
+ 1436 016a 0B       		.uleb128 0xb
+ 1437 016b F3050000 		.4byte	.LASF27
+ 1438 016f 0A       		.byte	0xa
+ 1439 0170 0B       		.uleb128 0xb
+ 1440 0171 B4040000 		.4byte	.LASF28
+ 1441 0175 0B       		.byte	0xb
+ 1442 0176 0B       		.uleb128 0xb
+ 1443 0177 93000000 		.4byte	.LASF29
+ 1444 017b 0C       		.byte	0xc
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 32
+
+
+ 1445 017c 0B       		.uleb128 0xb
+ 1446 017d 21000000 		.4byte	.LASF30
+ 1447 0181 0D       		.byte	0xd
+ 1448 0182 0B       		.uleb128 0xb
+ 1449 0183 53030000 		.4byte	.LASF31
+ 1450 0187 0E       		.byte	0xe
+ 1451 0188 0B       		.uleb128 0xb
+ 1452 0189 BA010000 		.4byte	.LASF32
+ 1453 018d 0F       		.byte	0xf
+ 1454 018e 0B       		.uleb128 0xb
+ 1455 018f 7B030000 		.4byte	.LASF33
+ 1456 0193 10       		.byte	0x10
+ 1457 0194 0B       		.uleb128 0xb
+ 1458 0195 EA010000 		.4byte	.LASF34
+ 1459 0199 11       		.byte	0x11
+ 1460 019a 0B       		.uleb128 0xb
+ 1461 019b 39030000 		.4byte	.LASF35
+ 1462 019f 12       		.byte	0x12
+ 1463 01a0 0B       		.uleb128 0xb
+ 1464 01a1 C2040000 		.4byte	.LASF36
+ 1465 01a5 13       		.byte	0x13
+ 1466 01a6 0B       		.uleb128 0xb
+ 1467 01a7 8E020000 		.4byte	.LASF37
+ 1468 01ab 14       		.byte	0x14
+ 1469 01ac 0B       		.uleb128 0xb
+ 1470 01ad 96030000 		.4byte	.LASF38
+ 1471 01b1 15       		.byte	0x15
+ 1472 01b2 0B       		.uleb128 0xb
+ 1473 01b3 44050000 		.4byte	.LASF39
+ 1474 01b7 16       		.byte	0x16
+ 1475 01b8 0B       		.uleb128 0xb
+ 1476 01b9 3E020000 		.4byte	.LASF40
+ 1477 01bd 17       		.byte	0x17
+ 1478 01be 0B       		.uleb128 0xb
+ 1479 01bf 17050000 		.4byte	.LASF41
+ 1480 01c3 18       		.byte	0x18
+ 1481 01c4 0B       		.uleb128 0xb
+ 1482 01c5 55040000 		.4byte	.LASF42
+ 1483 01c9 19       		.byte	0x19
+ 1484 01ca 0B       		.uleb128 0xb
+ 1485 01cb 04020000 		.4byte	.LASF43
+ 1486 01cf 1A       		.byte	0x1a
+ 1487 01d0 0B       		.uleb128 0xb
+ 1488 01d1 DE040000 		.4byte	.LASF44
+ 1489 01d5 1B       		.byte	0x1b
+ 1490 01d6 0B       		.uleb128 0xb
+ 1491 01d7 CA050000 		.4byte	.LASF45
+ 1492 01db 1C       		.byte	0x1c
+ 1493 01dc 0B       		.uleb128 0xb
+ 1494 01dd B6050000 		.4byte	.LASF46
+ 1495 01e1 1D       		.byte	0x1d
+ 1496 01e2 0B       		.uleb128 0xb
+ 1497 01e3 3E000000 		.4byte	.LASF47
+ 1498 01e7 1E       		.byte	0x1e
+ 1499 01e8 0B       		.uleb128 0xb
+ 1500 01e9 F9030000 		.4byte	.LASF48
+ 1501 01ed 1F       		.byte	0x1f
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 33
+
+
+ 1502 01ee 0B       		.uleb128 0xb
+ 1503 01ef 6B000000 		.4byte	.LASF49
+ 1504 01f3 20       		.byte	0x20
+ 1505 01f4 0B       		.uleb128 0xb
+ 1506 01f5 FC000000 		.4byte	.LASF50
+ 1507 01f9 21       		.byte	0x21
+ 1508 01fa 0B       		.uleb128 0xb
+ 1509 01fb 11030000 		.4byte	.LASF51
+ 1510 01ff 22       		.byte	0x22
+ 1511 0200 0B       		.uleb128 0xb
+ 1512 0201 52000000 		.4byte	.LASF52
+ 1513 0205 23       		.byte	0x23
+ 1514 0206 0B       		.uleb128 0xb
+ 1515 0207 3E040000 		.4byte	.LASF53
+ 1516 020b 24       		.byte	0x24
+ 1517 020c 0B       		.uleb128 0xb
+ 1518 020d 06060000 		.4byte	.LASF54
+ 1519 0211 25       		.byte	0x25
+ 1520 0212 0B       		.uleb128 0xb
+ 1521 0213 16010000 		.4byte	.LASF55
+ 1522 0217 26       		.byte	0x26
+ 1523 0218 0B       		.uleb128 0xb
+ 1524 0219 64030000 		.4byte	.LASF56
+ 1525 021d 27       		.byte	0x27
+ 1526 021e 0B       		.uleb128 0xb
+ 1527 021f 0F000000 		.4byte	.LASF57
+ 1528 0223 28       		.byte	0x28
+ 1529 0224 0B       		.uleb128 0xb
+ 1530 0225 B2030000 		.4byte	.LASF58
+ 1531 0229 29       		.byte	0x29
+ 1532 022a 0B       		.uleb128 0xb
+ 1533 022b C6030000 		.4byte	.LASF59
+ 1534 022f 2A       		.byte	0x2a
+ 1535 0230 0B       		.uleb128 0xb
+ 1536 0231 DA030000 		.4byte	.LASF60
+ 1537 0235 2B       		.byte	0x2b
+ 1538 0236 0B       		.uleb128 0xb
+ 1539 0237 BF020000 		.4byte	.LASF61
+ 1540 023b 2C       		.byte	0x2c
+ 1541 023c 0B       		.uleb128 0xb
+ 1542 023d 24020000 		.4byte	.LASF62
+ 1543 0241 2D       		.byte	0x2d
+ 1544 0242 0B       		.uleb128 0xb
+ 1545 0243 B1020000 		.4byte	.LASF63
+ 1546 0247 2E       		.byte	0x2e
+ 1547 0248 0B       		.uleb128 0xb
+ 1548 0249 67020000 		.4byte	.LASF64
+ 1549 024d 2F       		.byte	0x2f
+ 1550 024e 0B       		.uleb128 0xb
+ 1551 024f 15040000 		.4byte	.LASF65
+ 1552 0253 30       		.byte	0x30
+ 1553 0254 0B       		.uleb128 0xb
+ 1554 0255 5C050000 		.4byte	.LASF66
+ 1555 0259 31       		.byte	0x31
+ 1556 025a 0B       		.uleb128 0xb
+ 1557 025b 76020000 		.4byte	.LASF67
+ 1558 025f 32       		.byte	0x32
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 34
+
+
+ 1559 0260 0B       		.uleb128 0xb
+ 1560 0261 2E050000 		.4byte	.LASF68
+ 1561 0265 33       		.byte	0x33
+ 1562 0266 0B       		.uleb128 0xb
+ 1563 0267 E4000000 		.4byte	.LASF69
+ 1564 026b 34       		.byte	0x34
+ 1565 026c 00       		.byte	0
+ 1566 026d 0C       		.uleb128 0xc
+ 1567 026e DC020000 		.4byte	.LASF71
+ 1568 0272 01       		.byte	0x1
+ 1569 0273 05       		.byte	0x5
+ 1570 0274 00000000 		.4byte	.LFB36
+ 1571 0278 A8040000 		.4byte	.LFE36-.LFB36
+ 1572 027c 01       		.uleb128 0x1
+ 1573 027d 9C       		.byte	0x9c
+ 1574 027e A9060000 		.4byte	0x6a9
+ 1575 0282 0D       		.uleb128 0xd
+ 1576 0283 636D6400 		.ascii	"cmd\000"
+ 1577 0287 01       		.byte	0x1
+ 1578 0288 05       		.byte	0x5
+ 1579 0289 87000000 		.4byte	0x87
+ 1580 028d 00000000 		.4byte	.LLST0
+ 1581 0291 0E       		.uleb128 0xe
+ 1582 0292 78040000 		.4byte	.LASF70
+ 1583 0296 01       		.byte	0x1
+ 1584 0297 05       		.byte	0x5
+ 1585 0298 25000000 		.4byte	0x25
+ 1586 029c 21000000 		.4byte	.LLST1
+ 1587 02a0 0F       		.uleb128 0xf
+ 1588 02a1 73747200 		.ascii	"str\000"
+ 1589 02a5 01       		.byte	0x1
+ 1590 02a6 07       		.byte	0x7
+ 1591 02a7 A9060000 		.4byte	0x6a9
+ 1592 02ab 03       		.uleb128 0x3
+ 1593 02ac 91       		.byte	0x91
+ 1594 02ad B07F     		.sleb128 -80
+ 1595 02af 10       		.uleb128 0x10
+ 1596 02b0 636800   		.ascii	"ch\000"
+ 1597 02b3 01       		.byte	0x1
+ 1598 02b4 B2       		.byte	0xb2
+ 1599 02b5 87000000 		.4byte	0x87
+ 1600 02b9 C9060000 		.4byte	.LLST2
+ 1601 02bd 11       		.uleb128 0x11
+ 1602 02be 26000000 		.4byte	.LVL3
+ 1603 02c2 9E070000 		.4byte	0x79e
+ 1604 02c6 DA020000 		.4byte	0x2da
+ 1605 02ca 12       		.uleb128 0x12
+ 1606 02cb 01       		.uleb128 0x1
+ 1607 02cc 50       		.byte	0x50
+ 1608 02cd 02       		.uleb128 0x2
+ 1609 02ce 7D       		.byte	0x7d
+ 1610 02cf 00       		.sleb128 0
+ 1611 02d0 12       		.uleb128 0x12
+ 1612 02d1 01       		.uleb128 0x1
+ 1613 02d2 51       		.byte	0x51
+ 1614 02d3 05       		.uleb128 0x5
+ 1615 02d4 03       		.byte	0x3
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 35
+
+
+ 1616 02d5 00000000 		.4byte	.LC1
+ 1617 02d9 00       		.byte	0
+ 1618 02da 11       		.uleb128 0x11
+ 1619 02db 3A000000 		.4byte	.LVL6
+ 1620 02df 9E070000 		.4byte	0x79e
+ 1621 02e3 F7020000 		.4byte	0x2f7
+ 1622 02e7 12       		.uleb128 0x12
+ 1623 02e8 01       		.uleb128 0x1
+ 1624 02e9 50       		.byte	0x50
+ 1625 02ea 02       		.uleb128 0x2
+ 1626 02eb 7D       		.byte	0x7d
+ 1627 02ec 00       		.sleb128 0
+ 1628 02ed 12       		.uleb128 0x12
+ 1629 02ee 01       		.uleb128 0x1
+ 1630 02ef 51       		.byte	0x51
+ 1631 02f0 05       		.uleb128 0x5
+ 1632 02f1 03       		.byte	0x3
+ 1633 02f2 08000000 		.4byte	.LC3
+ 1634 02f6 00       		.byte	0
+ 1635 02f7 11       		.uleb128 0x11
+ 1636 02f8 4E000000 		.4byte	.LVL9
+ 1637 02fc 9E070000 		.4byte	0x79e
+ 1638 0300 14030000 		.4byte	0x314
+ 1639 0304 12       		.uleb128 0x12
+ 1640 0305 01       		.uleb128 0x1
+ 1641 0306 50       		.byte	0x50
+ 1642 0307 02       		.uleb128 0x2
+ 1643 0308 7D       		.byte	0x7d
+ 1644 0309 00       		.sleb128 0
+ 1645 030a 12       		.uleb128 0x12
+ 1646 030b 01       		.uleb128 0x1
+ 1647 030c 51       		.byte	0x51
+ 1648 030d 05       		.uleb128 0x5
+ 1649 030e 03       		.byte	0x3
+ 1650 030f 10000000 		.4byte	.LC5
+ 1651 0313 00       		.byte	0
+ 1652 0314 11       		.uleb128 0x11
+ 1653 0315 62000000 		.4byte	.LVL12
+ 1654 0319 9E070000 		.4byte	0x79e
+ 1655 031d 31030000 		.4byte	0x331
+ 1656 0321 12       		.uleb128 0x12
+ 1657 0322 01       		.uleb128 0x1
+ 1658 0323 50       		.byte	0x50
+ 1659 0324 02       		.uleb128 0x2
+ 1660 0325 7D       		.byte	0x7d
+ 1661 0326 00       		.sleb128 0
+ 1662 0327 12       		.uleb128 0x12
+ 1663 0328 01       		.uleb128 0x1
+ 1664 0329 51       		.byte	0x51
+ 1665 032a 05       		.uleb128 0x5
+ 1666 032b 03       		.byte	0x3
+ 1667 032c 18000000 		.4byte	.LC7
+ 1668 0330 00       		.byte	0
+ 1669 0331 11       		.uleb128 0x11
+ 1670 0332 76000000 		.4byte	.LVL15
+ 1671 0336 9E070000 		.4byte	0x79e
+ 1672 033a 4E030000 		.4byte	0x34e
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 36
+
+
+ 1673 033e 12       		.uleb128 0x12
+ 1674 033f 01       		.uleb128 0x1
+ 1675 0340 50       		.byte	0x50
+ 1676 0341 02       		.uleb128 0x2
+ 1677 0342 7D       		.byte	0x7d
+ 1678 0343 00       		.sleb128 0
+ 1679 0344 12       		.uleb128 0x12
+ 1680 0345 01       		.uleb128 0x1
+ 1681 0346 51       		.byte	0x51
+ 1682 0347 05       		.uleb128 0x5
+ 1683 0348 03       		.byte	0x3
+ 1684 0349 20000000 		.4byte	.LC9
+ 1685 034d 00       		.byte	0
+ 1686 034e 11       		.uleb128 0x11
+ 1687 034f 8A000000 		.4byte	.LVL18
+ 1688 0353 9E070000 		.4byte	0x79e
+ 1689 0357 6B030000 		.4byte	0x36b
+ 1690 035b 12       		.uleb128 0x12
+ 1691 035c 01       		.uleb128 0x1
+ 1692 035d 50       		.byte	0x50
+ 1693 035e 02       		.uleb128 0x2
+ 1694 035f 7D       		.byte	0x7d
+ 1695 0360 00       		.sleb128 0
+ 1696 0361 12       		.uleb128 0x12
+ 1697 0362 01       		.uleb128 0x1
+ 1698 0363 51       		.byte	0x51
+ 1699 0364 05       		.uleb128 0x5
+ 1700 0365 03       		.byte	0x3
+ 1701 0366 28000000 		.4byte	.LC11
+ 1702 036a 00       		.byte	0
+ 1703 036b 11       		.uleb128 0x11
+ 1704 036c 9E000000 		.4byte	.LVL21
+ 1705 0370 9E070000 		.4byte	0x79e
+ 1706 0374 88030000 		.4byte	0x388
+ 1707 0378 12       		.uleb128 0x12
+ 1708 0379 01       		.uleb128 0x1
+ 1709 037a 50       		.byte	0x50
+ 1710 037b 02       		.uleb128 0x2
+ 1711 037c 7D       		.byte	0x7d
+ 1712 037d 00       		.sleb128 0
+ 1713 037e 12       		.uleb128 0x12
+ 1714 037f 01       		.uleb128 0x1
+ 1715 0380 51       		.byte	0x51
+ 1716 0381 05       		.uleb128 0x5
+ 1717 0382 03       		.byte	0x3
+ 1718 0383 30000000 		.4byte	.LC13
+ 1719 0387 00       		.byte	0
+ 1720 0388 11       		.uleb128 0x11
+ 1721 0389 B2000000 		.4byte	.LVL24
+ 1722 038d 9E070000 		.4byte	0x79e
+ 1723 0391 A5030000 		.4byte	0x3a5
+ 1724 0395 12       		.uleb128 0x12
+ 1725 0396 01       		.uleb128 0x1
+ 1726 0397 50       		.byte	0x50
+ 1727 0398 02       		.uleb128 0x2
+ 1728 0399 7D       		.byte	0x7d
+ 1729 039a 00       		.sleb128 0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 37
+
+
+ 1730 039b 12       		.uleb128 0x12
+ 1731 039c 01       		.uleb128 0x1
+ 1732 039d 51       		.byte	0x51
+ 1733 039e 05       		.uleb128 0x5
+ 1734 039f 03       		.byte	0x3
+ 1735 03a0 38000000 		.4byte	.LC15
+ 1736 03a4 00       		.byte	0
+ 1737 03a5 11       		.uleb128 0x11
+ 1738 03a6 C6000000 		.4byte	.LVL27
+ 1739 03aa 9E070000 		.4byte	0x79e
+ 1740 03ae C2030000 		.4byte	0x3c2
+ 1741 03b2 12       		.uleb128 0x12
+ 1742 03b3 01       		.uleb128 0x1
+ 1743 03b4 50       		.byte	0x50
+ 1744 03b5 02       		.uleb128 0x2
+ 1745 03b6 7D       		.byte	0x7d
+ 1746 03b7 00       		.sleb128 0
+ 1747 03b8 12       		.uleb128 0x12
+ 1748 03b9 01       		.uleb128 0x1
+ 1749 03ba 51       		.byte	0x51
+ 1750 03bb 05       		.uleb128 0x5
+ 1751 03bc 03       		.byte	0x3
+ 1752 03bd 40000000 		.4byte	.LC17
+ 1753 03c1 00       		.byte	0
+ 1754 03c2 11       		.uleb128 0x11
+ 1755 03c3 DA000000 		.4byte	.LVL30
+ 1756 03c7 9E070000 		.4byte	0x79e
+ 1757 03cb DF030000 		.4byte	0x3df
+ 1758 03cf 12       		.uleb128 0x12
+ 1759 03d0 01       		.uleb128 0x1
+ 1760 03d1 50       		.byte	0x50
+ 1761 03d2 02       		.uleb128 0x2
+ 1762 03d3 7D       		.byte	0x7d
+ 1763 03d4 00       		.sleb128 0
+ 1764 03d5 12       		.uleb128 0x12
+ 1765 03d6 01       		.uleb128 0x1
+ 1766 03d7 51       		.byte	0x51
+ 1767 03d8 05       		.uleb128 0x5
+ 1768 03d9 03       		.byte	0x3
+ 1769 03da 48000000 		.4byte	.LC19
+ 1770 03de 00       		.byte	0
+ 1771 03df 11       		.uleb128 0x11
+ 1772 03e0 EE000000 		.4byte	.LVL33
+ 1773 03e4 9E070000 		.4byte	0x79e
+ 1774 03e8 FC030000 		.4byte	0x3fc
+ 1775 03ec 12       		.uleb128 0x12
+ 1776 03ed 01       		.uleb128 0x1
+ 1777 03ee 50       		.byte	0x50
+ 1778 03ef 02       		.uleb128 0x2
+ 1779 03f0 7D       		.byte	0x7d
+ 1780 03f1 00       		.sleb128 0
+ 1781 03f2 12       		.uleb128 0x12
+ 1782 03f3 01       		.uleb128 0x1
+ 1783 03f4 51       		.byte	0x51
+ 1784 03f5 05       		.uleb128 0x5
+ 1785 03f6 03       		.byte	0x3
+ 1786 03f7 54000000 		.4byte	.LC21
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 38
+
+
+ 1787 03fb 00       		.byte	0
+ 1788 03fc 11       		.uleb128 0x11
+ 1789 03fd 02010000 		.4byte	.LVL36
+ 1790 0401 9E070000 		.4byte	0x79e
+ 1791 0405 19040000 		.4byte	0x419
+ 1792 0409 12       		.uleb128 0x12
+ 1793 040a 01       		.uleb128 0x1
+ 1794 040b 50       		.byte	0x50
+ 1795 040c 02       		.uleb128 0x2
+ 1796 040d 7D       		.byte	0x7d
+ 1797 040e 00       		.sleb128 0
+ 1798 040f 12       		.uleb128 0x12
+ 1799 0410 01       		.uleb128 0x1
+ 1800 0411 51       		.byte	0x51
+ 1801 0412 05       		.uleb128 0x5
+ 1802 0413 03       		.byte	0x3
+ 1803 0414 5C000000 		.4byte	.LC23
+ 1804 0418 00       		.byte	0
+ 1805 0419 11       		.uleb128 0x11
+ 1806 041a 16010000 		.4byte	.LVL39
+ 1807 041e 9E070000 		.4byte	0x79e
+ 1808 0422 36040000 		.4byte	0x436
+ 1809 0426 12       		.uleb128 0x12
+ 1810 0427 01       		.uleb128 0x1
+ 1811 0428 50       		.byte	0x50
+ 1812 0429 02       		.uleb128 0x2
+ 1813 042a 7D       		.byte	0x7d
+ 1814 042b 00       		.sleb128 0
+ 1815 042c 12       		.uleb128 0x12
+ 1816 042d 01       		.uleb128 0x1
+ 1817 042e 51       		.byte	0x51
+ 1818 042f 05       		.uleb128 0x5
+ 1819 0430 03       		.byte	0x3
+ 1820 0431 64000000 		.4byte	.LC25
+ 1821 0435 00       		.byte	0
+ 1822 0436 11       		.uleb128 0x11
+ 1823 0437 2A010000 		.4byte	.LVL42
+ 1824 043b 9E070000 		.4byte	0x79e
+ 1825 043f 53040000 		.4byte	0x453
+ 1826 0443 12       		.uleb128 0x12
+ 1827 0444 01       		.uleb128 0x1
+ 1828 0445 50       		.byte	0x50
+ 1829 0446 02       		.uleb128 0x2
+ 1830 0447 7D       		.byte	0x7d
+ 1831 0448 00       		.sleb128 0
+ 1832 0449 12       		.uleb128 0x12
+ 1833 044a 01       		.uleb128 0x1
+ 1834 044b 51       		.byte	0x51
+ 1835 044c 05       		.uleb128 0x5
+ 1836 044d 03       		.byte	0x3
+ 1837 044e 6C000000 		.4byte	.LC27
+ 1838 0452 00       		.byte	0
+ 1839 0453 11       		.uleb128 0x11
+ 1840 0454 3E010000 		.4byte	.LVL45
+ 1841 0458 9E070000 		.4byte	0x79e
+ 1842 045c 70040000 		.4byte	0x470
+ 1843 0460 12       		.uleb128 0x12
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 39
+
+
+ 1844 0461 01       		.uleb128 0x1
+ 1845 0462 50       		.byte	0x50
+ 1846 0463 02       		.uleb128 0x2
+ 1847 0464 7D       		.byte	0x7d
+ 1848 0465 00       		.sleb128 0
+ 1849 0466 12       		.uleb128 0x12
+ 1850 0467 01       		.uleb128 0x1
+ 1851 0468 51       		.byte	0x51
+ 1852 0469 05       		.uleb128 0x5
+ 1853 046a 03       		.byte	0x3
+ 1854 046b 78000000 		.4byte	.LC29
+ 1855 046f 00       		.byte	0
+ 1856 0470 11       		.uleb128 0x11
+ 1857 0471 52010000 		.4byte	.LVL48
+ 1858 0475 9E070000 		.4byte	0x79e
+ 1859 0479 8D040000 		.4byte	0x48d
+ 1860 047d 12       		.uleb128 0x12
+ 1861 047e 01       		.uleb128 0x1
+ 1862 047f 50       		.byte	0x50
+ 1863 0480 02       		.uleb128 0x2
+ 1864 0481 7D       		.byte	0x7d
+ 1865 0482 00       		.sleb128 0
+ 1866 0483 12       		.uleb128 0x12
+ 1867 0484 01       		.uleb128 0x1
+ 1868 0485 51       		.byte	0x51
+ 1869 0486 05       		.uleb128 0x5
+ 1870 0487 03       		.byte	0x3
+ 1871 0488 84000000 		.4byte	.LC31
+ 1872 048c 00       		.byte	0
+ 1873 048d 11       		.uleb128 0x11
+ 1874 048e 66010000 		.4byte	.LVL51
+ 1875 0492 9E070000 		.4byte	0x79e
+ 1876 0496 AA040000 		.4byte	0x4aa
+ 1877 049a 12       		.uleb128 0x12
+ 1878 049b 01       		.uleb128 0x1
+ 1879 049c 50       		.byte	0x50
+ 1880 049d 02       		.uleb128 0x2
+ 1881 049e 7D       		.byte	0x7d
+ 1882 049f 00       		.sleb128 0
+ 1883 04a0 12       		.uleb128 0x12
+ 1884 04a1 01       		.uleb128 0x1
+ 1885 04a2 51       		.byte	0x51
+ 1886 04a3 05       		.uleb128 0x5
+ 1887 04a4 03       		.byte	0x3
+ 1888 04a5 8C000000 		.4byte	.LC33
+ 1889 04a9 00       		.byte	0
+ 1890 04aa 11       		.uleb128 0x11
+ 1891 04ab 7A010000 		.4byte	.LVL54
+ 1892 04af 9E070000 		.4byte	0x79e
+ 1893 04b3 C7040000 		.4byte	0x4c7
+ 1894 04b7 12       		.uleb128 0x12
+ 1895 04b8 01       		.uleb128 0x1
+ 1896 04b9 50       		.byte	0x50
+ 1897 04ba 02       		.uleb128 0x2
+ 1898 04bb 7D       		.byte	0x7d
+ 1899 04bc 00       		.sleb128 0
+ 1900 04bd 12       		.uleb128 0x12
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 40
+
+
+ 1901 04be 01       		.uleb128 0x1
+ 1902 04bf 51       		.byte	0x51
+ 1903 04c0 05       		.uleb128 0x5
+ 1904 04c1 03       		.byte	0x3
+ 1905 04c2 98000000 		.4byte	.LC35
+ 1906 04c6 00       		.byte	0
+ 1907 04c7 11       		.uleb128 0x11
+ 1908 04c8 86010000 		.4byte	.LVL56
+ 1909 04cc 9E070000 		.4byte	0x79e
+ 1910 04d0 E4040000 		.4byte	0x4e4
+ 1911 04d4 12       		.uleb128 0x12
+ 1912 04d5 01       		.uleb128 0x1
+ 1913 04d6 50       		.byte	0x50
+ 1914 04d7 02       		.uleb128 0x2
+ 1915 04d8 7D       		.byte	0x7d
+ 1916 04d9 00       		.sleb128 0
+ 1917 04da 12       		.uleb128 0x12
+ 1918 04db 01       		.uleb128 0x1
+ 1919 04dc 51       		.byte	0x51
+ 1920 04dd 05       		.uleb128 0x5
+ 1921 04de 03       		.byte	0x3
+ 1922 04df A4000000 		.4byte	.LC37
+ 1923 04e3 00       		.byte	0
+ 1924 04e4 11       		.uleb128 0x11
+ 1925 04e5 9A010000 		.4byte	.LVL59
+ 1926 04e9 9E070000 		.4byte	0x79e
+ 1927 04ed 01050000 		.4byte	0x501
+ 1928 04f1 12       		.uleb128 0x12
+ 1929 04f2 01       		.uleb128 0x1
+ 1930 04f3 50       		.byte	0x50
+ 1931 04f4 02       		.uleb128 0x2
+ 1932 04f5 7D       		.byte	0x7d
+ 1933 04f6 00       		.sleb128 0
+ 1934 04f7 12       		.uleb128 0x12
+ 1935 04f8 01       		.uleb128 0x1
+ 1936 04f9 51       		.byte	0x51
+ 1937 04fa 05       		.uleb128 0x5
+ 1938 04fb 03       		.byte	0x3
+ 1939 04fc B4000000 		.4byte	.LC39
+ 1940 0500 00       		.byte	0
+ 1941 0501 11       		.uleb128 0x11
+ 1942 0502 A6010000 		.4byte	.LVL61
+ 1943 0506 9E070000 		.4byte	0x79e
+ 1944 050a 1E050000 		.4byte	0x51e
+ 1945 050e 12       		.uleb128 0x12
+ 1946 050f 01       		.uleb128 0x1
+ 1947 0510 50       		.byte	0x50
+ 1948 0511 02       		.uleb128 0x2
+ 1949 0512 7D       		.byte	0x7d
+ 1950 0513 00       		.sleb128 0
+ 1951 0514 12       		.uleb128 0x12
+ 1952 0515 01       		.uleb128 0x1
+ 1953 0516 51       		.byte	0x51
+ 1954 0517 05       		.uleb128 0x5
+ 1955 0518 03       		.byte	0x3
+ 1956 0519 C0000000 		.4byte	.LC41
+ 1957 051d 00       		.byte	0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 41
+
+
+ 1958 051e 11       		.uleb128 0x11
+ 1959 051f BA010000 		.4byte	.LVL64
+ 1960 0523 9E070000 		.4byte	0x79e
+ 1961 0527 3B050000 		.4byte	0x53b
+ 1962 052b 12       		.uleb128 0x12
+ 1963 052c 01       		.uleb128 0x1
+ 1964 052d 50       		.byte	0x50
+ 1965 052e 02       		.uleb128 0x2
+ 1966 052f 7D       		.byte	0x7d
+ 1967 0530 00       		.sleb128 0
+ 1968 0531 12       		.uleb128 0x12
+ 1969 0532 01       		.uleb128 0x1
+ 1970 0533 51       		.byte	0x51
+ 1971 0534 05       		.uleb128 0x5
+ 1972 0535 03       		.byte	0x3
+ 1973 0536 CC000000 		.4byte	.LC43
+ 1974 053a 00       		.byte	0
+ 1975 053b 11       		.uleb128 0x11
+ 1976 053c CE010000 		.4byte	.LVL67
+ 1977 0540 9E070000 		.4byte	0x79e
+ 1978 0544 58050000 		.4byte	0x558
+ 1979 0548 12       		.uleb128 0x12
+ 1980 0549 01       		.uleb128 0x1
+ 1981 054a 50       		.byte	0x50
+ 1982 054b 02       		.uleb128 0x2
+ 1983 054c 7D       		.byte	0x7d
+ 1984 054d 00       		.sleb128 0
+ 1985 054e 12       		.uleb128 0x12
+ 1986 054f 01       		.uleb128 0x1
+ 1987 0550 51       		.byte	0x51
+ 1988 0551 05       		.uleb128 0x5
+ 1989 0552 03       		.byte	0x3
+ 1990 0553 D8000000 		.4byte	.LC45
+ 1991 0557 00       		.byte	0
+ 1992 0558 11       		.uleb128 0x11
+ 1993 0559 DA010000 		.4byte	.LVL69
+ 1994 055d 9E070000 		.4byte	0x79e
+ 1995 0561 75050000 		.4byte	0x575
+ 1996 0565 12       		.uleb128 0x12
+ 1997 0566 01       		.uleb128 0x1
+ 1998 0567 50       		.byte	0x50
+ 1999 0568 02       		.uleb128 0x2
+ 2000 0569 7D       		.byte	0x7d
+ 2001 056a 00       		.sleb128 0
+ 2002 056b 12       		.uleb128 0x12
+ 2003 056c 01       		.uleb128 0x1
+ 2004 056d 51       		.byte	0x51
+ 2005 056e 05       		.uleb128 0x5
+ 2006 056f 03       		.byte	0x3
+ 2007 0570 E4000000 		.4byte	.LC47
+ 2008 0574 00       		.byte	0
+ 2009 0575 11       		.uleb128 0x11
+ 2010 0576 E6010000 		.4byte	.LVL71
+ 2011 057a 9E070000 		.4byte	0x79e
+ 2012 057e 92050000 		.4byte	0x592
+ 2013 0582 12       		.uleb128 0x12
+ 2014 0583 01       		.uleb128 0x1
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 42
+
+
+ 2015 0584 50       		.byte	0x50
+ 2016 0585 02       		.uleb128 0x2
+ 2017 0586 7D       		.byte	0x7d
+ 2018 0587 00       		.sleb128 0
+ 2019 0588 12       		.uleb128 0x12
+ 2020 0589 01       		.uleb128 0x1
+ 2021 058a 51       		.byte	0x51
+ 2022 058b 05       		.uleb128 0x5
+ 2023 058c 03       		.byte	0x3
+ 2024 058d F0000000 		.4byte	.LC49
+ 2025 0591 00       		.byte	0
+ 2026 0592 11       		.uleb128 0x11
+ 2027 0593 FA010000 		.4byte	.LVL74
+ 2028 0597 9E070000 		.4byte	0x79e
+ 2029 059b AF050000 		.4byte	0x5af
+ 2030 059f 12       		.uleb128 0x12
+ 2031 05a0 01       		.uleb128 0x1
+ 2032 05a1 50       		.byte	0x50
+ 2033 05a2 02       		.uleb128 0x2
+ 2034 05a3 7D       		.byte	0x7d
+ 2035 05a4 00       		.sleb128 0
+ 2036 05a5 12       		.uleb128 0x12
+ 2037 05a6 01       		.uleb128 0x1
+ 2038 05a7 51       		.byte	0x51
+ 2039 05a8 05       		.uleb128 0x5
+ 2040 05a9 03       		.byte	0x3
+ 2041 05aa FC000000 		.4byte	.LC51
+ 2042 05ae 00       		.byte	0
+ 2043 05af 11       		.uleb128 0x11
+ 2044 05b0 0E020000 		.4byte	.LVL77
+ 2045 05b4 9E070000 		.4byte	0x79e
+ 2046 05b8 CC050000 		.4byte	0x5cc
+ 2047 05bc 12       		.uleb128 0x12
+ 2048 05bd 01       		.uleb128 0x1
+ 2049 05be 50       		.byte	0x50
+ 2050 05bf 02       		.uleb128 0x2
+ 2051 05c0 7D       		.byte	0x7d
+ 2052 05c1 00       		.sleb128 0
+ 2053 05c2 12       		.uleb128 0x12
+ 2054 05c3 01       		.uleb128 0x1
+ 2055 05c4 51       		.byte	0x51
+ 2056 05c5 05       		.uleb128 0x5
+ 2057 05c6 03       		.byte	0x3
+ 2058 05c7 08010000 		.4byte	.LC53
+ 2059 05cb 00       		.byte	0
+ 2060 05cc 11       		.uleb128 0x11
+ 2061 05cd 1A020000 		.4byte	.LVL79
+ 2062 05d1 9E070000 		.4byte	0x79e
+ 2063 05d5 E9050000 		.4byte	0x5e9
+ 2064 05d9 12       		.uleb128 0x12
+ 2065 05da 01       		.uleb128 0x1
+ 2066 05db 50       		.byte	0x50
+ 2067 05dc 02       		.uleb128 0x2
+ 2068 05dd 7D       		.byte	0x7d
+ 2069 05de 00       		.sleb128 0
+ 2070 05df 12       		.uleb128 0x12
+ 2071 05e0 01       		.uleb128 0x1
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 43
+
+
+ 2072 05e1 51       		.byte	0x51
+ 2073 05e2 05       		.uleb128 0x5
+ 2074 05e3 03       		.byte	0x3
+ 2075 05e4 14010000 		.4byte	.LC55
+ 2076 05e8 00       		.byte	0
+ 2077 05e9 11       		.uleb128 0x11
+ 2078 05ea 2E020000 		.4byte	.LVL82
+ 2079 05ee 9E070000 		.4byte	0x79e
+ 2080 05f2 06060000 		.4byte	0x606
+ 2081 05f6 12       		.uleb128 0x12
+ 2082 05f7 01       		.uleb128 0x1
+ 2083 05f8 50       		.byte	0x50
+ 2084 05f9 02       		.uleb128 0x2
+ 2085 05fa 7D       		.byte	0x7d
+ 2086 05fb 00       		.sleb128 0
+ 2087 05fc 12       		.uleb128 0x12
+ 2088 05fd 01       		.uleb128 0x1
+ 2089 05fe 51       		.byte	0x51
+ 2090 05ff 05       		.uleb128 0x5
+ 2091 0600 03       		.byte	0x3
+ 2092 0601 24010000 		.4byte	.LC57
+ 2093 0605 00       		.byte	0
+ 2094 0606 11       		.uleb128 0x11
+ 2095 0607 3A020000 		.4byte	.LVL84
+ 2096 060b 9E070000 		.4byte	0x79e
+ 2097 060f 23060000 		.4byte	0x623
+ 2098 0613 12       		.uleb128 0x12
+ 2099 0614 01       		.uleb128 0x1
+ 2100 0615 50       		.byte	0x50
+ 2101 0616 02       		.uleb128 0x2
+ 2102 0617 7D       		.byte	0x7d
+ 2103 0618 00       		.sleb128 0
+ 2104 0619 12       		.uleb128 0x12
+ 2105 061a 01       		.uleb128 0x1
+ 2106 061b 51       		.byte	0x51
+ 2107 061c 05       		.uleb128 0x5
+ 2108 061d 03       		.byte	0x3
+ 2109 061e 30010000 		.4byte	.LC59
+ 2110 0622 00       		.byte	0
+ 2111 0623 11       		.uleb128 0x11
+ 2112 0624 46020000 		.4byte	.LVL86
+ 2113 0628 9E070000 		.4byte	0x79e
+ 2114 062c 40060000 		.4byte	0x640
+ 2115 0630 12       		.uleb128 0x12
+ 2116 0631 01       		.uleb128 0x1
+ 2117 0632 50       		.byte	0x50
+ 2118 0633 02       		.uleb128 0x2
+ 2119 0634 7D       		.byte	0x7d
+ 2120 0635 00       		.sleb128 0
+ 2121 0636 12       		.uleb128 0x12
+ 2122 0637 01       		.uleb128 0x1
+ 2123 0638 51       		.byte	0x51
+ 2124 0639 05       		.uleb128 0x5
+ 2125 063a 03       		.byte	0x3
+ 2126 063b 40010000 		.4byte	.LC61
+ 2127 063f 00       		.byte	0
+ 2128 0640 11       		.uleb128 0x11
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 44
+
+
+ 2129 0641 4E030000 		.4byte	.LVL121
+ 2130 0645 9E070000 		.4byte	0x79e
+ 2131 0649 5D060000 		.4byte	0x65d
+ 2132 064d 12       		.uleb128 0x12
+ 2133 064e 01       		.uleb128 0x1
+ 2134 064f 50       		.byte	0x50
+ 2135 0650 02       		.uleb128 0x2
+ 2136 0651 7D       		.byte	0x7d
+ 2137 0652 00       		.sleb128 0
+ 2138 0653 12       		.uleb128 0x12
+ 2139 0654 01       		.uleb128 0x1
+ 2140 0655 51       		.byte	0x51
+ 2141 0656 05       		.uleb128 0x5
+ 2142 0657 03       		.byte	0x3
+ 2143 0658 D0010000 		.4byte	.LC95
+ 2144 065c 00       		.byte	0
+ 2145 065d 11       		.uleb128 0x11
+ 2146 065e 68040000 		.4byte	.LVL132
+ 2147 0662 A9070000 		.4byte	0x7a9
+ 2148 0666 71060000 		.4byte	0x671
+ 2149 066a 12       		.uleb128 0x12
+ 2150 066b 01       		.uleb128 0x1
+ 2151 066c 50       		.byte	0x50
+ 2152 066d 02       		.uleb128 0x2
+ 2153 066e 7D       		.byte	0x7d
+ 2154 066f 00       		.sleb128 0
+ 2155 0670 00       		.byte	0
+ 2156 0671 13       		.uleb128 0x13
+ 2157 0672 6C040000 		.4byte	.LVL133
+ 2158 0676 B5070000 		.4byte	0x7b5
+ 2159 067a 13       		.uleb128 0x13
+ 2160 067b 76040000 		.4byte	.LVL135
+ 2161 067f B5070000 		.4byte	0x7b5
+ 2162 0683 13       		.uleb128 0x13
+ 2163 0684 80040000 		.4byte	.LVL137
+ 2164 0688 B5070000 		.4byte	0x7b5
+ 2165 068c 13       		.uleb128 0x13
+ 2166 068d 8A040000 		.4byte	.LVL139
+ 2167 0691 B5070000 		.4byte	0x7b5
+ 2168 0695 14       		.uleb128 0x14
+ 2169 0696 96040000 		.4byte	.LVL142
+ 2170 069a C1070000 		.4byte	0x7c1
+ 2171 069e 12       		.uleb128 0x12
+ 2172 069f 01       		.uleb128 0x1
+ 2173 06a0 50       		.byte	0x50
+ 2174 06a1 05       		.uleb128 0x5
+ 2175 06a2 03       		.byte	0x3
+ 2176 06a3 04020000 		.4byte	.LC107
+ 2177 06a7 00       		.byte	0
+ 2178 06a8 00       		.byte	0
+ 2179 06a9 07       		.uleb128 0x7
+ 2180 06aa 80000000 		.4byte	0x80
+ 2181 06ae B9060000 		.4byte	0x6b9
+ 2182 06b2 08       		.uleb128 0x8
+ 2183 06b3 79000000 		.4byte	0x79
+ 2184 06b7 3F       		.byte	0x3f
+ 2185 06b8 00       		.byte	0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 45
+
+
+ 2186 06b9 15       		.uleb128 0x15
+ 2187 06ba EE030000 		.4byte	.LASF72
+ 2188 06be 01       		.byte	0x1
+ 2189 06bf BC       		.byte	0xbc
+ 2190 06c0 00000000 		.4byte	.LFB37
+ 2191 06c4 10000000 		.4byte	.LFE37-.LFB37
+ 2192 06c8 01       		.uleb128 0x1
+ 2193 06c9 9C       		.byte	0x9c
+ 2194 06ca F2060000 		.4byte	0x6f2
+ 2195 06ce 11       		.uleb128 0x11
+ 2196 06cf 08000000 		.4byte	.LVL143
+ 2197 06d3 D0070000 		.4byte	0x7d0
+ 2198 06d7 E2060000 		.4byte	0x6e2
+ 2199 06db 12       		.uleb128 0x12
+ 2200 06dc 01       		.uleb128 0x1
+ 2201 06dd 50       		.byte	0x50
+ 2202 06de 02       		.uleb128 0x2
+ 2203 06df 08       		.byte	0x8
+ 2204 06e0 2A       		.byte	0x2a
+ 2205 06e1 00       		.byte	0
+ 2206 06e2 14       		.uleb128 0x14
+ 2207 06e3 0E000000 		.4byte	.LVL144
+ 2208 06e7 DC070000 		.4byte	0x7dc
+ 2209 06eb 12       		.uleb128 0x12
+ 2210 06ec 01       		.uleb128 0x1
+ 2211 06ed 50       		.byte	0x50
+ 2212 06ee 01       		.uleb128 0x1
+ 2213 06ef 3A       		.byte	0x3a
+ 2214 06f0 00       		.byte	0
+ 2215 06f1 00       		.byte	0
+ 2216 06f2 16       		.uleb128 0x16
+ 2217 06f3 A6050000 		.4byte	.LASF82
+ 2218 06f7 01       		.byte	0x1
+ 2219 06f8 C2       		.byte	0xc2
+ 2220 06f9 17010000 		.4byte	0x117
+ 2221 06fd 00000000 		.4byte	.LFB38
+ 2222 0701 C0000000 		.4byte	.LFE38-.LFB38
+ 2223 0705 01       		.uleb128 0x1
+ 2224 0706 9C       		.byte	0x9c
+ 2225 0707 9E070000 		.4byte	0x79e
+ 2226 070b 10       		.uleb128 0x10
+ 2227 070c 68657800 		.ascii	"hex\000"
+ 2228 0710 01       		.byte	0x1
+ 2229 0711 C4       		.byte	0xc4
+ 2230 0712 93000000 		.4byte	0x93
+ 2231 0716 FD060000 		.4byte	.LLST3
+ 2232 071a 17       		.uleb128 0x17
+ 2233 071b 71040000 		.4byte	.LASF73
+ 2234 071f 01       		.byte	0x1
+ 2235 0720 C5       		.byte	0xc5
+ 2236 0721 93000000 		.4byte	0x93
+ 2237 0725 26070000 		.4byte	.LLST4
+ 2238 0729 10       		.uleb128 0x10
+ 2239 072a 636E7400 		.ascii	"cnt\000"
+ 2240 072e 01       		.byte	0x1
+ 2241 072f C6       		.byte	0xc6
+ 2242 0730 64000000 		.4byte	0x64
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 46
+
+
+ 2243 0734 5C070000 		.4byte	.LLST5
+ 2244 0738 17       		.uleb128 0x17
+ 2245 0739 78040000 		.4byte	.LASF70
+ 2246 073d 01       		.byte	0x1
+ 2247 073e C7       		.byte	0xc7
+ 2248 073f 17010000 		.4byte	0x117
+ 2249 0743 92070000 		.4byte	.LLST6
+ 2250 0747 18       		.uleb128 0x18
+ 2251 0748 00000000 		.4byte	.Ldebug_ranges0+0
+ 2252 074c 70070000 		.4byte	0x770
+ 2253 0750 10       		.uleb128 0x10
+ 2254 0751 6900     		.ascii	"i\000"
+ 2255 0753 01       		.byte	0x1
+ 2256 0754 D4       		.byte	0xd4
+ 2257 0755 87000000 		.4byte	0x87
+ 2258 0759 BE070000 		.4byte	.LLST7
+ 2259 075d 13       		.uleb128 0x13
+ 2260 075e 34000000 		.4byte	.LVL154
+ 2261 0762 B5070000 		.4byte	0x7b5
+ 2262 0766 13       		.uleb128 0x13
+ 2263 0767 3A000000 		.4byte	.LVL155
+ 2264 076b B5070000 		.4byte	0x7b5
+ 2265 076f 00       		.byte	0
+ 2266 0770 13       		.uleb128 0x13
+ 2267 0771 0C000000 		.4byte	.LVL147
+ 2268 0775 B9060000 		.4byte	0x6b9
+ 2269 0779 13       		.uleb128 0x13
+ 2270 077a 10000000 		.4byte	.LVL148
+ 2271 077e B5070000 		.4byte	0x7b5
+ 2272 0782 13       		.uleb128 0x13
+ 2273 0783 16000000 		.4byte	.LVL149
+ 2274 0787 B5070000 		.4byte	0x7b5
+ 2275 078b 13       		.uleb128 0x13
+ 2276 078c 9C000000 		.4byte	.LVL164
+ 2277 0790 B5070000 		.4byte	0x7b5
+ 2278 0794 13       		.uleb128 0x13
+ 2279 0795 A2000000 		.4byte	.LVL166
+ 2280 0799 B5070000 		.4byte	0x7b5
+ 2281 079d 00       		.byte	0
+ 2282 079e 19       		.uleb128 0x19
+ 2283 079f D4020000 		.4byte	.LASF74
+ 2284 07a3 D4020000 		.4byte	.LASF74
+ 2285 07a7 04       		.byte	0x4
+ 2286 07a8 E7       		.byte	0xe7
+ 2287 07a9 1A       		.uleb128 0x1a
+ 2288 07aa A5000000 		.4byte	.LASF75
+ 2289 07ae A5000000 		.4byte	.LASF75
+ 2290 07b2 05       		.byte	0x5
+ 2291 07b3 2A03     		.2byte	0x32a
+ 2292 07b5 1A       		.uleb128 0x1a
+ 2293 07b6 1E060000 		.4byte	.LASF76
+ 2294 07ba 1E060000 		.4byte	.LASF76
+ 2295 07be 05       		.byte	0x5
+ 2296 07bf 0F03     		.2byte	0x30f
+ 2297 07c1 1B       		.uleb128 0x1b
+ 2298 07c2 E5010000 		.4byte	.LASF83
+ 2299 07c6 00000000 		.4byte	.LASF84
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 47
+
+
+ 2300 07ca 07       		.byte	0x7
+ 2301 07cb 00       		.byte	0
+ 2302 07cc E5010000 		.4byte	.LASF83
+ 2303 07d0 1A       		.uleb128 0x1a
+ 2304 07d1 C8000000 		.4byte	.LASF77
+ 2305 07d5 C8000000 		.4byte	.LASF77
+ 2306 07d9 05       		.byte	0x5
+ 2307 07da 4403     		.2byte	0x344
+ 2308 07dc 19       		.uleb128 0x19
+ 2309 07dd EB050000 		.4byte	.LASF78
+ 2310 07e1 EB050000 		.4byte	.LASF78
+ 2311 07e5 06       		.byte	0x6
+ 2312 07e6 D9       		.byte	0xd9
+ 2313 07e7 00       		.byte	0
+ 2314              		.section	.debug_abbrev,"",%progbits
+ 2315              	.Ldebug_abbrev0:
+ 2316 0000 01       		.uleb128 0x1
+ 2317 0001 11       		.uleb128 0x11
+ 2318 0002 01       		.byte	0x1
+ 2319 0003 25       		.uleb128 0x25
+ 2320 0004 0E       		.uleb128 0xe
+ 2321 0005 13       		.uleb128 0x13
+ 2322 0006 0B       		.uleb128 0xb
+ 2323 0007 03       		.uleb128 0x3
+ 2324 0008 0E       		.uleb128 0xe
+ 2325 0009 1B       		.uleb128 0x1b
+ 2326 000a 0E       		.uleb128 0xe
+ 2327 000b 55       		.uleb128 0x55
+ 2328 000c 17       		.uleb128 0x17
+ 2329 000d 11       		.uleb128 0x11
+ 2330 000e 01       		.uleb128 0x1
+ 2331 000f 10       		.uleb128 0x10
+ 2332 0010 17       		.uleb128 0x17
+ 2333 0011 00       		.byte	0
+ 2334 0012 00       		.byte	0
+ 2335 0013 02       		.uleb128 0x2
+ 2336 0014 24       		.uleb128 0x24
+ 2337 0015 00       		.byte	0
+ 2338 0016 0B       		.uleb128 0xb
+ 2339 0017 0B       		.uleb128 0xb
+ 2340 0018 3E       		.uleb128 0x3e
+ 2341 0019 0B       		.uleb128 0xb
+ 2342 001a 03       		.uleb128 0x3
+ 2343 001b 0E       		.uleb128 0xe
+ 2344 001c 00       		.byte	0
+ 2345 001d 00       		.byte	0
+ 2346 001e 03       		.uleb128 0x3
+ 2347 001f 24       		.uleb128 0x24
+ 2348 0020 00       		.byte	0
+ 2349 0021 0B       		.uleb128 0xb
+ 2350 0022 0B       		.uleb128 0xb
+ 2351 0023 3E       		.uleb128 0x3e
+ 2352 0024 0B       		.uleb128 0xb
+ 2353 0025 03       		.uleb128 0x3
+ 2354 0026 08       		.uleb128 0x8
+ 2355 0027 00       		.byte	0
+ 2356 0028 00       		.byte	0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 48
+
+
+ 2357 0029 04       		.uleb128 0x4
+ 2358 002a 16       		.uleb128 0x16
+ 2359 002b 00       		.byte	0
+ 2360 002c 03       		.uleb128 0x3
+ 2361 002d 0E       		.uleb128 0xe
+ 2362 002e 3A       		.uleb128 0x3a
+ 2363 002f 0B       		.uleb128 0xb
+ 2364 0030 3B       		.uleb128 0x3b
+ 2365 0031 05       		.uleb128 0x5
+ 2366 0032 49       		.uleb128 0x49
+ 2367 0033 13       		.uleb128 0x13
+ 2368 0034 00       		.byte	0
+ 2369 0035 00       		.byte	0
+ 2370 0036 05       		.uleb128 0x5
+ 2371 0037 13       		.uleb128 0x13
+ 2372 0038 01       		.byte	0x1
+ 2373 0039 0B       		.uleb128 0xb
+ 2374 003a 0B       		.uleb128 0xb
+ 2375 003b 3A       		.uleb128 0x3a
+ 2376 003c 0B       		.uleb128 0xb
+ 2377 003d 3B       		.uleb128 0x3b
+ 2378 003e 0B       		.uleb128 0xb
+ 2379 003f 01       		.uleb128 0x1
+ 2380 0040 13       		.uleb128 0x13
+ 2381 0041 00       		.byte	0
+ 2382 0042 00       		.byte	0
+ 2383 0043 06       		.uleb128 0x6
+ 2384 0044 0D       		.uleb128 0xd
+ 2385 0045 00       		.byte	0
+ 2386 0046 03       		.uleb128 0x3
+ 2387 0047 08       		.uleb128 0x8
+ 2388 0048 3A       		.uleb128 0x3a
+ 2389 0049 0B       		.uleb128 0xb
+ 2390 004a 3B       		.uleb128 0x3b
+ 2391 004b 0B       		.uleb128 0xb
+ 2392 004c 49       		.uleb128 0x49
+ 2393 004d 13       		.uleb128 0x13
+ 2394 004e 38       		.uleb128 0x38
+ 2395 004f 0B       		.uleb128 0xb
+ 2396 0050 00       		.byte	0
+ 2397 0051 00       		.byte	0
+ 2398 0052 07       		.uleb128 0x7
+ 2399 0053 01       		.uleb128 0x1
+ 2400 0054 01       		.byte	0x1
+ 2401 0055 49       		.uleb128 0x49
+ 2402 0056 13       		.uleb128 0x13
+ 2403 0057 01       		.uleb128 0x1
+ 2404 0058 13       		.uleb128 0x13
+ 2405 0059 00       		.byte	0
+ 2406 005a 00       		.byte	0
+ 2407 005b 08       		.uleb128 0x8
+ 2408 005c 21       		.uleb128 0x21
+ 2409 005d 00       		.byte	0
+ 2410 005e 49       		.uleb128 0x49
+ 2411 005f 13       		.uleb128 0x13
+ 2412 0060 2F       		.uleb128 0x2f
+ 2413 0061 0B       		.uleb128 0xb
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 49
+
+
+ 2414 0062 00       		.byte	0
+ 2415 0063 00       		.byte	0
+ 2416 0064 09       		.uleb128 0x9
+ 2417 0065 16       		.uleb128 0x16
+ 2418 0066 00       		.byte	0
+ 2419 0067 03       		.uleb128 0x3
+ 2420 0068 08       		.uleb128 0x8
+ 2421 0069 3A       		.uleb128 0x3a
+ 2422 006a 0B       		.uleb128 0xb
+ 2423 006b 3B       		.uleb128 0x3b
+ 2424 006c 0B       		.uleb128 0xb
+ 2425 006d 49       		.uleb128 0x49
+ 2426 006e 13       		.uleb128 0x13
+ 2427 006f 00       		.byte	0
+ 2428 0070 00       		.byte	0
+ 2429 0071 0A       		.uleb128 0xa
+ 2430 0072 04       		.uleb128 0x4
+ 2431 0073 01       		.byte	0x1
+ 2432 0074 0B       		.uleb128 0xb
+ 2433 0075 0B       		.uleb128 0xb
+ 2434 0076 49       		.uleb128 0x49
+ 2435 0077 13       		.uleb128 0x13
+ 2436 0078 3A       		.uleb128 0x3a
+ 2437 0079 0B       		.uleb128 0xb
+ 2438 007a 3B       		.uleb128 0x3b
+ 2439 007b 0B       		.uleb128 0xb
+ 2440 007c 01       		.uleb128 0x1
+ 2441 007d 13       		.uleb128 0x13
+ 2442 007e 00       		.byte	0
+ 2443 007f 00       		.byte	0
+ 2444 0080 0B       		.uleb128 0xb
+ 2445 0081 28       		.uleb128 0x28
+ 2446 0082 00       		.byte	0
+ 2447 0083 03       		.uleb128 0x3
+ 2448 0084 0E       		.uleb128 0xe
+ 2449 0085 1C       		.uleb128 0x1c
+ 2450 0086 0B       		.uleb128 0xb
+ 2451 0087 00       		.byte	0
+ 2452 0088 00       		.byte	0
+ 2453 0089 0C       		.uleb128 0xc
+ 2454 008a 2E       		.uleb128 0x2e
+ 2455 008b 01       		.byte	0x1
+ 2456 008c 3F       		.uleb128 0x3f
+ 2457 008d 19       		.uleb128 0x19
+ 2458 008e 03       		.uleb128 0x3
+ 2459 008f 0E       		.uleb128 0xe
+ 2460 0090 3A       		.uleb128 0x3a
+ 2461 0091 0B       		.uleb128 0xb
+ 2462 0092 3B       		.uleb128 0x3b
+ 2463 0093 0B       		.uleb128 0xb
+ 2464 0094 27       		.uleb128 0x27
+ 2465 0095 19       		.uleb128 0x19
+ 2466 0096 11       		.uleb128 0x11
+ 2467 0097 01       		.uleb128 0x1
+ 2468 0098 12       		.uleb128 0x12
+ 2469 0099 06       		.uleb128 0x6
+ 2470 009a 40       		.uleb128 0x40
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 50
+
+
+ 2471 009b 18       		.uleb128 0x18
+ 2472 009c 9642     		.uleb128 0x2116
+ 2473 009e 19       		.uleb128 0x19
+ 2474 009f 01       		.uleb128 0x1
+ 2475 00a0 13       		.uleb128 0x13
+ 2476 00a1 00       		.byte	0
+ 2477 00a2 00       		.byte	0
+ 2478 00a3 0D       		.uleb128 0xd
+ 2479 00a4 05       		.uleb128 0x5
+ 2480 00a5 00       		.byte	0
+ 2481 00a6 03       		.uleb128 0x3
+ 2482 00a7 08       		.uleb128 0x8
+ 2483 00a8 3A       		.uleb128 0x3a
+ 2484 00a9 0B       		.uleb128 0xb
+ 2485 00aa 3B       		.uleb128 0x3b
+ 2486 00ab 0B       		.uleb128 0xb
+ 2487 00ac 49       		.uleb128 0x49
+ 2488 00ad 13       		.uleb128 0x13
+ 2489 00ae 02       		.uleb128 0x2
+ 2490 00af 17       		.uleb128 0x17
+ 2491 00b0 00       		.byte	0
+ 2492 00b1 00       		.byte	0
+ 2493 00b2 0E       		.uleb128 0xe
+ 2494 00b3 05       		.uleb128 0x5
+ 2495 00b4 00       		.byte	0
+ 2496 00b5 03       		.uleb128 0x3
+ 2497 00b6 0E       		.uleb128 0xe
+ 2498 00b7 3A       		.uleb128 0x3a
+ 2499 00b8 0B       		.uleb128 0xb
+ 2500 00b9 3B       		.uleb128 0x3b
+ 2501 00ba 0B       		.uleb128 0xb
+ 2502 00bb 49       		.uleb128 0x49
+ 2503 00bc 13       		.uleb128 0x13
+ 2504 00bd 02       		.uleb128 0x2
+ 2505 00be 17       		.uleb128 0x17
+ 2506 00bf 00       		.byte	0
+ 2507 00c0 00       		.byte	0
+ 2508 00c1 0F       		.uleb128 0xf
+ 2509 00c2 34       		.uleb128 0x34
+ 2510 00c3 00       		.byte	0
+ 2511 00c4 03       		.uleb128 0x3
+ 2512 00c5 08       		.uleb128 0x8
+ 2513 00c6 3A       		.uleb128 0x3a
+ 2514 00c7 0B       		.uleb128 0xb
+ 2515 00c8 3B       		.uleb128 0x3b
+ 2516 00c9 0B       		.uleb128 0xb
+ 2517 00ca 49       		.uleb128 0x49
+ 2518 00cb 13       		.uleb128 0x13
+ 2519 00cc 02       		.uleb128 0x2
+ 2520 00cd 18       		.uleb128 0x18
+ 2521 00ce 00       		.byte	0
+ 2522 00cf 00       		.byte	0
+ 2523 00d0 10       		.uleb128 0x10
+ 2524 00d1 34       		.uleb128 0x34
+ 2525 00d2 00       		.byte	0
+ 2526 00d3 03       		.uleb128 0x3
+ 2527 00d4 08       		.uleb128 0x8
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 51
+
+
+ 2528 00d5 3A       		.uleb128 0x3a
+ 2529 00d6 0B       		.uleb128 0xb
+ 2530 00d7 3B       		.uleb128 0x3b
+ 2531 00d8 0B       		.uleb128 0xb
+ 2532 00d9 49       		.uleb128 0x49
+ 2533 00da 13       		.uleb128 0x13
+ 2534 00db 02       		.uleb128 0x2
+ 2535 00dc 17       		.uleb128 0x17
+ 2536 00dd 00       		.byte	0
+ 2537 00de 00       		.byte	0
+ 2538 00df 11       		.uleb128 0x11
+ 2539 00e0 898201   		.uleb128 0x4109
+ 2540 00e3 01       		.byte	0x1
+ 2541 00e4 11       		.uleb128 0x11
+ 2542 00e5 01       		.uleb128 0x1
+ 2543 00e6 31       		.uleb128 0x31
+ 2544 00e7 13       		.uleb128 0x13
+ 2545 00e8 01       		.uleb128 0x1
+ 2546 00e9 13       		.uleb128 0x13
+ 2547 00ea 00       		.byte	0
+ 2548 00eb 00       		.byte	0
+ 2549 00ec 12       		.uleb128 0x12
+ 2550 00ed 8A8201   		.uleb128 0x410a
+ 2551 00f0 00       		.byte	0
+ 2552 00f1 02       		.uleb128 0x2
+ 2553 00f2 18       		.uleb128 0x18
+ 2554 00f3 9142     		.uleb128 0x2111
+ 2555 00f5 18       		.uleb128 0x18
+ 2556 00f6 00       		.byte	0
+ 2557 00f7 00       		.byte	0
+ 2558 00f8 13       		.uleb128 0x13
+ 2559 00f9 898201   		.uleb128 0x4109
+ 2560 00fc 00       		.byte	0
+ 2561 00fd 11       		.uleb128 0x11
+ 2562 00fe 01       		.uleb128 0x1
+ 2563 00ff 31       		.uleb128 0x31
+ 2564 0100 13       		.uleb128 0x13
+ 2565 0101 00       		.byte	0
+ 2566 0102 00       		.byte	0
+ 2567 0103 14       		.uleb128 0x14
+ 2568 0104 898201   		.uleb128 0x4109
+ 2569 0107 01       		.byte	0x1
+ 2570 0108 11       		.uleb128 0x11
+ 2571 0109 01       		.uleb128 0x1
+ 2572 010a 31       		.uleb128 0x31
+ 2573 010b 13       		.uleb128 0x13
+ 2574 010c 00       		.byte	0
+ 2575 010d 00       		.byte	0
+ 2576 010e 15       		.uleb128 0x15
+ 2577 010f 2E       		.uleb128 0x2e
+ 2578 0110 01       		.byte	0x1
+ 2579 0111 3F       		.uleb128 0x3f
+ 2580 0112 19       		.uleb128 0x19
+ 2581 0113 03       		.uleb128 0x3
+ 2582 0114 0E       		.uleb128 0xe
+ 2583 0115 3A       		.uleb128 0x3a
+ 2584 0116 0B       		.uleb128 0xb
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 52
+
+
+ 2585 0117 3B       		.uleb128 0x3b
+ 2586 0118 0B       		.uleb128 0xb
+ 2587 0119 27       		.uleb128 0x27
+ 2588 011a 19       		.uleb128 0x19
+ 2589 011b 11       		.uleb128 0x11
+ 2590 011c 01       		.uleb128 0x1
+ 2591 011d 12       		.uleb128 0x12
+ 2592 011e 06       		.uleb128 0x6
+ 2593 011f 40       		.uleb128 0x40
+ 2594 0120 18       		.uleb128 0x18
+ 2595 0121 9742     		.uleb128 0x2117
+ 2596 0123 19       		.uleb128 0x19
+ 2597 0124 01       		.uleb128 0x1
+ 2598 0125 13       		.uleb128 0x13
+ 2599 0126 00       		.byte	0
+ 2600 0127 00       		.byte	0
+ 2601 0128 16       		.uleb128 0x16
+ 2602 0129 2E       		.uleb128 0x2e
+ 2603 012a 01       		.byte	0x1
+ 2604 012b 3F       		.uleb128 0x3f
+ 2605 012c 19       		.uleb128 0x19
+ 2606 012d 03       		.uleb128 0x3
+ 2607 012e 0E       		.uleb128 0xe
+ 2608 012f 3A       		.uleb128 0x3a
+ 2609 0130 0B       		.uleb128 0xb
+ 2610 0131 3B       		.uleb128 0x3b
+ 2611 0132 0B       		.uleb128 0xb
+ 2612 0133 27       		.uleb128 0x27
+ 2613 0134 19       		.uleb128 0x19
+ 2614 0135 49       		.uleb128 0x49
+ 2615 0136 13       		.uleb128 0x13
+ 2616 0137 11       		.uleb128 0x11
+ 2617 0138 01       		.uleb128 0x1
+ 2618 0139 12       		.uleb128 0x12
+ 2619 013a 06       		.uleb128 0x6
+ 2620 013b 40       		.uleb128 0x40
+ 2621 013c 18       		.uleb128 0x18
+ 2622 013d 9742     		.uleb128 0x2117
+ 2623 013f 19       		.uleb128 0x19
+ 2624 0140 01       		.uleb128 0x1
+ 2625 0141 13       		.uleb128 0x13
+ 2626 0142 00       		.byte	0
+ 2627 0143 00       		.byte	0
+ 2628 0144 17       		.uleb128 0x17
+ 2629 0145 34       		.uleb128 0x34
+ 2630 0146 00       		.byte	0
+ 2631 0147 03       		.uleb128 0x3
+ 2632 0148 0E       		.uleb128 0xe
+ 2633 0149 3A       		.uleb128 0x3a
+ 2634 014a 0B       		.uleb128 0xb
+ 2635 014b 3B       		.uleb128 0x3b
+ 2636 014c 0B       		.uleb128 0xb
+ 2637 014d 49       		.uleb128 0x49
+ 2638 014e 13       		.uleb128 0x13
+ 2639 014f 02       		.uleb128 0x2
+ 2640 0150 17       		.uleb128 0x17
+ 2641 0151 00       		.byte	0
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 53
+
+
+ 2642 0152 00       		.byte	0
+ 2643 0153 18       		.uleb128 0x18
+ 2644 0154 0B       		.uleb128 0xb
+ 2645 0155 01       		.byte	0x1
+ 2646 0156 55       		.uleb128 0x55
+ 2647 0157 17       		.uleb128 0x17
+ 2648 0158 01       		.uleb128 0x1
+ 2649 0159 13       		.uleb128 0x13
+ 2650 015a 00       		.byte	0
+ 2651 015b 00       		.byte	0
+ 2652 015c 19       		.uleb128 0x19
+ 2653 015d 2E       		.uleb128 0x2e
+ 2654 015e 00       		.byte	0
+ 2655 015f 3F       		.uleb128 0x3f
+ 2656 0160 19       		.uleb128 0x19
+ 2657 0161 3C       		.uleb128 0x3c
+ 2658 0162 19       		.uleb128 0x19
+ 2659 0163 6E       		.uleb128 0x6e
+ 2660 0164 0E       		.uleb128 0xe
+ 2661 0165 03       		.uleb128 0x3
+ 2662 0166 0E       		.uleb128 0xe
+ 2663 0167 3A       		.uleb128 0x3a
+ 2664 0168 0B       		.uleb128 0xb
+ 2665 0169 3B       		.uleb128 0x3b
+ 2666 016a 0B       		.uleb128 0xb
+ 2667 016b 00       		.byte	0
+ 2668 016c 00       		.byte	0
+ 2669 016d 1A       		.uleb128 0x1a
+ 2670 016e 2E       		.uleb128 0x2e
+ 2671 016f 00       		.byte	0
+ 2672 0170 3F       		.uleb128 0x3f
+ 2673 0171 19       		.uleb128 0x19
+ 2674 0172 3C       		.uleb128 0x3c
+ 2675 0173 19       		.uleb128 0x19
+ 2676 0174 6E       		.uleb128 0x6e
+ 2677 0175 0E       		.uleb128 0xe
+ 2678 0176 03       		.uleb128 0x3
+ 2679 0177 0E       		.uleb128 0xe
+ 2680 0178 3A       		.uleb128 0x3a
+ 2681 0179 0B       		.uleb128 0xb
+ 2682 017a 3B       		.uleb128 0x3b
+ 2683 017b 05       		.uleb128 0x5
+ 2684 017c 00       		.byte	0
+ 2685 017d 00       		.byte	0
+ 2686 017e 1B       		.uleb128 0x1b
+ 2687 017f 2E       		.uleb128 0x2e
+ 2688 0180 00       		.byte	0
+ 2689 0181 3F       		.uleb128 0x3f
+ 2690 0182 19       		.uleb128 0x19
+ 2691 0183 3C       		.uleb128 0x3c
+ 2692 0184 19       		.uleb128 0x19
+ 2693 0185 6E       		.uleb128 0x6e
+ 2694 0186 0E       		.uleb128 0xe
+ 2695 0187 03       		.uleb128 0x3
+ 2696 0188 0E       		.uleb128 0xe
+ 2697 0189 3A       		.uleb128 0x3a
+ 2698 018a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 54
+
+
+ 2699 018b 3B       		.uleb128 0x3b
+ 2700 018c 0B       		.uleb128 0xb
+ 2701 018d 6E       		.uleb128 0x6e
+ 2702 018e 0E       		.uleb128 0xe
+ 2703 018f 00       		.byte	0
+ 2704 0190 00       		.byte	0
+ 2705 0191 00       		.byte	0
+ 2706              		.section	.debug_loc,"",%progbits
+ 2707              	.Ldebug_loc0:
+ 2708              	.LLST0:
+ 2709 0000 00000000 		.4byte	.LVL0
+ 2710 0004 0E000000 		.4byte	.LVL1
+ 2711 0008 0100     		.2byte	0x1
+ 2712 000a 50       		.byte	0x50
+ 2713 000b 0E000000 		.4byte	.LVL1
+ 2714 000f A8040000 		.4byte	.LFE36
+ 2715 0013 0400     		.2byte	0x4
+ 2716 0015 F3       		.byte	0xf3
+ 2717 0016 01       		.uleb128 0x1
+ 2718 0017 50       		.byte	0x50
+ 2719 0018 9F       		.byte	0x9f
+ 2720 0019 00000000 		.4byte	0
+ 2721 001d 00000000 		.4byte	0
+ 2722              	.LLST1:
+ 2723 0021 00000000 		.4byte	.LVL0
+ 2724 0025 1B000000 		.4byte	.LVL2-1
+ 2725 0029 0600     		.2byte	0x6
+ 2726 002b 52       		.byte	0x52
+ 2727 002c 93       		.byte	0x93
+ 2728 002d 04       		.uleb128 0x4
+ 2729 002e 53       		.byte	0x53
+ 2730 002f 93       		.byte	0x93
+ 2731 0030 04       		.uleb128 0x4
+ 2732 0031 1B000000 		.4byte	.LVL2-1
+ 2733 0035 28000000 		.4byte	.LVL4
+ 2734 0039 0600     		.2byte	0x6
+ 2735 003b F3       		.byte	0xf3
+ 2736 003c 03       		.uleb128 0x3
+ 2737 003d F5       		.byte	0xf5
+ 2738 003e 02       		.uleb128 0x2
+ 2739 003f 25       		.uleb128 0x25
+ 2740 0040 9F       		.byte	0x9f
+ 2741 0041 28000000 		.4byte	.LVL4
+ 2742 0045 2F000000 		.4byte	.LVL5-1
+ 2743 0049 0600     		.2byte	0x6
+ 2744 004b 52       		.byte	0x52
+ 2745 004c 93       		.byte	0x93
+ 2746 004d 04       		.uleb128 0x4
+ 2747 004e 53       		.byte	0x53
+ 2748 004f 93       		.byte	0x93
+ 2749 0050 04       		.uleb128 0x4
+ 2750 0051 2F000000 		.4byte	.LVL5-1
+ 2751 0055 3C000000 		.4byte	.LVL7
+ 2752 0059 0600     		.2byte	0x6
+ 2753 005b F3       		.byte	0xf3
+ 2754 005c 03       		.uleb128 0x3
+ 2755 005d F5       		.byte	0xf5
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 55
+
+
+ 2756 005e 02       		.uleb128 0x2
+ 2757 005f 25       		.uleb128 0x25
+ 2758 0060 9F       		.byte	0x9f
+ 2759 0061 3C000000 		.4byte	.LVL7
+ 2760 0065 43000000 		.4byte	.LVL8-1
+ 2761 0069 0600     		.2byte	0x6
+ 2762 006b 52       		.byte	0x52
+ 2763 006c 93       		.byte	0x93
+ 2764 006d 04       		.uleb128 0x4
+ 2765 006e 53       		.byte	0x53
+ 2766 006f 93       		.byte	0x93
+ 2767 0070 04       		.uleb128 0x4
+ 2768 0071 43000000 		.4byte	.LVL8-1
+ 2769 0075 50000000 		.4byte	.LVL10
+ 2770 0079 0600     		.2byte	0x6
+ 2771 007b F3       		.byte	0xf3
+ 2772 007c 03       		.uleb128 0x3
+ 2773 007d F5       		.byte	0xf5
+ 2774 007e 02       		.uleb128 0x2
+ 2775 007f 25       		.uleb128 0x25
+ 2776 0080 9F       		.byte	0x9f
+ 2777 0081 50000000 		.4byte	.LVL10
+ 2778 0085 57000000 		.4byte	.LVL11-1
+ 2779 0089 0600     		.2byte	0x6
+ 2780 008b 52       		.byte	0x52
+ 2781 008c 93       		.byte	0x93
+ 2782 008d 04       		.uleb128 0x4
+ 2783 008e 53       		.byte	0x53
+ 2784 008f 93       		.byte	0x93
+ 2785 0090 04       		.uleb128 0x4
+ 2786 0091 57000000 		.4byte	.LVL11-1
+ 2787 0095 64000000 		.4byte	.LVL13
+ 2788 0099 0600     		.2byte	0x6
+ 2789 009b F3       		.byte	0xf3
+ 2790 009c 03       		.uleb128 0x3
+ 2791 009d F5       		.byte	0xf5
+ 2792 009e 02       		.uleb128 0x2
+ 2793 009f 25       		.uleb128 0x25
+ 2794 00a0 9F       		.byte	0x9f
+ 2795 00a1 64000000 		.4byte	.LVL13
+ 2796 00a5 6B000000 		.4byte	.LVL14-1
+ 2797 00a9 0600     		.2byte	0x6
+ 2798 00ab 52       		.byte	0x52
+ 2799 00ac 93       		.byte	0x93
+ 2800 00ad 04       		.uleb128 0x4
+ 2801 00ae 53       		.byte	0x53
+ 2802 00af 93       		.byte	0x93
+ 2803 00b0 04       		.uleb128 0x4
+ 2804 00b1 6B000000 		.4byte	.LVL14-1
+ 2805 00b5 78000000 		.4byte	.LVL16
+ 2806 00b9 0600     		.2byte	0x6
+ 2807 00bb F3       		.byte	0xf3
+ 2808 00bc 03       		.uleb128 0x3
+ 2809 00bd F5       		.byte	0xf5
+ 2810 00be 02       		.uleb128 0x2
+ 2811 00bf 25       		.uleb128 0x25
+ 2812 00c0 9F       		.byte	0x9f
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 56
+
+
+ 2813 00c1 78000000 		.4byte	.LVL16
+ 2814 00c5 7F000000 		.4byte	.LVL17-1
+ 2815 00c9 0600     		.2byte	0x6
+ 2816 00cb 52       		.byte	0x52
+ 2817 00cc 93       		.byte	0x93
+ 2818 00cd 04       		.uleb128 0x4
+ 2819 00ce 53       		.byte	0x53
+ 2820 00cf 93       		.byte	0x93
+ 2821 00d0 04       		.uleb128 0x4
+ 2822 00d1 7F000000 		.4byte	.LVL17-1
+ 2823 00d5 8C000000 		.4byte	.LVL19
+ 2824 00d9 0600     		.2byte	0x6
+ 2825 00db F3       		.byte	0xf3
+ 2826 00dc 03       		.uleb128 0x3
+ 2827 00dd F5       		.byte	0xf5
+ 2828 00de 02       		.uleb128 0x2
+ 2829 00df 25       		.uleb128 0x25
+ 2830 00e0 9F       		.byte	0x9f
+ 2831 00e1 8C000000 		.4byte	.LVL19
+ 2832 00e5 93000000 		.4byte	.LVL20-1
+ 2833 00e9 0600     		.2byte	0x6
+ 2834 00eb 52       		.byte	0x52
+ 2835 00ec 93       		.byte	0x93
+ 2836 00ed 04       		.uleb128 0x4
+ 2837 00ee 53       		.byte	0x53
+ 2838 00ef 93       		.byte	0x93
+ 2839 00f0 04       		.uleb128 0x4
+ 2840 00f1 93000000 		.4byte	.LVL20-1
+ 2841 00f5 A0000000 		.4byte	.LVL22
+ 2842 00f9 0600     		.2byte	0x6
+ 2843 00fb F3       		.byte	0xf3
+ 2844 00fc 03       		.uleb128 0x3
+ 2845 00fd F5       		.byte	0xf5
+ 2846 00fe 02       		.uleb128 0x2
+ 2847 00ff 25       		.uleb128 0x25
+ 2848 0100 9F       		.byte	0x9f
+ 2849 0101 A0000000 		.4byte	.LVL22
+ 2850 0105 A7000000 		.4byte	.LVL23-1
+ 2851 0109 0600     		.2byte	0x6
+ 2852 010b 52       		.byte	0x52
+ 2853 010c 93       		.byte	0x93
+ 2854 010d 04       		.uleb128 0x4
+ 2855 010e 53       		.byte	0x53
+ 2856 010f 93       		.byte	0x93
+ 2857 0110 04       		.uleb128 0x4
+ 2858 0111 A7000000 		.4byte	.LVL23-1
+ 2859 0115 B4000000 		.4byte	.LVL25
+ 2860 0119 0600     		.2byte	0x6
+ 2861 011b F3       		.byte	0xf3
+ 2862 011c 03       		.uleb128 0x3
+ 2863 011d F5       		.byte	0xf5
+ 2864 011e 02       		.uleb128 0x2
+ 2865 011f 25       		.uleb128 0x25
+ 2866 0120 9F       		.byte	0x9f
+ 2867 0121 B4000000 		.4byte	.LVL25
+ 2868 0125 BB000000 		.4byte	.LVL26-1
+ 2869 0129 0600     		.2byte	0x6
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 57
+
+
+ 2870 012b 52       		.byte	0x52
+ 2871 012c 93       		.byte	0x93
+ 2872 012d 04       		.uleb128 0x4
+ 2873 012e 53       		.byte	0x53
+ 2874 012f 93       		.byte	0x93
+ 2875 0130 04       		.uleb128 0x4
+ 2876 0131 BB000000 		.4byte	.LVL26-1
+ 2877 0135 C8000000 		.4byte	.LVL28
+ 2878 0139 0600     		.2byte	0x6
+ 2879 013b F3       		.byte	0xf3
+ 2880 013c 03       		.uleb128 0x3
+ 2881 013d F5       		.byte	0xf5
+ 2882 013e 02       		.uleb128 0x2
+ 2883 013f 25       		.uleb128 0x25
+ 2884 0140 9F       		.byte	0x9f
+ 2885 0141 C8000000 		.4byte	.LVL28
+ 2886 0145 CF000000 		.4byte	.LVL29-1
+ 2887 0149 0600     		.2byte	0x6
+ 2888 014b 52       		.byte	0x52
+ 2889 014c 93       		.byte	0x93
+ 2890 014d 04       		.uleb128 0x4
+ 2891 014e 53       		.byte	0x53
+ 2892 014f 93       		.byte	0x93
+ 2893 0150 04       		.uleb128 0x4
+ 2894 0151 CF000000 		.4byte	.LVL29-1
+ 2895 0155 DC000000 		.4byte	.LVL31
+ 2896 0159 0600     		.2byte	0x6
+ 2897 015b F3       		.byte	0xf3
+ 2898 015c 03       		.uleb128 0x3
+ 2899 015d F5       		.byte	0xf5
+ 2900 015e 02       		.uleb128 0x2
+ 2901 015f 25       		.uleb128 0x25
+ 2902 0160 9F       		.byte	0x9f
+ 2903 0161 DC000000 		.4byte	.LVL31
+ 2904 0165 E3000000 		.4byte	.LVL32-1
+ 2905 0169 0600     		.2byte	0x6
+ 2906 016b 52       		.byte	0x52
+ 2907 016c 93       		.byte	0x93
+ 2908 016d 04       		.uleb128 0x4
+ 2909 016e 53       		.byte	0x53
+ 2910 016f 93       		.byte	0x93
+ 2911 0170 04       		.uleb128 0x4
+ 2912 0171 E3000000 		.4byte	.LVL32-1
+ 2913 0175 F0000000 		.4byte	.LVL34
+ 2914 0179 0600     		.2byte	0x6
+ 2915 017b F3       		.byte	0xf3
+ 2916 017c 03       		.uleb128 0x3
+ 2917 017d F5       		.byte	0xf5
+ 2918 017e 02       		.uleb128 0x2
+ 2919 017f 25       		.uleb128 0x25
+ 2920 0180 9F       		.byte	0x9f
+ 2921 0181 F0000000 		.4byte	.LVL34
+ 2922 0185 F7000000 		.4byte	.LVL35-1
+ 2923 0189 0600     		.2byte	0x6
+ 2924 018b 52       		.byte	0x52
+ 2925 018c 93       		.byte	0x93
+ 2926 018d 04       		.uleb128 0x4
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 58
+
+
+ 2927 018e 53       		.byte	0x53
+ 2928 018f 93       		.byte	0x93
+ 2929 0190 04       		.uleb128 0x4
+ 2930 0191 F7000000 		.4byte	.LVL35-1
+ 2931 0195 04010000 		.4byte	.LVL37
+ 2932 0199 0600     		.2byte	0x6
+ 2933 019b F3       		.byte	0xf3
+ 2934 019c 03       		.uleb128 0x3
+ 2935 019d F5       		.byte	0xf5
+ 2936 019e 02       		.uleb128 0x2
+ 2937 019f 25       		.uleb128 0x25
+ 2938 01a0 9F       		.byte	0x9f
+ 2939 01a1 04010000 		.4byte	.LVL37
+ 2940 01a5 0B010000 		.4byte	.LVL38-1
+ 2941 01a9 0600     		.2byte	0x6
+ 2942 01ab 52       		.byte	0x52
+ 2943 01ac 93       		.byte	0x93
+ 2944 01ad 04       		.uleb128 0x4
+ 2945 01ae 53       		.byte	0x53
+ 2946 01af 93       		.byte	0x93
+ 2947 01b0 04       		.uleb128 0x4
+ 2948 01b1 0B010000 		.4byte	.LVL38-1
+ 2949 01b5 18010000 		.4byte	.LVL40
+ 2950 01b9 0600     		.2byte	0x6
+ 2951 01bb F3       		.byte	0xf3
+ 2952 01bc 03       		.uleb128 0x3
+ 2953 01bd F5       		.byte	0xf5
+ 2954 01be 02       		.uleb128 0x2
+ 2955 01bf 25       		.uleb128 0x25
+ 2956 01c0 9F       		.byte	0x9f
+ 2957 01c1 18010000 		.4byte	.LVL40
+ 2958 01c5 1F010000 		.4byte	.LVL41-1
+ 2959 01c9 0600     		.2byte	0x6
+ 2960 01cb 52       		.byte	0x52
+ 2961 01cc 93       		.byte	0x93
+ 2962 01cd 04       		.uleb128 0x4
+ 2963 01ce 53       		.byte	0x53
+ 2964 01cf 93       		.byte	0x93
+ 2965 01d0 04       		.uleb128 0x4
+ 2966 01d1 1F010000 		.4byte	.LVL41-1
+ 2967 01d5 2C010000 		.4byte	.LVL43
+ 2968 01d9 0600     		.2byte	0x6
+ 2969 01db F3       		.byte	0xf3
+ 2970 01dc 03       		.uleb128 0x3
+ 2971 01dd F5       		.byte	0xf5
+ 2972 01de 02       		.uleb128 0x2
+ 2973 01df 25       		.uleb128 0x25
+ 2974 01e0 9F       		.byte	0x9f
+ 2975 01e1 2C010000 		.4byte	.LVL43
+ 2976 01e5 33010000 		.4byte	.LVL44-1
+ 2977 01e9 0600     		.2byte	0x6
+ 2978 01eb 52       		.byte	0x52
+ 2979 01ec 93       		.byte	0x93
+ 2980 01ed 04       		.uleb128 0x4
+ 2981 01ee 53       		.byte	0x53
+ 2982 01ef 93       		.byte	0x93
+ 2983 01f0 04       		.uleb128 0x4
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 59
+
+
+ 2984 01f1 33010000 		.4byte	.LVL44-1
+ 2985 01f5 40010000 		.4byte	.LVL46
+ 2986 01f9 0600     		.2byte	0x6
+ 2987 01fb F3       		.byte	0xf3
+ 2988 01fc 03       		.uleb128 0x3
+ 2989 01fd F5       		.byte	0xf5
+ 2990 01fe 02       		.uleb128 0x2
+ 2991 01ff 25       		.uleb128 0x25
+ 2992 0200 9F       		.byte	0x9f
+ 2993 0201 40010000 		.4byte	.LVL46
+ 2994 0205 47010000 		.4byte	.LVL47-1
+ 2995 0209 0600     		.2byte	0x6
+ 2996 020b 52       		.byte	0x52
+ 2997 020c 93       		.byte	0x93
+ 2998 020d 04       		.uleb128 0x4
+ 2999 020e 53       		.byte	0x53
+ 3000 020f 93       		.byte	0x93
+ 3001 0210 04       		.uleb128 0x4
+ 3002 0211 47010000 		.4byte	.LVL47-1
+ 3003 0215 54010000 		.4byte	.LVL49
+ 3004 0219 0600     		.2byte	0x6
+ 3005 021b F3       		.byte	0xf3
+ 3006 021c 03       		.uleb128 0x3
+ 3007 021d F5       		.byte	0xf5
+ 3008 021e 02       		.uleb128 0x2
+ 3009 021f 25       		.uleb128 0x25
+ 3010 0220 9F       		.byte	0x9f
+ 3011 0221 54010000 		.4byte	.LVL49
+ 3012 0225 5B010000 		.4byte	.LVL50-1
+ 3013 0229 0600     		.2byte	0x6
+ 3014 022b 52       		.byte	0x52
+ 3015 022c 93       		.byte	0x93
+ 3016 022d 04       		.uleb128 0x4
+ 3017 022e 53       		.byte	0x53
+ 3018 022f 93       		.byte	0x93
+ 3019 0230 04       		.uleb128 0x4
+ 3020 0231 5B010000 		.4byte	.LVL50-1
+ 3021 0235 68010000 		.4byte	.LVL52
+ 3022 0239 0600     		.2byte	0x6
+ 3023 023b F3       		.byte	0xf3
+ 3024 023c 03       		.uleb128 0x3
+ 3025 023d F5       		.byte	0xf5
+ 3026 023e 02       		.uleb128 0x2
+ 3027 023f 25       		.uleb128 0x25
+ 3028 0240 9F       		.byte	0x9f
+ 3029 0241 68010000 		.4byte	.LVL52
+ 3030 0245 6F010000 		.4byte	.LVL53-1
+ 3031 0249 0600     		.2byte	0x6
+ 3032 024b 52       		.byte	0x52
+ 3033 024c 93       		.byte	0x93
+ 3034 024d 04       		.uleb128 0x4
+ 3035 024e 53       		.byte	0x53
+ 3036 024f 93       		.byte	0x93
+ 3037 0250 04       		.uleb128 0x4
+ 3038 0251 6F010000 		.4byte	.LVL53-1
+ 3039 0255 7C010000 		.4byte	.LVL55
+ 3040 0259 0600     		.2byte	0x6
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 60
+
+
+ 3041 025b F3       		.byte	0xf3
+ 3042 025c 03       		.uleb128 0x3
+ 3043 025d F5       		.byte	0xf5
+ 3044 025e 02       		.uleb128 0x2
+ 3045 025f 25       		.uleb128 0x25
+ 3046 0260 9F       		.byte	0x9f
+ 3047 0261 7C010000 		.4byte	.LVL55
+ 3048 0265 85010000 		.4byte	.LVL56-1
+ 3049 0269 0600     		.2byte	0x6
+ 3050 026b 52       		.byte	0x52
+ 3051 026c 93       		.byte	0x93
+ 3052 026d 04       		.uleb128 0x4
+ 3053 026e 53       		.byte	0x53
+ 3054 026f 93       		.byte	0x93
+ 3055 0270 04       		.uleb128 0x4
+ 3056 0271 85010000 		.4byte	.LVL56-1
+ 3057 0275 88010000 		.4byte	.LVL57
+ 3058 0279 0600     		.2byte	0x6
+ 3059 027b F3       		.byte	0xf3
+ 3060 027c 03       		.uleb128 0x3
+ 3061 027d F5       		.byte	0xf5
+ 3062 027e 02       		.uleb128 0x2
+ 3063 027f 25       		.uleb128 0x25
+ 3064 0280 9F       		.byte	0x9f
+ 3065 0281 88010000 		.4byte	.LVL57
+ 3066 0285 8F010000 		.4byte	.LVL58-1
+ 3067 0289 0600     		.2byte	0x6
+ 3068 028b 52       		.byte	0x52
+ 3069 028c 93       		.byte	0x93
+ 3070 028d 04       		.uleb128 0x4
+ 3071 028e 53       		.byte	0x53
+ 3072 028f 93       		.byte	0x93
+ 3073 0290 04       		.uleb128 0x4
+ 3074 0291 8F010000 		.4byte	.LVL58-1
+ 3075 0295 9C010000 		.4byte	.LVL60
+ 3076 0299 0600     		.2byte	0x6
+ 3077 029b F3       		.byte	0xf3
+ 3078 029c 03       		.uleb128 0x3
+ 3079 029d F5       		.byte	0xf5
+ 3080 029e 02       		.uleb128 0x2
+ 3081 029f 25       		.uleb128 0x25
+ 3082 02a0 9F       		.byte	0x9f
+ 3083 02a1 9C010000 		.4byte	.LVL60
+ 3084 02a5 A5010000 		.4byte	.LVL61-1
+ 3085 02a9 0600     		.2byte	0x6
+ 3086 02ab 52       		.byte	0x52
+ 3087 02ac 93       		.byte	0x93
+ 3088 02ad 04       		.uleb128 0x4
+ 3089 02ae 53       		.byte	0x53
+ 3090 02af 93       		.byte	0x93
+ 3091 02b0 04       		.uleb128 0x4
+ 3092 02b1 A5010000 		.4byte	.LVL61-1
+ 3093 02b5 A8010000 		.4byte	.LVL62
+ 3094 02b9 0600     		.2byte	0x6
+ 3095 02bb F3       		.byte	0xf3
+ 3096 02bc 03       		.uleb128 0x3
+ 3097 02bd F5       		.byte	0xf5
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 61
+
+
+ 3098 02be 02       		.uleb128 0x2
+ 3099 02bf 25       		.uleb128 0x25
+ 3100 02c0 9F       		.byte	0x9f
+ 3101 02c1 A8010000 		.4byte	.LVL62
+ 3102 02c5 AF010000 		.4byte	.LVL63-1
+ 3103 02c9 0600     		.2byte	0x6
+ 3104 02cb 52       		.byte	0x52
+ 3105 02cc 93       		.byte	0x93
+ 3106 02cd 04       		.uleb128 0x4
+ 3107 02ce 53       		.byte	0x53
+ 3108 02cf 93       		.byte	0x93
+ 3109 02d0 04       		.uleb128 0x4
+ 3110 02d1 AF010000 		.4byte	.LVL63-1
+ 3111 02d5 BC010000 		.4byte	.LVL65
+ 3112 02d9 0600     		.2byte	0x6
+ 3113 02db F3       		.byte	0xf3
+ 3114 02dc 03       		.uleb128 0x3
+ 3115 02dd F5       		.byte	0xf5
+ 3116 02de 02       		.uleb128 0x2
+ 3117 02df 25       		.uleb128 0x25
+ 3118 02e0 9F       		.byte	0x9f
+ 3119 02e1 BC010000 		.4byte	.LVL65
+ 3120 02e5 C3010000 		.4byte	.LVL66-1
+ 3121 02e9 0600     		.2byte	0x6
+ 3122 02eb 52       		.byte	0x52
+ 3123 02ec 93       		.byte	0x93
+ 3124 02ed 04       		.uleb128 0x4
+ 3125 02ee 53       		.byte	0x53
+ 3126 02ef 93       		.byte	0x93
+ 3127 02f0 04       		.uleb128 0x4
+ 3128 02f1 C3010000 		.4byte	.LVL66-1
+ 3129 02f5 D0010000 		.4byte	.LVL68
+ 3130 02f9 0600     		.2byte	0x6
+ 3131 02fb F3       		.byte	0xf3
+ 3132 02fc 03       		.uleb128 0x3
+ 3133 02fd F5       		.byte	0xf5
+ 3134 02fe 02       		.uleb128 0x2
+ 3135 02ff 25       		.uleb128 0x25
+ 3136 0300 9F       		.byte	0x9f
+ 3137 0301 D0010000 		.4byte	.LVL68
+ 3138 0305 D9010000 		.4byte	.LVL69-1
+ 3139 0309 0600     		.2byte	0x6
+ 3140 030b 52       		.byte	0x52
+ 3141 030c 93       		.byte	0x93
+ 3142 030d 04       		.uleb128 0x4
+ 3143 030e 53       		.byte	0x53
+ 3144 030f 93       		.byte	0x93
+ 3145 0310 04       		.uleb128 0x4
+ 3146 0311 D9010000 		.4byte	.LVL69-1
+ 3147 0315 DC010000 		.4byte	.LVL70
+ 3148 0319 0600     		.2byte	0x6
+ 3149 031b F3       		.byte	0xf3
+ 3150 031c 03       		.uleb128 0x3
+ 3151 031d F5       		.byte	0xf5
+ 3152 031e 02       		.uleb128 0x2
+ 3153 031f 25       		.uleb128 0x25
+ 3154 0320 9F       		.byte	0x9f
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 62
+
+
+ 3155 0321 DC010000 		.4byte	.LVL70
+ 3156 0325 E5010000 		.4byte	.LVL71-1
+ 3157 0329 0600     		.2byte	0x6
+ 3158 032b 52       		.byte	0x52
+ 3159 032c 93       		.byte	0x93
+ 3160 032d 04       		.uleb128 0x4
+ 3161 032e 53       		.byte	0x53
+ 3162 032f 93       		.byte	0x93
+ 3163 0330 04       		.uleb128 0x4
+ 3164 0331 E5010000 		.4byte	.LVL71-1
+ 3165 0335 E8010000 		.4byte	.LVL72
+ 3166 0339 0600     		.2byte	0x6
+ 3167 033b F3       		.byte	0xf3
+ 3168 033c 03       		.uleb128 0x3
+ 3169 033d F5       		.byte	0xf5
+ 3170 033e 02       		.uleb128 0x2
+ 3171 033f 25       		.uleb128 0x25
+ 3172 0340 9F       		.byte	0x9f
+ 3173 0341 E8010000 		.4byte	.LVL72
+ 3174 0345 EF010000 		.4byte	.LVL73-1
+ 3175 0349 0600     		.2byte	0x6
+ 3176 034b 52       		.byte	0x52
+ 3177 034c 93       		.byte	0x93
+ 3178 034d 04       		.uleb128 0x4
+ 3179 034e 53       		.byte	0x53
+ 3180 034f 93       		.byte	0x93
+ 3181 0350 04       		.uleb128 0x4
+ 3182 0351 EF010000 		.4byte	.LVL73-1
+ 3183 0355 FC010000 		.4byte	.LVL75
+ 3184 0359 0600     		.2byte	0x6
+ 3185 035b F3       		.byte	0xf3
+ 3186 035c 03       		.uleb128 0x3
+ 3187 035d F5       		.byte	0xf5
+ 3188 035e 02       		.uleb128 0x2
+ 3189 035f 25       		.uleb128 0x25
+ 3190 0360 9F       		.byte	0x9f
+ 3191 0361 FC010000 		.4byte	.LVL75
+ 3192 0365 03020000 		.4byte	.LVL76-1
+ 3193 0369 0600     		.2byte	0x6
+ 3194 036b 52       		.byte	0x52
+ 3195 036c 93       		.byte	0x93
+ 3196 036d 04       		.uleb128 0x4
+ 3197 036e 53       		.byte	0x53
+ 3198 036f 93       		.byte	0x93
+ 3199 0370 04       		.uleb128 0x4
+ 3200 0371 03020000 		.4byte	.LVL76-1
+ 3201 0375 10020000 		.4byte	.LVL78
+ 3202 0379 0600     		.2byte	0x6
+ 3203 037b F3       		.byte	0xf3
+ 3204 037c 03       		.uleb128 0x3
+ 3205 037d F5       		.byte	0xf5
+ 3206 037e 02       		.uleb128 0x2
+ 3207 037f 25       		.uleb128 0x25
+ 3208 0380 9F       		.byte	0x9f
+ 3209 0381 10020000 		.4byte	.LVL78
+ 3210 0385 19020000 		.4byte	.LVL79-1
+ 3211 0389 0600     		.2byte	0x6
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 63
+
+
+ 3212 038b 52       		.byte	0x52
+ 3213 038c 93       		.byte	0x93
+ 3214 038d 04       		.uleb128 0x4
+ 3215 038e 53       		.byte	0x53
+ 3216 038f 93       		.byte	0x93
+ 3217 0390 04       		.uleb128 0x4
+ 3218 0391 19020000 		.4byte	.LVL79-1
+ 3219 0395 1C020000 		.4byte	.LVL80
+ 3220 0399 0600     		.2byte	0x6
+ 3221 039b F3       		.byte	0xf3
+ 3222 039c 03       		.uleb128 0x3
+ 3223 039d F5       		.byte	0xf5
+ 3224 039e 02       		.uleb128 0x2
+ 3225 039f 25       		.uleb128 0x25
+ 3226 03a0 9F       		.byte	0x9f
+ 3227 03a1 1C020000 		.4byte	.LVL80
+ 3228 03a5 23020000 		.4byte	.LVL81-1
+ 3229 03a9 0600     		.2byte	0x6
+ 3230 03ab 52       		.byte	0x52
+ 3231 03ac 93       		.byte	0x93
+ 3232 03ad 04       		.uleb128 0x4
+ 3233 03ae 53       		.byte	0x53
+ 3234 03af 93       		.byte	0x93
+ 3235 03b0 04       		.uleb128 0x4
+ 3236 03b1 23020000 		.4byte	.LVL81-1
+ 3237 03b5 30020000 		.4byte	.LVL83
+ 3238 03b9 0600     		.2byte	0x6
+ 3239 03bb F3       		.byte	0xf3
+ 3240 03bc 03       		.uleb128 0x3
+ 3241 03bd F5       		.byte	0xf5
+ 3242 03be 02       		.uleb128 0x2
+ 3243 03bf 25       		.uleb128 0x25
+ 3244 03c0 9F       		.byte	0x9f
+ 3245 03c1 30020000 		.4byte	.LVL83
+ 3246 03c5 39020000 		.4byte	.LVL84-1
+ 3247 03c9 0600     		.2byte	0x6
+ 3248 03cb 52       		.byte	0x52
+ 3249 03cc 93       		.byte	0x93
+ 3250 03cd 04       		.uleb128 0x4
+ 3251 03ce 53       		.byte	0x53
+ 3252 03cf 93       		.byte	0x93
+ 3253 03d0 04       		.uleb128 0x4
+ 3254 03d1 39020000 		.4byte	.LVL84-1
+ 3255 03d5 3C020000 		.4byte	.LVL85
+ 3256 03d9 0600     		.2byte	0x6
+ 3257 03db F3       		.byte	0xf3
+ 3258 03dc 03       		.uleb128 0x3
+ 3259 03dd F5       		.byte	0xf5
+ 3260 03de 02       		.uleb128 0x2
+ 3261 03df 25       		.uleb128 0x25
+ 3262 03e0 9F       		.byte	0x9f
+ 3263 03e1 3C020000 		.4byte	.LVL85
+ 3264 03e5 45020000 		.4byte	.LVL86-1
+ 3265 03e9 0600     		.2byte	0x6
+ 3266 03eb 52       		.byte	0x52
+ 3267 03ec 93       		.byte	0x93
+ 3268 03ed 04       		.uleb128 0x4
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 64
+
+
+ 3269 03ee 53       		.byte	0x53
+ 3270 03ef 93       		.byte	0x93
+ 3271 03f0 04       		.uleb128 0x4
+ 3272 03f1 45020000 		.4byte	.LVL86-1
+ 3273 03f5 48020000 		.4byte	.LVL87
+ 3274 03f9 0600     		.2byte	0x6
+ 3275 03fb F3       		.byte	0xf3
+ 3276 03fc 03       		.uleb128 0x3
+ 3277 03fd F5       		.byte	0xf5
+ 3278 03fe 02       		.uleb128 0x2
+ 3279 03ff 25       		.uleb128 0x25
+ 3280 0400 9F       		.byte	0x9f
+ 3281 0401 48020000 		.4byte	.LVL87
+ 3282 0405 4C020000 		.4byte	.LVL88
+ 3283 0409 0600     		.2byte	0x6
+ 3284 040b 52       		.byte	0x52
+ 3285 040c 93       		.byte	0x93
+ 3286 040d 04       		.uleb128 0x4
+ 3287 040e 53       		.byte	0x53
+ 3288 040f 93       		.byte	0x93
+ 3289 0410 04       		.uleb128 0x4
+ 3290 0411 4C020000 		.4byte	.LVL88
+ 3291 0415 5A020000 		.4byte	.LVL89
+ 3292 0419 0600     		.2byte	0x6
+ 3293 041b F3       		.byte	0xf3
+ 3294 041c 03       		.uleb128 0x3
+ 3295 041d F5       		.byte	0xf5
+ 3296 041e 02       		.uleb128 0x2
+ 3297 041f 25       		.uleb128 0x25
+ 3298 0420 9F       		.byte	0x9f
+ 3299 0421 5A020000 		.4byte	.LVL89
+ 3300 0425 5E020000 		.4byte	.LVL90
+ 3301 0429 0600     		.2byte	0x6
+ 3302 042b 52       		.byte	0x52
+ 3303 042c 93       		.byte	0x93
+ 3304 042d 04       		.uleb128 0x4
+ 3305 042e 53       		.byte	0x53
+ 3306 042f 93       		.byte	0x93
+ 3307 0430 04       		.uleb128 0x4
+ 3308 0431 5E020000 		.4byte	.LVL90
+ 3309 0435 68020000 		.4byte	.LVL91
+ 3310 0439 0600     		.2byte	0x6
+ 3311 043b F3       		.byte	0xf3
+ 3312 043c 03       		.uleb128 0x3
+ 3313 043d F5       		.byte	0xf5
+ 3314 043e 02       		.uleb128 0x2
+ 3315 043f 25       		.uleb128 0x25
+ 3316 0440 9F       		.byte	0x9f
+ 3317 0441 68020000 		.4byte	.LVL91
+ 3318 0445 6C020000 		.4byte	.LVL92
+ 3319 0449 0600     		.2byte	0x6
+ 3320 044b 52       		.byte	0x52
+ 3321 044c 93       		.byte	0x93
+ 3322 044d 04       		.uleb128 0x4
+ 3323 044e 53       		.byte	0x53
+ 3324 044f 93       		.byte	0x93
+ 3325 0450 04       		.uleb128 0x4
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 65
+
+
+ 3326 0451 6C020000 		.4byte	.LVL92
+ 3327 0455 76020000 		.4byte	.LVL93
+ 3328 0459 0600     		.2byte	0x6
+ 3329 045b F3       		.byte	0xf3
+ 3330 045c 03       		.uleb128 0x3
+ 3331 045d F5       		.byte	0xf5
+ 3332 045e 02       		.uleb128 0x2
+ 3333 045f 25       		.uleb128 0x25
+ 3334 0460 9F       		.byte	0x9f
+ 3335 0461 76020000 		.4byte	.LVL93
+ 3336 0465 7A020000 		.4byte	.LVL94
+ 3337 0469 0600     		.2byte	0x6
+ 3338 046b 52       		.byte	0x52
+ 3339 046c 93       		.byte	0x93
+ 3340 046d 04       		.uleb128 0x4
+ 3341 046e 53       		.byte	0x53
+ 3342 046f 93       		.byte	0x93
+ 3343 0470 04       		.uleb128 0x4
+ 3344 0471 7A020000 		.4byte	.LVL94
+ 3345 0475 84020000 		.4byte	.LVL95
+ 3346 0479 0600     		.2byte	0x6
+ 3347 047b F3       		.byte	0xf3
+ 3348 047c 03       		.uleb128 0x3
+ 3349 047d F5       		.byte	0xf5
+ 3350 047e 02       		.uleb128 0x2
+ 3351 047f 25       		.uleb128 0x25
+ 3352 0480 9F       		.byte	0x9f
+ 3353 0481 84020000 		.4byte	.LVL95
+ 3354 0485 88020000 		.4byte	.LVL96
+ 3355 0489 0600     		.2byte	0x6
+ 3356 048b 52       		.byte	0x52
+ 3357 048c 93       		.byte	0x93
+ 3358 048d 04       		.uleb128 0x4
+ 3359 048e 53       		.byte	0x53
+ 3360 048f 93       		.byte	0x93
+ 3361 0490 04       		.uleb128 0x4
+ 3362 0491 88020000 		.4byte	.LVL96
+ 3363 0495 92020000 		.4byte	.LVL97
+ 3364 0499 0600     		.2byte	0x6
+ 3365 049b F3       		.byte	0xf3
+ 3366 049c 03       		.uleb128 0x3
+ 3367 049d F5       		.byte	0xf5
+ 3368 049e 02       		.uleb128 0x2
+ 3369 049f 25       		.uleb128 0x25
+ 3370 04a0 9F       		.byte	0x9f
+ 3371 04a1 92020000 		.4byte	.LVL97
+ 3372 04a5 96020000 		.4byte	.LVL98
+ 3373 04a9 0600     		.2byte	0x6
+ 3374 04ab 52       		.byte	0x52
+ 3375 04ac 93       		.byte	0x93
+ 3376 04ad 04       		.uleb128 0x4
+ 3377 04ae 53       		.byte	0x53
+ 3378 04af 93       		.byte	0x93
+ 3379 04b0 04       		.uleb128 0x4
+ 3380 04b1 96020000 		.4byte	.LVL98
+ 3381 04b5 A4020000 		.4byte	.LVL99
+ 3382 04b9 0600     		.2byte	0x6
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 66
+
+
+ 3383 04bb F3       		.byte	0xf3
+ 3384 04bc 03       		.uleb128 0x3
+ 3385 04bd F5       		.byte	0xf5
+ 3386 04be 02       		.uleb128 0x2
+ 3387 04bf 25       		.uleb128 0x25
+ 3388 04c0 9F       		.byte	0x9f
+ 3389 04c1 A4020000 		.4byte	.LVL99
+ 3390 04c5 A6020000 		.4byte	.LVL100
+ 3391 04c9 0600     		.2byte	0x6
+ 3392 04cb 52       		.byte	0x52
+ 3393 04cc 93       		.byte	0x93
+ 3394 04cd 04       		.uleb128 0x4
+ 3395 04ce 53       		.byte	0x53
+ 3396 04cf 93       		.byte	0x93
+ 3397 04d0 04       		.uleb128 0x4
+ 3398 04d1 A6020000 		.4byte	.LVL100
+ 3399 04d5 AE020000 		.4byte	.LVL101
+ 3400 04d9 0600     		.2byte	0x6
+ 3401 04db F3       		.byte	0xf3
+ 3402 04dc 03       		.uleb128 0x3
+ 3403 04dd F5       		.byte	0xf5
+ 3404 04de 02       		.uleb128 0x2
+ 3405 04df 25       		.uleb128 0x25
+ 3406 04e0 9F       		.byte	0x9f
+ 3407 04e1 AE020000 		.4byte	.LVL101
+ 3408 04e5 B2020000 		.4byte	.LVL102
+ 3409 04e9 0600     		.2byte	0x6
+ 3410 04eb 52       		.byte	0x52
+ 3411 04ec 93       		.byte	0x93
+ 3412 04ed 04       		.uleb128 0x4
+ 3413 04ee 53       		.byte	0x53
+ 3414 04ef 93       		.byte	0x93
+ 3415 04f0 04       		.uleb128 0x4
+ 3416 04f1 B2020000 		.4byte	.LVL102
+ 3417 04f5 BC020000 		.4byte	.LVL103
+ 3418 04f9 0600     		.2byte	0x6
+ 3419 04fb F3       		.byte	0xf3
+ 3420 04fc 03       		.uleb128 0x3
+ 3421 04fd F5       		.byte	0xf5
+ 3422 04fe 02       		.uleb128 0x2
+ 3423 04ff 25       		.uleb128 0x25
+ 3424 0500 9F       		.byte	0x9f
+ 3425 0501 BC020000 		.4byte	.LVL103
+ 3426 0505 C0020000 		.4byte	.LVL104
+ 3427 0509 0600     		.2byte	0x6
+ 3428 050b 52       		.byte	0x52
+ 3429 050c 93       		.byte	0x93
+ 3430 050d 04       		.uleb128 0x4
+ 3431 050e 53       		.byte	0x53
+ 3432 050f 93       		.byte	0x93
+ 3433 0510 04       		.uleb128 0x4
+ 3434 0511 C0020000 		.4byte	.LVL104
+ 3435 0515 CE020000 		.4byte	.LVL105
+ 3436 0519 0600     		.2byte	0x6
+ 3437 051b F3       		.byte	0xf3
+ 3438 051c 03       		.uleb128 0x3
+ 3439 051d F5       		.byte	0xf5
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 67
+
+
+ 3440 051e 02       		.uleb128 0x2
+ 3441 051f 25       		.uleb128 0x25
+ 3442 0520 9F       		.byte	0x9f
+ 3443 0521 CE020000 		.4byte	.LVL105
+ 3444 0525 D2020000 		.4byte	.LVL106
+ 3445 0529 0600     		.2byte	0x6
+ 3446 052b 52       		.byte	0x52
+ 3447 052c 93       		.byte	0x93
+ 3448 052d 04       		.uleb128 0x4
+ 3449 052e 53       		.byte	0x53
+ 3450 052f 93       		.byte	0x93
+ 3451 0530 04       		.uleb128 0x4
+ 3452 0531 D2020000 		.4byte	.LVL106
+ 3453 0535 DC020000 		.4byte	.LVL107
+ 3454 0539 0600     		.2byte	0x6
+ 3455 053b F3       		.byte	0xf3
+ 3456 053c 03       		.uleb128 0x3
+ 3457 053d F5       		.byte	0xf5
+ 3458 053e 02       		.uleb128 0x2
+ 3459 053f 25       		.uleb128 0x25
+ 3460 0540 9F       		.byte	0x9f
+ 3461 0541 DC020000 		.4byte	.LVL107
+ 3462 0545 E0020000 		.4byte	.LVL108
+ 3463 0549 0600     		.2byte	0x6
+ 3464 054b 52       		.byte	0x52
+ 3465 054c 93       		.byte	0x93
+ 3466 054d 04       		.uleb128 0x4
+ 3467 054e 53       		.byte	0x53
+ 3468 054f 93       		.byte	0x93
+ 3469 0550 04       		.uleb128 0x4
+ 3470 0551 E0020000 		.4byte	.LVL108
+ 3471 0555 EE020000 		.4byte	.LVL109
+ 3472 0559 0600     		.2byte	0x6
+ 3473 055b F3       		.byte	0xf3
+ 3474 055c 03       		.uleb128 0x3
+ 3475 055d F5       		.byte	0xf5
+ 3476 055e 02       		.uleb128 0x2
+ 3477 055f 25       		.uleb128 0x25
+ 3478 0560 9F       		.byte	0x9f
+ 3479 0561 EE020000 		.4byte	.LVL109
+ 3480 0565 F2020000 		.4byte	.LVL110
+ 3481 0569 0600     		.2byte	0x6
+ 3482 056b 52       		.byte	0x52
+ 3483 056c 93       		.byte	0x93
+ 3484 056d 04       		.uleb128 0x4
+ 3485 056e 53       		.byte	0x53
+ 3486 056f 93       		.byte	0x93
+ 3487 0570 04       		.uleb128 0x4
+ 3488 0571 F2020000 		.4byte	.LVL110
+ 3489 0575 00030000 		.4byte	.LVL111
+ 3490 0579 0600     		.2byte	0x6
+ 3491 057b F3       		.byte	0xf3
+ 3492 057c 03       		.uleb128 0x3
+ 3493 057d F5       		.byte	0xf5
+ 3494 057e 02       		.uleb128 0x2
+ 3495 057f 25       		.uleb128 0x25
+ 3496 0580 9F       		.byte	0x9f
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 68
+
+
+ 3497 0581 00030000 		.4byte	.LVL111
+ 3498 0585 04030000 		.4byte	.LVL112
+ 3499 0589 0600     		.2byte	0x6
+ 3500 058b 52       		.byte	0x52
+ 3501 058c 93       		.byte	0x93
+ 3502 058d 04       		.uleb128 0x4
+ 3503 058e 53       		.byte	0x53
+ 3504 058f 93       		.byte	0x93
+ 3505 0590 04       		.uleb128 0x4
+ 3506 0591 04030000 		.4byte	.LVL112
+ 3507 0595 12030000 		.4byte	.LVL113
+ 3508 0599 0600     		.2byte	0x6
+ 3509 059b F3       		.byte	0xf3
+ 3510 059c 03       		.uleb128 0x3
+ 3511 059d F5       		.byte	0xf5
+ 3512 059e 02       		.uleb128 0x2
+ 3513 059f 25       		.uleb128 0x25
+ 3514 05a0 9F       		.byte	0x9f
+ 3515 05a1 12030000 		.4byte	.LVL113
+ 3516 05a5 14030000 		.4byte	.LVL114
+ 3517 05a9 0600     		.2byte	0x6
+ 3518 05ab 52       		.byte	0x52
+ 3519 05ac 93       		.byte	0x93
+ 3520 05ad 04       		.uleb128 0x4
+ 3521 05ae 53       		.byte	0x53
+ 3522 05af 93       		.byte	0x93
+ 3523 05b0 04       		.uleb128 0x4
+ 3524 05b1 14030000 		.4byte	.LVL114
+ 3525 05b5 1C030000 		.4byte	.LVL115
+ 3526 05b9 0600     		.2byte	0x6
+ 3527 05bb F3       		.byte	0xf3
+ 3528 05bc 03       		.uleb128 0x3
+ 3529 05bd F5       		.byte	0xf5
+ 3530 05be 02       		.uleb128 0x2
+ 3531 05bf 25       		.uleb128 0x25
+ 3532 05c0 9F       		.byte	0x9f
+ 3533 05c1 1C030000 		.4byte	.LVL115
+ 3534 05c5 20030000 		.4byte	.LVL116
+ 3535 05c9 0600     		.2byte	0x6
+ 3536 05cb 52       		.byte	0x52
+ 3537 05cc 93       		.byte	0x93
+ 3538 05cd 04       		.uleb128 0x4
+ 3539 05ce 53       		.byte	0x53
+ 3540 05cf 93       		.byte	0x93
+ 3541 05d0 04       		.uleb128 0x4
+ 3542 05d1 20030000 		.4byte	.LVL116
+ 3543 05d5 2E030000 		.4byte	.LVL117
+ 3544 05d9 0600     		.2byte	0x6
+ 3545 05db F3       		.byte	0xf3
+ 3546 05dc 03       		.uleb128 0x3
+ 3547 05dd F5       		.byte	0xf5
+ 3548 05de 02       		.uleb128 0x2
+ 3549 05df 25       		.uleb128 0x25
+ 3550 05e0 9F       		.byte	0x9f
+ 3551 05e1 2E030000 		.4byte	.LVL117
+ 3552 05e5 32030000 		.4byte	.LVL118
+ 3553 05e9 0600     		.2byte	0x6
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 69
+
+
+ 3554 05eb 52       		.byte	0x52
+ 3555 05ec 93       		.byte	0x93
+ 3556 05ed 04       		.uleb128 0x4
+ 3557 05ee 53       		.byte	0x53
+ 3558 05ef 93       		.byte	0x93
+ 3559 05f0 04       		.uleb128 0x4
+ 3560 05f1 32030000 		.4byte	.LVL118
+ 3561 05f5 3C030000 		.4byte	.LVL119
+ 3562 05f9 0600     		.2byte	0x6
+ 3563 05fb F3       		.byte	0xf3
+ 3564 05fc 03       		.uleb128 0x3
+ 3565 05fd F5       		.byte	0xf5
+ 3566 05fe 02       		.uleb128 0x2
+ 3567 05ff 25       		.uleb128 0x25
+ 3568 0600 9F       		.byte	0x9f
+ 3569 0601 3C030000 		.4byte	.LVL119
+ 3570 0605 43030000 		.4byte	.LVL120-1
+ 3571 0609 0600     		.2byte	0x6
+ 3572 060b 52       		.byte	0x52
+ 3573 060c 93       		.byte	0x93
+ 3574 060d 04       		.uleb128 0x4
+ 3575 060e 53       		.byte	0x53
+ 3576 060f 93       		.byte	0x93
+ 3577 0610 04       		.uleb128 0x4
+ 3578 0611 43030000 		.4byte	.LVL120-1
+ 3579 0615 50030000 		.4byte	.LVL122
+ 3580 0619 0600     		.2byte	0x6
+ 3581 061b F3       		.byte	0xf3
+ 3582 061c 03       		.uleb128 0x3
+ 3583 061d F5       		.byte	0xf5
+ 3584 061e 02       		.uleb128 0x2
+ 3585 061f 25       		.uleb128 0x25
+ 3586 0620 9F       		.byte	0x9f
+ 3587 0621 50030000 		.4byte	.LVL122
+ 3588 0625 52030000 		.4byte	.LVL123
+ 3589 0629 0600     		.2byte	0x6
+ 3590 062b 52       		.byte	0x52
+ 3591 062c 93       		.byte	0x93
+ 3592 062d 04       		.uleb128 0x4
+ 3593 062e 53       		.byte	0x53
+ 3594 062f 93       		.byte	0x93
+ 3595 0630 04       		.uleb128 0x4
+ 3596 0631 52030000 		.4byte	.LVL123
+ 3597 0635 5A030000 		.4byte	.LVL124
+ 3598 0639 0600     		.2byte	0x6
+ 3599 063b F3       		.byte	0xf3
+ 3600 063c 03       		.uleb128 0x3
+ 3601 063d F5       		.byte	0xf5
+ 3602 063e 02       		.uleb128 0x2
+ 3603 063f 25       		.uleb128 0x25
+ 3604 0640 9F       		.byte	0x9f
+ 3605 0641 5A030000 		.4byte	.LVL124
+ 3606 0645 5E030000 		.4byte	.LVL125
+ 3607 0649 0600     		.2byte	0x6
+ 3608 064b 52       		.byte	0x52
+ 3609 064c 93       		.byte	0x93
+ 3610 064d 04       		.uleb128 0x4
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 70
+
+
+ 3611 064e 53       		.byte	0x53
+ 3612 064f 93       		.byte	0x93
+ 3613 0650 04       		.uleb128 0x4
+ 3614 0651 5E030000 		.4byte	.LVL125
+ 3615 0655 6C030000 		.4byte	.LVL126
+ 3616 0659 0600     		.2byte	0x6
+ 3617 065b F3       		.byte	0xf3
+ 3618 065c 03       		.uleb128 0x3
+ 3619 065d F5       		.byte	0xf5
+ 3620 065e 02       		.uleb128 0x2
+ 3621 065f 25       		.uleb128 0x25
+ 3622 0660 9F       		.byte	0x9f
+ 3623 0661 6C030000 		.4byte	.LVL126
+ 3624 0665 70030000 		.4byte	.LVL127
+ 3625 0669 0600     		.2byte	0x6
+ 3626 066b 52       		.byte	0x52
+ 3627 066c 93       		.byte	0x93
+ 3628 066d 04       		.uleb128 0x4
+ 3629 066e 53       		.byte	0x53
+ 3630 066f 93       		.byte	0x93
+ 3631 0670 04       		.uleb128 0x4
+ 3632 0671 70030000 		.4byte	.LVL127
+ 3633 0675 4C040000 		.4byte	.LVL128
+ 3634 0679 0600     		.2byte	0x6
+ 3635 067b F3       		.byte	0xf3
+ 3636 067c 03       		.uleb128 0x3
+ 3637 067d F5       		.byte	0xf5
+ 3638 067e 02       		.uleb128 0x2
+ 3639 067f 25       		.uleb128 0x25
+ 3640 0680 9F       		.byte	0x9f
+ 3641 0681 4C040000 		.4byte	.LVL128
+ 3642 0685 4E040000 		.4byte	.LVL129
+ 3643 0689 0600     		.2byte	0x6
+ 3644 068b 52       		.byte	0x52
+ 3645 068c 93       		.byte	0x93
+ 3646 068d 04       		.uleb128 0x4
+ 3647 068e 53       		.byte	0x53
+ 3648 068f 93       		.byte	0x93
+ 3649 0690 04       		.uleb128 0x4
+ 3650 0691 4E040000 		.4byte	.LVL129
+ 3651 0695 56040000 		.4byte	.LVL130
+ 3652 0699 0600     		.2byte	0x6
+ 3653 069b F3       		.byte	0xf3
+ 3654 069c 03       		.uleb128 0x3
+ 3655 069d F5       		.byte	0xf5
+ 3656 069e 02       		.uleb128 0x2
+ 3657 069f 25       		.uleb128 0x25
+ 3658 06a0 9F       		.byte	0x9f
+ 3659 06a1 56040000 		.4byte	.LVL130
+ 3660 06a5 5A040000 		.4byte	.LVL131
+ 3661 06a9 0600     		.2byte	0x6
+ 3662 06ab 52       		.byte	0x52
+ 3663 06ac 93       		.byte	0x93
+ 3664 06ad 04       		.uleb128 0x4
+ 3665 06ae 53       		.byte	0x53
+ 3666 06af 93       		.byte	0x93
+ 3667 06b0 04       		.uleb128 0x4
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 71
+
+
+ 3668 06b1 5A040000 		.4byte	.LVL131
+ 3669 06b5 A8040000 		.4byte	.LFE36
+ 3670 06b9 0600     		.2byte	0x6
+ 3671 06bb F3       		.byte	0xf3
+ 3672 06bc 03       		.uleb128 0x3
+ 3673 06bd F5       		.byte	0xf5
+ 3674 06be 02       		.uleb128 0x2
+ 3675 06bf 25       		.uleb128 0x25
+ 3676 06c0 9F       		.byte	0x9f
+ 3677 06c1 00000000 		.4byte	0
+ 3678 06c5 00000000 		.4byte	0
+ 3679              	.LLST2:
+ 3680 06c9 6E040000 		.4byte	.LVL134
+ 3681 06cd 75040000 		.4byte	.LVL135-1
+ 3682 06d1 0100     		.2byte	0x1
+ 3683 06d3 50       		.byte	0x50
+ 3684 06d4 78040000 		.4byte	.LVL136
+ 3685 06d8 7F040000 		.4byte	.LVL137-1
+ 3686 06dc 0100     		.2byte	0x1
+ 3687 06de 50       		.byte	0x50
+ 3688 06df 82040000 		.4byte	.LVL138
+ 3689 06e3 89040000 		.4byte	.LVL139-1
+ 3690 06e7 0100     		.2byte	0x1
+ 3691 06e9 50       		.byte	0x50
+ 3692 06ea 8C040000 		.4byte	.LVL140
+ 3693 06ee 92040000 		.4byte	.LVL141
+ 3694 06f2 0100     		.2byte	0x1
+ 3695 06f4 50       		.byte	0x50
+ 3696 06f5 00000000 		.4byte	0
+ 3697 06f9 00000000 		.4byte	0
+ 3698              	.LLST3:
+ 3699 06fd 1C000000 		.4byte	.LVL150
+ 3700 0701 2A000000 		.4byte	.LVL152
+ 3701 0705 0100     		.2byte	0x1
+ 3702 0707 50       		.byte	0x50
+ 3703 0708 40000000 		.4byte	.LVL156
+ 3704 070c 92000000 		.4byte	.LVL162
+ 3705 0710 0100     		.2byte	0x1
+ 3706 0712 50       		.byte	0x50
+ 3707 0713 A8000000 		.4byte	.LVL167
+ 3708 0717 B4000000 		.4byte	.LVL171
+ 3709 071b 0100     		.2byte	0x1
+ 3710 071d 50       		.byte	0x50
+ 3711 071e 00000000 		.4byte	0
+ 3712 0722 00000000 		.4byte	0
+ 3713              	.LLST4:
+ 3714 0726 08000000 		.4byte	.LVL146
+ 3715 072a 24000000 		.4byte	.LVL151
+ 3716 072e 0200     		.2byte	0x2
+ 3717 0730 30       		.byte	0x30
+ 3718 0731 9F       		.byte	0x9f
+ 3719 0732 24000000 		.4byte	.LVL151
+ 3720 0736 AA000000 		.4byte	.LVL168
+ 3721 073a 0100     		.2byte	0x1
+ 3722 073c 57       		.byte	0x57
+ 3723 073d AA000000 		.4byte	.LVL168
+ 3724 0741 AE000000 		.4byte	.LVL169
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 72
+
+
+ 3725 0745 0200     		.2byte	0x2
+ 3726 0747 30       		.byte	0x30
+ 3727 0748 9F       		.byte	0x9f
+ 3728 0749 AE000000 		.4byte	.LVL169
+ 3729 074d B2000000 		.4byte	.LVL170
+ 3730 0751 0100     		.2byte	0x1
+ 3731 0753 57       		.byte	0x57
+ 3732 0754 00000000 		.4byte	0
+ 3733 0758 00000000 		.4byte	0
+ 3734              	.LLST5:
+ 3735 075c 08000000 		.4byte	.LVL146
+ 3736 0760 24000000 		.4byte	.LVL151
+ 3737 0764 0200     		.2byte	0x2
+ 3738 0766 30       		.byte	0x30
+ 3739 0767 9F       		.byte	0x9f
+ 3740 0768 24000000 		.4byte	.LVL151
+ 3741 076c AA000000 		.4byte	.LVL168
+ 3742 0770 0100     		.2byte	0x1
+ 3743 0772 55       		.byte	0x55
+ 3744 0773 AA000000 		.4byte	.LVL168
+ 3745 0777 AE000000 		.4byte	.LVL169
+ 3746 077b 0200     		.2byte	0x2
+ 3747 077d 30       		.byte	0x30
+ 3748 077e 9F       		.byte	0x9f
+ 3749 077f AE000000 		.4byte	.LVL169
+ 3750 0783 B2000000 		.4byte	.LVL170
+ 3751 0787 0100     		.2byte	0x1
+ 3752 0789 55       		.byte	0x55
+ 3753 078a 00000000 		.4byte	0
+ 3754 078e 00000000 		.4byte	0
+ 3755              	.LLST6:
+ 3756 0792 00000000 		.4byte	.LVL145
+ 3757 0796 0B000000 		.4byte	.LVL147-1
+ 3758 079a 0200     		.2byte	0x2
+ 3759 079c 70       		.byte	0x70
+ 3760 079d 00       		.sleb128 0
+ 3761 079e 0B000000 		.4byte	.LVL147-1
+ 3762 07a2 B4000000 		.4byte	.LVL172
+ 3763 07a6 0200     		.2byte	0x2
+ 3764 07a8 78       		.byte	0x78
+ 3765 07a9 00       		.sleb128 0
+ 3766 07aa B4000000 		.4byte	.LVL172
+ 3767 07ae C0000000 		.4byte	.LFE38
+ 3768 07b2 0200     		.2byte	0x2
+ 3769 07b4 70       		.byte	0x70
+ 3770 07b5 00       		.sleb128 0
+ 3771 07b6 00000000 		.4byte	0
+ 3772 07ba 00000000 		.4byte	0
+ 3773              	.LLST7:
+ 3774 07be 24000000 		.4byte	.LVL151
+ 3775 07c2 7C000000 		.4byte	.LVL157
+ 3776 07c6 0100     		.2byte	0x1
+ 3777 07c8 54       		.byte	0x54
+ 3778 07c9 7E000000 		.4byte	.LVL158
+ 3779 07cd 80000000 		.4byte	.LVL159
+ 3780 07d1 0100     		.2byte	0x1
+ 3781 07d3 54       		.byte	0x54
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 73
+
+
+ 3782 07d4 82000000 		.4byte	.LVL160
+ 3783 07d8 9E000000 		.4byte	.LVL165
+ 3784 07dc 0100     		.2byte	0x1
+ 3785 07de 54       		.byte	0x54
+ 3786 07df 00000000 		.4byte	0
+ 3787 07e3 00000000 		.4byte	0
+ 3788              		.section	.debug_aranges,"",%progbits
+ 3789 0000 2C000000 		.4byte	0x2c
+ 3790 0004 0200     		.2byte	0x2
+ 3791 0006 00000000 		.4byte	.Ldebug_info0
+ 3792 000a 04       		.byte	0x4
+ 3793 000b 00       		.byte	0
+ 3794 000c 0000     		.2byte	0
+ 3795 000e 0000     		.2byte	0
+ 3796 0010 00000000 		.4byte	.LFB36
+ 3797 0014 A8040000 		.4byte	.LFE36-.LFB36
+ 3798 0018 00000000 		.4byte	.LFB37
+ 3799 001c 10000000 		.4byte	.LFE37-.LFB37
+ 3800 0020 00000000 		.4byte	.LFB38
+ 3801 0024 C0000000 		.4byte	.LFE38-.LFB38
+ 3802 0028 00000000 		.4byte	0
+ 3803 002c 00000000 		.4byte	0
+ 3804              		.section	.debug_ranges,"",%progbits
+ 3805              	.Ldebug_ranges0:
+ 3806 0000 24000000 		.4byte	.LBB2
+ 3807 0004 80000000 		.4byte	.LBE2
+ 3808 0008 82000000 		.4byte	.LBB3
+ 3809 000c 86000000 		.4byte	.LBE3
+ 3810 0010 00000000 		.4byte	0
+ 3811 0014 00000000 		.4byte	0
+ 3812 0018 00000000 		.4byte	.LFB36
+ 3813 001c A8040000 		.4byte	.LFE36
+ 3814 0020 00000000 		.4byte	.LFB37
+ 3815 0024 10000000 		.4byte	.LFE37
+ 3816 0028 00000000 		.4byte	.LFB38
+ 3817 002c C0000000 		.4byte	.LFE38
+ 3818 0030 00000000 		.4byte	0
+ 3819 0034 00000000 		.4byte	0
+ 3820              		.section	.debug_line,"",%progbits
+ 3821              	.Ldebug_line0:
+ 3822 0000 CE010000 		.section	.debug_str,"MS",%progbits,1
+ 3822      0200EC00 
+ 3822      00000201 
+ 3822      FB0E0D00 
+ 3822      01010101 
+ 3823              	.LASF84:
+ 3824 0000 5F5F6275 		.ascii	"__builtin_puts\000"
+ 3824      696C7469 
+ 3824      6E5F7075 
+ 3824      747300
+ 3825              	.LASF57:
+ 3826 000f 5345545F 		.ascii	"SET_MOTION_OFFSET\000"
+ 3826      4D4F5449 
+ 3826      4F4E5F4F 
+ 3826      46465345 
+ 3826      5400
+ 3827              	.LASF30:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 74
+
+
+ 3828 0021 5345545F 		.ascii	"SET_LPF_GYRO\000"
+ 3828      4C50465F 
+ 3828      4759524F 
+ 3828      00
+ 3829              	.LASF19:
+ 3830 002e 5345545F 		.ascii	"SET_OUTPUT_CODE\000"
+ 3830      4F555450 
+ 3830      55545F43 
+ 3830      4F444500 
+ 3831              	.LASF47:
+ 3832 003e 504F535F 		.ascii	"POS_FILTER_PARAM_AR\000"
+ 3832      46494C54 
+ 3832      45525F50 
+ 3832      4152414D 
+ 3832      5F415200 
+ 3833              	.LASF52:
+ 3834 0052 43414C49 		.ascii	"CALIBRATION_MAGNETO_FREE\000"
+ 3834      42524154 
+ 3834      494F4E5F 
+ 3834      4D41474E 
+ 3834      45544F5F 
+ 3835              	.LASF49:
+ 3836 006b 43414C49 		.ascii	"CALIBRATION_GYRO\000"
+ 3836      42524154 
+ 3836      494F4E5F 
+ 3836      4759524F 
+ 3836      00
+ 3837              	.LASF8:
+ 3838 007c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3838      206C6F6E 
+ 3838      6720756E 
+ 3838      7369676E 
+ 3838      65642069 
+ 3839              	.LASF29:
+ 3840 0093 5345545F 		.ascii	"SET_SENS_ACCELERO\000"
+ 3840      53454E53 
+ 3840      5F414343 
+ 3840      454C4552 
+ 3840      4F00
+ 3841              	.LASF75:
+ 3842 00a5 55415254 		.ascii	"UART_IMU_UartPutString\000"
+ 3842      5F494D55 
+ 3842      5F556172 
+ 3842      74507574 
+ 3842      53747269 
+ 3843              	.LASF10:
+ 3844 00bc 6C6F6E67 		.ascii	"long double\000"
+ 3844      20646F75 
+ 3844      626C6500 
+ 3845              	.LASF77:
+ 3846 00c8 55415254 		.ascii	"UART_IMU_SpiUartWriteTxData\000"
+ 3846      5F494D55 
+ 3846      5F537069 
+ 3846      55617274 
+ 3846      57726974 
+ 3847              	.LASF69:
+ 3848 00e4 56455253 		.ascii	"VERSION_CHECK\000"
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 75
+
+
+ 3848      494F4E5F 
+ 3848      43484543 
+ 3848      4B00
+ 3849              	.LASF3:
+ 3850 00f2 73686F72 		.ascii	"short int\000"
+ 3850      7420696E 
+ 3850      7400
+ 3851              	.LASF50:
+ 3852 00fc 43414C49 		.ascii	"CALIBRATION_ACCELERO_FREE\000"
+ 3852      42524154 
+ 3852      494F4E5F 
+ 3852      41434345 
+ 3852      4C45524F 
+ 3853              	.LASF55:
+ 3854 0116 43414C49 		.ascii	"CALIBRATION_MAGNETO_Z\000"
+ 3854      42524154 
+ 3854      494F4E5F 
+ 3854      4D41474E 
+ 3854      45544F5F 
+ 3855              	.LASF79:
+ 3856 012c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3856      43313120 
+ 3856      352E342E 
+ 3856      31203230 
+ 3856      31363036 
+ 3857 015f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 3857      20726576 
+ 3857      6973696F 
+ 3857      6E203233 
+ 3857      37373135 
+ 3858 0192 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3858      66756E63 
+ 3858      74696F6E 
+ 3858      2D736563 
+ 3858      74696F6E 
+ 3859              	.LASF32:
+ 3860 01ba 5345545F 		.ascii	"SET_FILTER_FACTOR\000"
+ 3860      46494C54 
+ 3860      45525F46 
+ 3860      4143544F 
+ 3860      5200
+ 3861              	.LASF80:
+ 3862 01cc 696D752E 		.ascii	"imu.c\000"
+ 3862      6300
+ 3863              	.LASF13:
+ 3864 01d2 75696E74 		.ascii	"uint8\000"
+ 3864      3800
+ 3865              	.LASF17:
+ 3866 01d8 5345545F 		.ascii	"SET_BAUDRATE\000"
+ 3866      42415544 
+ 3866      52415445 
+ 3866      00
+ 3867              	.LASF83:
+ 3868 01e5 70757473 		.ascii	"puts\000"
+ 3868      00
+ 3869              	.LASF34:
+ 3870 01ea 5345545F 		.ascii	"SET_FILTER_FACTOR_MAGNETO\000"
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 76
+
+
+ 3870      46494C54 
+ 3870      45525F46 
+ 3870      4143544F 
+ 3870      525F4D41 
+ 3871              	.LASF43:
+ 3872 0204 41565F43 		.ascii	"AV_CANCEL_PARAM_ACCELERO_ENABLE\000"
+ 3872      414E4345 
+ 3872      4C5F5041 
+ 3872      52414D5F 
+ 3872      41434345 
+ 3873              	.LASF62:
+ 3874 0224 434C4541 		.ascii	"CLEAR_MOTION_OFFSET\000"
+ 3874      525F4D4F 
+ 3874      54494F4E 
+ 3874      5F4F4646 
+ 3874      53455400 
+ 3875              	.LASF16:
+ 3876 0238 666C6F61 		.ascii	"float\000"
+ 3876      7400
+ 3877              	.LASF40:
+ 3878 023e 41475F43 		.ascii	"AG_CALIBER_PARAM_THRESHOLD\000"
+ 3878      414C4942 
+ 3878      45525F50 
+ 3878      4152414D 
+ 3878      5F544852 
+ 3879              	.LASF7:
+ 3880 0259 6C6F6E67 		.ascii	"long long int\000"
+ 3880      206C6F6E 
+ 3880      6720696E 
+ 3880      7400
+ 3881              	.LASF64:
+ 3882 0267 504F5745 		.ascii	"POWER_ON_START\000"
+ 3882      525F4F4E 
+ 3882      5F535441 
+ 3882      525400
+ 3883              	.LASF67:
+ 3884 0276 4C4F4144 		.ascii	"LOAD_FACTORORY_SETTINGS\000"
+ 3884      5F464143 
+ 3884      544F524F 
+ 3884      52595F53 
+ 3884      45545449 
+ 3885              	.LASF37:
+ 3886 028e 5248415F 		.ascii	"RHA_ALGORITHM_PARAM_LEVEL\000"
+ 3886      414C474F 
+ 3886      52495448 
+ 3886      4D5F5041 
+ 3886      52414D5F 
+ 3887              	.LASF5:
+ 3888 02a8 6C6F6E67 		.ascii	"long int\000"
+ 3888      20696E74 
+ 3888      00
+ 3889              	.LASF63:
+ 3890 02b1 434F4E46 		.ascii	"CONFIGURATION\000"
+ 3890      49475552 
+ 3890      4154494F 
+ 3890      4E00
+ 3891              	.LASF61:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 77
+
+
+ 3892 02bf 5345545F 		.ascii	"SET_MOTION_OFFSET_XY\000"
+ 3892      4D4F5449 
+ 3892      4F4E5F4F 
+ 3892      46465345 
+ 3892      545F5859 
+ 3893              	.LASF74:
+ 3894 02d4 73707269 		.ascii	"sprintf\000"
+ 3894      6E746600 
+ 3895              	.LASF71:
+ 3896 02dc 4542494D 		.ascii	"EBIMU_send_command\000"
+ 3896      555F7365 
+ 3896      6E645F63 
+ 3896      6F6D6D61 
+ 3896      6E6400
+ 3897              	.LASF22:
+ 3898 02ef 5345545F 		.ascii	"SET_OUTPUT_ACCELERO\000"
+ 3898      4F555450 
+ 3898      55545F41 
+ 3898      4343454C 
+ 3898      45524F00 
+ 3899              	.LASF2:
+ 3900 0303 756E7369 		.ascii	"unsigned char\000"
+ 3900      676E6564 
+ 3900      20636861 
+ 3900      7200
+ 3901              	.LASF51:
+ 3902 0311 43414C49 		.ascii	"CALIBRATION_ACCELERO_SIMPLE\000"
+ 3902      42524154 
+ 3902      494F4E5F 
+ 3902      41434345 
+ 3902      4C45524F 
+ 3903              	.LASF1:
+ 3904 032d 7369676E 		.ascii	"signed char\000"
+ 3904      65642063 
+ 3904      68617200 
+ 3905              	.LASF35:
+ 3906 0339 5241415F 		.ascii	"RAA_ALGORITHM_PARAM_LEVEL\000"
+ 3906      414C474F 
+ 3906      52495448 
+ 3906      4D5F5041 
+ 3906      52414D5F 
+ 3907              	.LASF31:
+ 3908 0353 5345545F 		.ascii	"SET_LPF_ACCELERO\000"
+ 3908      4C50465F 
+ 3908      41434345 
+ 3908      4C45524F 
+ 3908      00
+ 3909              	.LASF56:
+ 3910 0364 43414C49 		.ascii	"CALIBRATION_MAGNETO_PZ\000"
+ 3910      42524154 
+ 3910      494F4E5F 
+ 3910      4D41474E 
+ 3910      45544F5F 
+ 3911              	.LASF33:
+ 3912 037b 5345545F 		.ascii	"SET_FILTER_FACTOR_ACCELERO\000"
+ 3912      46494C54 
+ 3912      45525F46 
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 78
+
+
+ 3912      4143544F 
+ 3912      525F4143 
+ 3913              	.LASF38:
+ 3914 0396 5248415F 		.ascii	"RHA_ALGORITHM_PARAM_TIMEOUT\000"
+ 3914      414C474F 
+ 3914      52495448 
+ 3914      4D5F5041 
+ 3914      52414D5F 
+ 3915              	.LASF58:
+ 3916 03b2 5345545F 		.ascii	"SET_MOTION_OFFSET_X\000"
+ 3916      4D4F5449 
+ 3916      4F4E5F4F 
+ 3916      46465345 
+ 3916      545F5800 
+ 3917              	.LASF59:
+ 3918 03c6 5345545F 		.ascii	"SET_MOTION_OFFSET_Y\000"
+ 3918      4D4F5449 
+ 3918      4F4E5F4F 
+ 3918      46465345 
+ 3918      545F5900 
+ 3919              	.LASF60:
+ 3920 03da 5345545F 		.ascii	"SET_MOTION_OFFSET_Z\000"
+ 3920      4D4F5449 
+ 3920      4F4E5F4F 
+ 3920      46465345 
+ 3920      545F5A00 
+ 3921              	.LASF72:
+ 3922 03ee 4542494D 		.ascii	"EBIMU_poll\000"
+ 3922      555F706F 
+ 3922      6C6C00
+ 3923              	.LASF48:
+ 3924 03f9 504F535F 		.ascii	"POS_ZERO\000"
+ 3924      5A45524F 
+ 3924      00
+ 3925              	.LASF4:
+ 3926 0402 73686F72 		.ascii	"short unsigned int\000"
+ 3926      7420756E 
+ 3926      7369676E 
+ 3926      65642069 
+ 3926      6E7400
+ 3927              	.LASF65:
+ 3928 0415 53544152 		.ascii	"START\000"
+ 3928      5400
+ 3929              	.LASF11:
+ 3930 041b 73697A65 		.ascii	"sizetype\000"
+ 3930      74797065 
+ 3930      00
+ 3931              	.LASF12:
+ 3932 0424 63686172 		.ascii	"char\000"
+ 3932      00
+ 3933              	.LASF26:
+ 3934 0429 5345545F 		.ascii	"SET_OUTPUT_TIMESTAMP\000"
+ 3934      4F555450 
+ 3934      55545F54 
+ 3934      494D4553 
+ 3934      54414D50 
+ 3935              	.LASF53:
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 79
+
+
+ 3936 043e 43414C49 		.ascii	"CALIBRATION_MAGNETO_XY\000"
+ 3936      42524154 
+ 3936      494F4E5F 
+ 3936      4D41474E 
+ 3936      45544F5F 
+ 3937              	.LASF42:
+ 3938 0455 41565F43 		.ascii	"AV_CANCEL_PARAM_GYRO_ENABLE\000"
+ 3938      414E4345 
+ 3938      4C5F5041 
+ 3938      52414D5F 
+ 3938      4759524F 
+ 3939              	.LASF73:
+ 3940 0471 63686B73 		.ascii	"chksum\000"
+ 3940      756D00
+ 3941              	.LASF70:
+ 3942 0478 64617461 		.ascii	"data\000"
+ 3942      00
+ 3943              	.LASF14:
+ 3944 047d 75696E74 		.ascii	"uint16\000"
+ 3944      313600
+ 3945              	.LASF21:
+ 3946 0484 5345545F 		.ascii	"SET_OUTPUT_GYRO\000"
+ 3946      4F555450 
+ 3946      55545F47 
+ 3946      59524F00 
+ 3947              	.LASF15:
+ 3948 0494 75696E74 		.ascii	"uint32\000"
+ 3948      333200
+ 3949              	.LASF6:
+ 3950 049b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3950      20756E73 
+ 3950      69676E65 
+ 3950      6420696E 
+ 3950      7400
+ 3951              	.LASF0:
+ 3952 04ad 646F7562 		.ascii	"double\000"
+ 3952      6C6500
+ 3953              	.LASF28:
+ 3954 04b4 5345545F 		.ascii	"SET_SENS_GYRO\000"
+ 3954      53454E53 
+ 3954      5F475952 
+ 3954      4F00
+ 3955              	.LASF36:
+ 3956 04c2 5241415F 		.ascii	"RAA_ALGORITHM_PARAM_TIMEOUT\000"
+ 3956      414C474F 
+ 3956      52495448 
+ 3956      4D5F5041 
+ 3956      52414D5F 
+ 3957              	.LASF44:
+ 3958 04de 504F535F 		.ascii	"POS_FILTER_PARAM_SL\000"
+ 3958      46494C54 
+ 3958      45525F50 
+ 3958      4152414D 
+ 3958      5F534C00 
+ 3959              	.LASF23:
+ 3960 04f2 5345545F 		.ascii	"SET_OUTPUT_MAGNETO\000"
+ 3960      4F555450 
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 80
+
+
+ 3960      55545F4D 
+ 3960      41474E45 
+ 3960      544F00
+ 3961              	.LASF20:
+ 3962 0505 5345545F 		.ascii	"SET_OUTPUT_FORMAT\000"
+ 3962      4F555450 
+ 3962      55545F46 
+ 3962      4F524D41 
+ 3962      5400
+ 3963              	.LASF41:
+ 3964 0517 41475F43 		.ascii	"AG_CALIBER_PARAM_DRIFT\000"
+ 3964      414C4942 
+ 3964      45525F50 
+ 3964      4152414D 
+ 3964      5F445249 
+ 3965              	.LASF68:
+ 3966 052e 52455345 		.ascii	"RESET\000"
+ 3966      5400
+ 3967              	.LASF18:
+ 3968 0534 5345545F 		.ascii	"SET_OUTPUT_RATE\000"
+ 3968      4F555450 
+ 3968      55545F52 
+ 3968      41544500 
+ 3969              	.LASF39:
+ 3970 0544 41475F43 		.ascii	"AG_CALIBER_PARAM_ENABLE\000"
+ 3970      414C4942 
+ 3970      45525F50 
+ 3970      4152414D 
+ 3970      5F454E41 
+ 3971              	.LASF66:
+ 3972 055c 53544F50 		.ascii	"STOP\000"
+ 3972      00
+ 3973              	.LASF25:
+ 3974 0561 5345545F 		.ascii	"SET_OUTPUT_TEMPERATURE\000"
+ 3974      4F555450 
+ 3974      55545F54 
+ 3974      454D5045 
+ 3974      52415455 
+ 3975              	.LASF81:
+ 3976 0578 443A5C67 		.ascii	"D:\\git\\kmc724\\CY8CKit\\Workspace\\BLE_IMU.cydsn\000"
+ 3976      69745C6B 
+ 3976      6D633732 
+ 3976      345C4359 
+ 3976      38434B69 
+ 3977              	.LASF82:
+ 3978 05a6 4542494D 		.ascii	"EBIMU_recv_data\000"
+ 3978      555F7265 
+ 3978      63765F64 
+ 3978      61746100 
+ 3979              	.LASF46:
+ 3980 05b6 504F535F 		.ascii	"POS_FILTER_PARAM_SR\000"
+ 3980      46494C54 
+ 3980      45525F50 
+ 3980      4152414D 
+ 3980      5F535200 
+ 3981              	.LASF45:
+ 3982 05ca 504F535F 		.ascii	"POS_FILTER_PARAM_ST\000"
+ARM GAS  C:\Users\iron\AppData\Local\Temp\ccVrLRQd.s 			page 81
+
+
+ 3982      46494C54 
+ 3982      45525F50 
+ 3982      4152414D 
+ 3982      5F535400 
+ 3983              	.LASF9:
+ 3984 05de 756E7369 		.ascii	"unsigned int\000"
+ 3984      676E6564 
+ 3984      20696E74 
+ 3984      00
+ 3985              	.LASF78:
+ 3986 05eb 43794465 		.ascii	"CyDelay\000"
+ 3986      6C617900 
+ 3987              	.LASF27:
+ 3988 05f3 5345545F 		.ascii	"SET_ENABLE_MAGNETO\000"
+ 3988      454E4142 
+ 3988      4C455F4D 
+ 3988      41474E45 
+ 3988      544F00
+ 3989              	.LASF54:
+ 3990 0606 43414C49 		.ascii	"CALIBRATION_MAGNETO_PXY\000"
+ 3990      42524154 
+ 3990      494F4E5F 
+ 3990      4D41474E 
+ 3990      45544F5F 
+ 3991              	.LASF76:
+ 3992 061e 55415254 		.ascii	"UART_IMU_UartGetChar\000"
+ 3992      5F494D55 
+ 3992      5F556172 
+ 3992      74476574 
+ 3992      43686172 
+ 3993              	.LASF24:
+ 3994 0633 5345545F 		.ascii	"SET_OUTPUT_DISTANCE\000"
+ 3994      4F555450 
+ 3994      55545F44 
+ 3994      49535441 
+ 3994      4E434500 
+ 3995              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

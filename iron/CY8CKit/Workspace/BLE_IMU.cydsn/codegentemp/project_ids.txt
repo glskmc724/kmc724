@@ -1,0 +1,7 @@
+D:\git\kmc724\CY8CKit\Workspace\UART_printf.cydsn\UART_printf.cyprj|5b10f686-22fc-427d-a41c-7633e8576dc3
+D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|bc599cd0-725b-4024-8048-6c1ea73e36ee
+C:\Users\iron\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|c3e6de48-ed5f-46cd-80bb-3e374cc5e308
+D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|fefba9bd-a194-4ac2-a3d0-8b5123d0abe6
+D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f4721584-e23d-43ab-a8e1-60640a90e3ed
+D:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9dbd4ec0-519d-4bc9-9491-6c8695cb9242
+D:\git\kmc724\CY8CKit\Workspace\BLE_IMU.cydsn\BLE_IMU.cyprj|205afaee-b372-4081-b16e-e95af8b05686

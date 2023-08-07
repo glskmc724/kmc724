@@ -1,0 +1,8 @@
+D:/git/kmc724/CY8CKit/Workspace/UART_printf.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : D:/git/kmc724/CY8CKit/Workspace/UART_printf.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s D:/git/kmc724/CY8CKit/Workspace/UART_printf.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc D:/git/kmc724/CY8CKit/Workspace/UART_printf.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+
+D:/git/kmc724/CY8CKit/Workspace/UART_printf.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+
+D:/git/kmc724/CY8CKit/Workspace/UART_printf.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+
+D:/git/kmc724/CY8CKit/Workspace/UART_printf.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+

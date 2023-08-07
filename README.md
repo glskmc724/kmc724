@@ -1,10 +1,3 @@
-# kmc724
+# kmc0724
 
-## CY8CKit
-Using CY8CKIT-042-BLE-A
-
-## NUCLEO-F412ZG
-Using NUCLEO-F412ZG
-
-## etc
-그 외 언젠간 쓸 것들.
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kmc0724&layout=donut)](https://github.com/kmc0724/github-readme-stats)
