@@ -29,15 +29,16 @@
 <table>
 <tr>
 <td>
-<img width="4410" height="1">
   
 ## 예제 입력 1
 </td>
 <td>
-<img width="4410" height="1">
   
 ## 예제 출력 1
 </td>
+</tr>
+<tr>
+  
 </tr>
 <tr>
 <td>
@@ -57,6 +58,14 @@
 3 1 4 2 5
 ```
   
+</td>
+</tr>
+<tr>
+<td>
+<img width="4410" height="1">
+</td>
+<td>
+<img width="4410" height="1">
 </td>
 </tr>
 </table>
