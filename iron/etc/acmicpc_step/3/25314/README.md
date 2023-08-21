@@ -32,9 +32,17 @@ C++ 책을 열심히 읽었던 혜아는 간단히 두 수를 더하는 코드�
 <table>
 <tr>
 <td>
-<img width="4410" height="1">
   
 ## 예제 입력 1
+</td>
+<td>
+
+## 예제 출력 1
+</td>
+<tr>
+</tr>
+<tr>
+<td>
 
 ```
 4
@@ -42,9 +50,8 @@ C++ 책을 열심히 읽었던 혜아는 간단히 두 수를 더하는 코드�
   
 </td>
 <td>
-<img width="4410" height="1">
   
-## 예제 출력 1
+
 
 ```
 long int
@@ -52,12 +59,22 @@ long int
   
 </td>
 </tr>
-
+<tr>
+</tr>
 <tr>
 <td>
   
 ## 예제 입력 2
-
+</td>
+<td>
+  
+## 예제 출력 2
+</tr>
+<tr>
+</tr>
+<tr>
+<td>
+  
 ```
 20
 ```
@@ -65,12 +82,20 @@ long int
 </td>
 <td>
   
-## 예제 출력 2
+
 
 ```
 long long long long long int
 ```
   
+</td>
+</tr>
+<tr>
+<td>
+<img width="4410" height="1">
+</td>
+<td>
+<img width="4410" height="1">
 </td>
 </tr>
 </table>
