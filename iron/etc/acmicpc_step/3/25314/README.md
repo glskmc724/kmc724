@@ -1,3 +1,9 @@
+# 코딩은 체육과목 입니다.
+
+|시간 제한             |메모리 제한|
+|--------------------|---------|
+|0.5초 (추가 시간 없음) |1024 MB|
+
 ## 문제
 
 <p align="center"><img src="https://github.com/kmc0724/kmc0724/assets/90677740/af551ac2-ad5e-4f5c-858e-9a9bcb6a35e0" width="300" height="300"/></p>
