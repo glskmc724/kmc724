@@ -18,13 +18,13 @@
 <table>
 <tr>
 <td>
-![image](https://github.com/kmc0724/kmc0724/assets/90677740/f69485e8-192a-4c1f-a569-5112621b36c7)
+<img src="https://github.com/kmc0724/kmc0724/assets/90677740/f69485e8-192a-4c1f-a569-5112621b36c7"/>
 </td>
 <td>
-![image](https://github.com/kmc0724/kmc0724/assets/90677740/d8877144-2494-43d2-a3d9-0b7268f182a4)
+<img src="https://github.com/kmc0724/kmc0724/assets/90677740/d8877144-2494-43d2-a3d9-0b7268f182a4"/>
 </td>
 <td>
-![image](https://github.com/kmc0724/kmc0724/assets/90677740/d6cb887c-c80e-43c5-90dd-0fe8a5d6af68)
+<img src="https://github.com/kmc0724/kmc0724/assets/90677740/d6cb887c-c80e-43c5-90dd-0fe8a5d6af68"/>
 </td>
 </tr>
 <tr>
