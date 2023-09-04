@@ -12,24 +12,82 @@ typedef struct
 	char name[MAX_BUFFER_LEN];
 } employee;
 
+typedef struct
+{
+	struct node* next;
+	employee entry;
+} node;
+
+typedef struct
+{
+	int hash;
+	employee employee;
+} hashmap;
+
 static employee* employees;
+static node* list;
+
+node* insert(node* n, char* name, int idx)
+{
+	node* new = (node*)calloc(1, sizeof(node));
+
+	while (n->next != NULL)
+	{
+		n = n->next;
+	}
+
+	new->next = NULL;
+	strcpy(new->entry.name, name);
+	new->entry.commute = 1;
+	new->entry.idx = idx;
+	n->next = new;
+
+	return new;
+}
+
+void delete(node* n, char* name)
+{
+	while (n != NULL)
+	{
+		if (strcmp(n->entry.name, name) == 0)
+		{
+			n->entry.commute = 0;
+			return;
+		}
+		else
+		{
+			n = n->next;
+		}
+	}
+}
+
+node* find(node* n, char* name)
+{
+	while (n != NULL)
+	{
+		if (strcmp(n->entry.name, name) == 0)
+		{
+			return n;
+		}
+		else
+		{
+			n = n->next;
+		}
+	}
+	return 0;
+}
 
 int compare(const void* a, const void* b)
 {
-	int hash_a;
-	int hash_b;
-	employee employee_a;
-	employee employee_b;
+	hashmap* hash_a;
+	hashmap* hash_b;
 
-	hash_a = (*(int*)a);
-	hash_b = (*(int*)b);
+	hash_a = (hashmap*)a;
+	hash_b = (hashmap*)b;
 
-	employee_a = employees[hash_a];
-	employee_b = employees[hash_b];
+	//printf("%s %s\n", hash_a->employee.name, hash_b->employee.name);
 
-	//printf("strcmp(%s, %s)=%d\n", employee_b.name, employee_a.name, strcmp(employee_b.name, employee_a.name));
-
-	return strcmp(employee_b.name, employee_a.name);
+	return strcmp(hash_b->employee.name, hash_a->employee.name);
 }
 
 unsigned int cyclic_shift(char* str, int len)
@@ -51,10 +109,12 @@ int main(void)
 	int len;
 	int hash;
 	int cnt;
-	int* hash_arr;
+	hashmap* map;
+	node* pnode;
 
-	employees = (employee*)calloc(MAX_NUM_LOG, sizeof(employee));
-	hash_arr = (int*)calloc(MAX_NUM_LOG, sizeof(int));
+	//employees = (employee*)calloc(MAX_NUM_LOG, sizeof(employee));
+	list = (node*)calloc(MAX_NUM_LOG, sizeof(node));
+	map = (int*)calloc(MAX_NUM_LOG, sizeof(hashmap));
 	cnt = 0;
 
 	scanf("%d", &n);
@@ -66,32 +126,44 @@ int main(void)
 		if (strcmp(commute, "enter") == 0)
 		{
 			len = strlen(name);
-			hash = (cyclic_shift(name, len)) % MAX_NUM_LOG;
-			strcpy(employees[hash].name, name);
-			employees[hash].commute = 1;
-			if (employees[hash].idx == 0)
+			hash = (cyclic_shift(name, len)) % MAX_NUM_LOG + 1;
+
+			pnode = find(&list[hash], name);
+
+			if (pnode != NULL)
 			{
-				hash_arr[cnt++] = hash;
-				employees[hash].idx = cnt;
+				pnode->entry.commute = 1;
 			}
+			else
+			{
+				map[cnt].hash = hash;
+				pnode = insert(&list[hash], name, cnt + 1);
+				map[cnt++].employee = pnode->entry;
+			}
+
 		}
 		else if (strcmp(commute, "leave") == 0)
 		{
 			len = strlen(name);
-			hash = (cyclic_shift(name, len)) % MAX_NUM_LOG;
-			employees[hash].commute = 0;
+			hash = (cyclic_shift(name, len)) % MAX_NUM_LOG + 1;
+			
+			delete(&list[hash], name);
 		}
 	}
 
-	//quick_sort(hash_arr, 0, cnt - 1);
-	qsort(hash_arr, cnt, sizeof(int), compare);
+	qsort(map, cnt, sizeof(hashmap), compare);
 
 	for (int i = 0; i < cnt; i++)
 	{
-		hash = hash_arr[i];
-		if (employees[hash].commute == 1)
+		hash = map[i].hash;
+
+		if (list[hash].next != NULL)
 		{
-			printf("%s\n", employees[hash].name);
+			pnode = find(&list[hash], map[i].employee.name);
+			if (pnode->entry.commute == 1)
+			{
+				printf("%s\n", pnode->entry.name);
+			}
 		}
 	}
 }
